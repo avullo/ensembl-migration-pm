@@ -1,0 +1,64 @@
+WP1 (Jan 2016 - April 2016): Migration of Ensembl 82 Archive to Embassy
+
+Status: 90%
+
+August 2016. 90%
+
+Shutdown: not really affected, does not involve anything with the suicidal blades apart from the web db servers which have to be migrated to EBI
+
+Actions: copy 81-85 (excl. 82) archive db data from EBI (ask Andy B & C.)
+
+1. Request machine VMWare image from WTSI for archive 82 VMs
+Status: done
+
+January 2016. 100%
+Request made
+
+2. Requisition MySQL database servers (version 5.1.58) for data hosting and user sessions (must exceed 2TB and ability to grow by x20). Need to have separation between mart and other databases. Copy 79-83 data to the machines from EBI mirror.
+
+Status: 95%
+
+Action: what does Steve mean by data hosting? enquire, request data to EBI DBAs
+
+3. Requisition disk (9Tb)  and setup an NFS server that can be accessed by all webserver VMs.
+Develop procedures to synchronise this with the /nfs volume at WTSI
+
+Status: 92%
+
+? 2016.
+Dan S properly configure NFS server
+
+? 2016.
+NFS instance with minimal set up on Embassy vCloud. Minimal space available?
+
+Actions: check current disk on NFS server attach more if necessary, enquire about synchronisation procedures
+
+4. Develop alternative to PFETCH
+Ensembl Genomes already have bindings to dbfetch and so may be a drop in replacement
+
+Status: ?
+
+Actions: enquire about
+
+5. Retrieve machine VMWare image from WTSI and host in Embassy
+- 1 for web server - install Perl modules if required
+- 1 for Solr search
+Note that it is critical that we can transfer the images - recreating them from scratch would be very difficult (webservers) or almost impossible (search servers)
+
+Status: 100%
+
+? 2016.
+both instances hosted in Embassy
+
+6. Setup VPN connection between Embassy, EBI and WTSI for shared accounts database
+
+7. Choose and deploy server and service monitoring infrastructure (eg Nagios / Opsview)
+
+8. Choose and deploy website use monitoring service, for example Piwik
+
+9. Develop control procedures (for example remotely updating and restarting servers) and ways for accessing server logs (debugging and DOS)
+
+10. Deploy happroxy based load balancer
+
+11. Setup DNS redirect from WTSI to Embassy (sept2015.archive.ensembl.org and e82.ensembl.org)
+

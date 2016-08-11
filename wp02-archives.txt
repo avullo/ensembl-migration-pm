@@ -1,0 +1,81 @@
+WP2 (April 2016 - August 2016): Hosting of all Archives in Embassy
+
+Status: 
+
+August 2016. 50%
+- Luke to investigate why some images don't boot on Embassy
+- Steve is trasferring ensembldb (public mirrors back to 24) to EBI warehouse space. Can be used to load archive db servers. Can taka a while
+- Dan S awaits problems with 82 boot solved
+- Alessandro's expanding MSQL DB servers storage via LVM, pb with fdisk
+
+Shutdown: not really affected, does not involve anything with the suicidal blades apart from the web db servers which have to be migrated to EBI
+
+Actions: enquiry about possible consequences of shutdown from this perspective, test fdisk, enquire about new deadline
+
+1. Expand storage of MySQL servers for all archive archives and copy data from Sanger using  using new Globus endpoints
+Status: 60%
+
+August 2016. 60%
+Allocated 80TB on Embassy vCloud enough to accomodate 15 versions + exceptions (GRCh37)
+
+July 2016. 40%
+No globus endpoint. Transfer is occuring from Sanger farm directly into Embassy vCloud using ovftool with OVA images. Glitches with ovftool solved by Luke by installing a particular ovftool version.
+
+Pb: some images (e.g. web-82?) don't boot on Embassy vCloud. Luke's to investigate.
+fdisk the new disk partition (for LVM to recognise the new PV) allocates only 2GB
+
+Actions: enquire Luke. test LVM
+
+2. Migrate all running VM archives from WTSI to Embassy
+Status: 10%
+
+Awaiting bottleneck with boot problem is solved.
+
+July 2016. 10% 
+Initial transfering of some notable instances: 54 (Lucene?), 67 (NCBI36) after tested on 82
+
+3. Migrate remaining Solr and Lucene search VMs to Embassy
+Status: 10%
+
+Awaiting bottleneck with boot problem is solved.
+
+July 2016. 10%
+Solr and Lucene instances available for the archives as of 2.
+
+4. Consultations about Exalead licensing have not been fruitful
+Need to decide whether to migrate Exalead, upgrade NCBI36 to a later schema version and use Solr, or use Unisearch.
+Status: 0%
+
+Description: don't know about it, enquire.
+
+Actions: what's this all about?
+
+5. Develop procedures for changing front end load-balancer configuration (for example redirects of old archives)
+Most of this will be done by ourselves but will need involvement of Sanger (and subsequently) EBI for the latest archive for the permalink
+
+Status: 1%
+
+Dan S has done some work with the current partial configuration.
+
+Actions: equire
+
+6. Transfer existing web stats from Sanger Piwik into EBI solution. 
+Possible options are:
+Direct transfer of stats into EBI
+Hosting an archive piwik server so we can continue to access the data
+
+Status: 0%?
+
+don't know nothing about
+
+Actions: enquire
+
+7. Redirect DNS to EBI archive servers
+Status: 0%
+
+will be done when confident about Embassy vApp behaviour
+
+8. Set up an SOP to create and host a new archive at EBI
+Status: 0%
+
+too early, need development on the vApp to have the necessary infrastructure in place
