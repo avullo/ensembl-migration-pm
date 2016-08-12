@@ -1,0 +1,62 @@
+- archives
+Luke to investigate why some images don't boot
+Steve transferring ensembldb files, can use them to load the archive DB server
+Problems with allocating more storage for the DB server
+
+- ftp
+mostly in Andy & Steve's hands, Steve has access to shadowland can do it
+
+- public mysql
+ensembldb.ensembl.org, a lot of DBs, Steve is copying data
+issue: old version of Mysql running there
+which ones are we going to updgrade to 5.6, and how
+if we can do for it, we have a procedure for the production DBs
+enquire DBA
+
+- production
+
+-- software running
+Have all the SW installed (on RH6)
+Need a reconciliation between RH6/7. Should meet with Andy
+Goal: making it as simple as possible for the teams.
+Making sure the teams have tested the pipelines 
+
+-- staging at the EBI
+First we move the live websites
+About when we move production, something to discuss with Dan S (timeline), what he needs for that to happen, should be in charge
+need to set a date and tell the other teams
+
+-- machines set up
+creating VMs, making sure people can use them. 
+11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
+ 
+- HW procurement
+Initial purchase HW ready
+At the moment there are enough resources 
+
+Next ensembl purchase
+
+- websites
+
+- datacentre shutdown
+email about details shutdown, use it to remind significant things to various teams
+
+web
+mostly taken care by Steve & C.
+
+ensembl-accounts DB?
+plan for the suicidal blades, new HW?
+possible disaster recovery plans - ongoing
+possible weekly slot with Steve to get updates?
+
+production
+staging3 too slow, back to staging1/2, systems have not yet come up with a solution
+Dan S to be probed about reverting back to non suicical after production ends most of its business
+Teams know which machines are on suicidal, make sure they run things on non faulty HW (mostly genebuilder), 
+
+- cvs archive
+need to figure out archive is here
+
+- RT migration
+Aim to migrate within the first two weeks of Sep
+Best practical asked to start developing plans for the migration
