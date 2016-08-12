@@ -1,15 +1,15 @@
 WP1 (Jan 2016 - April 2016): Migration of Ensembl 82 Archive to Embassy
 
-Status: 90%
+Status: 80%
 
-August 2016. 90%
+August 2016. 80%
 
 Shutdown: not really affected, does not involve anything with the suicidal blades apart from the web db servers which have to be migrated to EBI
 
 Actions: copy 81-85 (excl. 82) archive db data from EBI (ask Andy B & C.)
 
 1. Request machine VMWare image from WTSI for archive 82 VMs
-Status: done
+Status: 100%
 
 January 2016. 100%
 Request made
@@ -18,20 +18,23 @@ Request made
 
 Status: 95%
 
-Action: what does Steve mean by data hosting? enquire, request data to EBI DBAs
+Action: what does Steve mean by data hosting? enquire, request data, discuss transfer mode with EBI DBAs/Dan S
 
 3. Requisition disk (9Tb)  and setup an NFS server that can be accessed by all webserver VMs.
 Develop procedures to synchronise this with the /nfs volume at WTSI
 
-Status: 92%
+Status: 95%
+
+August 2016. 95%
+Allocated enough (?) storage (10TB) for the NFS server.
 
 ? 2016.
-Dan S properly configure NFS server
+Dan S configured NFS server
 
 ? 2016.
-NFS instance with minimal set up on Embassy vCloud. Minimal space available?
+NFS instance with minimal set up on Embassy vCloud. Minimal space available: 2TB (not enough storage quota)
 
-Actions: check current disk on NFS server attach more if necessary, enquire about synchronisation procedures
+Actions: enquire about synchronisation procedures
 
 4. Develop alternative to PFETCH
 Ensembl Genomes already have bindings to dbfetch and so may be a drop in replacement
@@ -54,11 +57,24 @@ both instances hosted in Embassy
 
 7. Choose and deploy server and service monitoring infrastructure (eg Nagios / Opsview)
 
+Status: 0%
+
+Actions: enquire
+
 8. Choose and deploy website use monitoring service, for example Piwik
+
+Status: 0%
+
+Action: enquire
 
 9. Develop control procedures (for example remotely updating and restarting servers) and ways for accessing server logs (debugging and DOS)
 
+Status: 0%
+
 10. Deploy happroxy based load balancer
+
+Status: ?
 
 11. Setup DNS redirect from WTSI to Embassy (sept2015.archive.ensembl.org and e82.ensembl.org)
 
+Status: 0%

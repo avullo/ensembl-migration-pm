@@ -1,22 +1,26 @@
 WP2 (April 2016 - August 2016): Hosting of all Archives in Embassy
 
-Status: 
+Status: 50%
 
 August 2016. 50%
 - Luke to investigate why some images don't boot on Embassy
 - Steve is trasferring ensembldb (public mirrors back to 24) to EBI warehouse space. Can be used to load archive db servers. Can taka a while
 - Dan S awaits problems with 82 boot solved
-- Alessandro's expanding MSQL DB servers storage via LVM, pb with fdisk
+- Alessandro's expanding MSQL DB servers storage via LVM, pb with resizing with >16TB
 
 Shutdown: not really affected, does not involve anything with the suicidal blades apart from the web db servers which have to be migrated to EBI
 
-Actions: enquiry about possible consequences of shutdown from this perspective, test fdisk, enquire about new deadline
+Actions: enquire about resizing, enquiry about possible consequences of shutdown from this perspective, enquire about new deadline
 
 1. Expand storage of MySQL servers for all archive archives and copy data from Sanger using  using new Globus endpoints
 Status: 60%
 
 August 2016. 60%
+BIG PROBLEM adding more space. Old kernel (3.13.0) on ext4 does not support resizing to >16TB. LVM LV has been extended to ~20TB but resizefs complains it's big.
+Added extra 10TB of storage to the MySQL server.
 Allocated 80TB on Embassy vCloud enough to accomodate 15 versions + exceptions (GRCh37)
+
+Actions: plan for an alternative resizing solution
 
 July 2016. 40%
 No globus endpoint. Transfer is occuring from Sanger farm directly into Embassy vCloud using ovftool with OVA images. Glitches with ovftool solved by Luke by installing a particular ovftool version.
@@ -24,7 +28,7 @@ No globus endpoint. Transfer is occuring from Sanger farm directly into Embassy 
 Pb: some images (e.g. web-82?) don't boot on Embassy vCloud. Luke's to investigate.
 fdisk the new disk partition (for LVM to recognise the new PV) allocates only 2GB
 
-Actions: enquire Luke. test LVM
+Actions: enquire Luke
 
 2. Migrate all running VM archives from WTSI to Embassy
 Status: 10%
