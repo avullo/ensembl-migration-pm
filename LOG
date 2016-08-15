@@ -1,24 +1,20 @@
-TODO
-15/08/2016.
-migration meeting
-contact Dan S about production/shutdown
-set up new main archive server
-Andy Y to be informed about genBlast, enquire about HW request form and FTP/CVS
+- Archives
+11/08 Reinstalling main archive server
+10/08 Steve transferring ensembldb files, can use them to load the archive DB server
+08/08 Luke to investigate why some images don't boot
 
-- archives
-Luke to investigate why some images don't boot
-Steve transferring ensembldb files, can use them to load the archive DB server
-Problems with allocating more storage for the DB server
 
-- ftp
-mostly in Andy & Steve's hands, Steve has access to shadowland can do it
+- FTP
+mostly in Andy & Steve's hands, Steve has access to shadowland, can do it
 
-- public mysql
-ensembldb.ensembl.org, a lot of DBs, Steve is copying data
+- Public mysql
+ensembldb.ensembl.org, a lot of DBs
 issue: old version of Mysql running there
 which ones are we going to updgrade to 5.6, and how
 if we can do for it, we have a procedure for the production DBs
 enquire DBA
+
+10/08 Steve transferring ensembldb files using shadowland (EBI warehouse)
 
 - production
 
@@ -65,5 +61,5 @@ Teams know which machines are on suicidal, make sure they run things on non faul
 need to figure out archive is here
 
 - RT migration
-Aim to migrate within the first two weeks of Sep
+aim to migrate within the first two weeks of Sep
 Best practical asked to start developing plans for the migration
