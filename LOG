@@ -49,11 +49,13 @@ email about details shutdown, use it to remind significant things to various tea
 
 web
 mostly taken care by Steve & C.
-
-ensembl-accounts DB?
-plan for the suicidal blades, new HW?
 possible disaster recovery plans - ongoing
 possible weekly slot with Steve to get updates?
+
+15/08 
+users/tools DB should be ready in one week/before shutdown at most (Harpreet to be probed in time)
+web servers on suicidal blades should be ok, can use old/new HW (how?) and recreate services easily(?)
+AWS-EBI VPN (for accounts) working 
 
 production
 staging3 too slow, back to staging1/2, systems have not yet come up with a solution
