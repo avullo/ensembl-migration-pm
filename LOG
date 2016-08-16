@@ -1,11 +1,41 @@
 - Archives
-11/08 Reinstalling main archive server
-10/08 Steve transferring ensembldb files, can use them to load the archive DB server
+16/08 Reinstalled main archive servers, expanded storage (mart server also)
+10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move?
 08/08 Luke to investigate why some images don't boot
-
+07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
 
 - FTP
-mostly in Andy & Steve's hands, Steve has access to shadowland, can do it
+
+
+04/08 internal beta testing is now enabled for FTP, HTTP and RSYNC.
+
+For FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
+For HTTP: http://hh-ens-http-001.ebi.ac.uk
+For RSYNC: rsync://hh-ens-rsync-001/
+
+03/08 ensemblftp is now on the dedicated link to Sanger. once logged in you see two subfolders,
+
+ensemblorg -> on the EBI cluster /nfs/ftp/ensemblorg
+ensemblftp -> on the EBI cluster /nfs/ensemblftp  
+
+can start with transfers right now, can use aspera but need to perform a number of re-syncs of Sanger based FTP to EBI based FTP before we are sure the service is ready to go live. ascp can provide resuming and do some basic comparison of files (or full md5 if you need to) and move it across. Asier installing rsync or we do for aspera?
+
+setting up the FTP servers in London
+
+02/08 Need an FTP site for the mirrors (load flat files). 
+27/07 FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster.
+there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/)
+
+15/07 Proposed FTP layout
+75TB usable ftp space in London and Hinxton. One of them will be a read-only copy (ideally London). Can ingest data only to one (the read-write). ftp service will initially live in one location. They will be mirrored. There's no failover at the moment, semi-manual process.
+
+Data ingest in Hinxton
+Serving from London, ie. 2 load balanced ftp servers in london
+Mirror every hour
+No failover, no need to go too complicated here since this is a failover for files we need from FTP to run the website not for external users (?!)
+ftp.ensembl.org to point to LDC and ftp-ensembl.ebi.ac.uk to point to a HX FTP/HTTP server and manage the switchover manually.
+
+07/07 FTP will not migrate until later on in the year. We found out the current order lacked FTP space (an oversight). This is pending a meeting with Pete J @ EBI
 
 - Public mysql
 ensembldb.ensembl.org, a lot of DBs
@@ -14,7 +44,10 @@ which ones are we going to updgrade to 5.6, and how
 if we can do for it, we have a procedure for the production DBs
 enquire DBA
 
-10/08 Steve transferring ensembldb files using shadowland (EBI warehouse)
+10/08 Steve transferring ensembldb files using shadowland to EBI warehouse
+22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ.
+21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set.  This will reduce transfer time greatly.
+
 05/08 HW ready at EBI
 
 - production
@@ -24,6 +57,16 @@ Have all the SW installed (on RH6)
 Need a reconciliation between RH6/7. Should meet with Andy
 Goal: making it as simple as possible for the teams.
 Making sure the teams have tested the pipelines 
+
+26/06 the new /nfs/software is available on the cluster
+15/07 Disk requirements
+Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. Can use 'our share' of the 5PB Lustre just published.
+NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup), available next week
+An NFS area attached to HX farm at /nfs/software and an area made available under /nfs/software/ensembl with write access only to the user ensw, available next week
+
+Compute requirements
+Use 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is for that, has plenty of free cpu capacity.
+
 
 -- staging at the EBI
 First we move the live websites
@@ -35,12 +78,6 @@ creating VMs, making sure people can use them.
 11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
 
 05/08 HW ready at EBI
-
-- HW procurement
-Initial purchase HW ready
-At the moment there are enough resources 
-
-Next ensembl purchase
 
 - websites
 
@@ -62,9 +99,21 @@ staging3 too slow, back to staging1/2, systems have not yet come up with a solut
 Dan S to be probed about reverting back to non suicical after production ends most of its business
 Teams know which machines are on suicidal, make sure they run things on non faulty HW (mostly genebuilder), 
 
+13/07 The fall back position, of having master-slave databases at EBI rather than Galera, would suffice. For either of these we'd need connections to/from it for WTSI webservers, WTSI LSF, AWS webservers, and Embassy. 
+AWS: could be done with VPN
+Embassy: could be done with internal network connections(?)
+Sanger web/archive servers/LSF: shadowload (private) link (what's the difference with internal network?)
+07/07 The dedicated institute network 10G line for us is going well. How can we use this to transfer data rather than going via Globus?
+
+Shadowland: 
+Steve T: could use Shadowland for two distinct purposes (i) to connect Sanger LSF with EBI databases for the data production teams, and (ii) to allow Sanger webservers and web LSF to connect to EBI/HH databases to cope with the August downtime. 
+John B:  proposal was that machines in the Sanger LSF cluster would be able to access databases inside EBI (inside the Hinxton EBI network to be precise). There was no other purpose for the "shadowlands" link. What has been implemented can do just that. Machines in our 10.7.0.0/16 network can (subject to firewall rules) access machines in Sanger's 172.17.0.0/16 net.
+
 - cvs archive
 need to figure out archive is here
 
 - RT migration
 aim to migrate within the first two weeks of Sep
 Best practical asked to start developing plans for the migration
+
+07/07 Expected RT date is still early August. We are purchasing the consultancy
