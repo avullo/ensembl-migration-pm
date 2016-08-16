@@ -1,8 +1,18 @@
 22/08/2016.
 migration meeting
 contact Dan S about production/shutdown
+- we have?
+  - 100TB of clustered file system (lustre) attached to HX farm. Can use 'our share' of the 5PB Lustre just published
+  - 300TB of NFS/medium storage areas (longer term warehousing for lustre's processes backups)
+  - NFS area attached to HX farm (/nfs/software/ensembl ensw rw access only) for software installation (RH7)
+  - HW request form sent to request production HW
+- we need
+  - strategy for moving warehouse
+  - DB server move, version strategy? when, who, how?
+- timeline for migration, what he need for that to happen, should be in charge, need to set a date and tell the other teams
 
 17/08/2016.
+verify we have 300TB of NFS/medium storage for warehouse, mount where?
 contact Steve, ask catch up about shutdown (to become regular, eventually)
 - FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
 - ensembldb transfer going at full speed? ETA, how about nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
