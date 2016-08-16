@@ -5,8 +5,8 @@ contact Dan S about production/shutdown
 17/08/2016.
 contact Steve, ask catch up about shutdown (to become regular, eventually)
 - FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
-- ensembldb transfer going at full speed? ETA, public MySQL affected only by FTP for shutdown? transferred where?
-- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS, shadowland with Sanger, what else?, web servers (moved to non suicidal, , archives, FTP, public MySQL, shutdown temporary failover/long-term solutions
+- ensembldb transfer going at full speed? ETA, how about nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
+- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal, , archives, FTP, public MySQL, shutdown temporary failover/long-term solutions
 enquire Andy about: 
 - HW request form
 - FTP: rsync? must be at EBI for shutdown? (mirrors)
@@ -18,7 +18,7 @@ X expand mart server storage (13TB)
 X inform Andy about genBlast (redirect to Fergal)
 enquire Andy about HW request form and FTP/CVS (meeting at some point about RH6/7)
 X catch up with FTP migration details (e! next purchase thread, mainly)
-X probe Luke (give reasonable timeline). No reply
+X probe Luke (give reasonable timeline).
 
 15/08/2016.
 X migration meeting

@@ -1,5 +1,5 @@
 - Archives
-16/08 Reinstalled main archive servers, expanded storage (mart server also)
+16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown?
 10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move?
 08/08 Luke to investigate why some images don't boot
 07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
@@ -43,9 +43,9 @@ which ones are we going to updgrade to 5.6, and how
 if we can do for it, we have a procedure for the production DBs
 enquire DBA
 
-10/08 Steve transferring ensembldb files using shadowland to EBI warehouse
+10/08 Steve transferring ensembldb files using shadowland to EBI warehouse, will take?
 22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ.
-21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set.  This will reduce transfer time greatly.
+21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set.  This will reduce transfer time greatly (Paul Bevan)
 
 05/08 HW ready at EBI
 
