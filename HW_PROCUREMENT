@@ -1,0 +1,42 @@
+Initial purchase HW ready
+At the moment there are enough resources 
+
+14/07 Next ensembl purchase: put in a request to Pete J for the following
+
+- 50TB FTP in HH (with appropriate scale-up, need failover at HX)
+we'd like FTP to have as much uptime as possible (we load flat-files from the FTP site into many of our live tools).
+- 100TB lustre in HX (total usage ATMO is 43TB)
+- 300TB NFS in HX (replacing warehouse at Sanger currently at 200TB including the flat-file stores)
+- 500 CPU yrs farm processing (to be costed up)
+- /nfs/software mount to be made available to the HX farm (where I will install our software packages for farm processing to)
+
+Can satisfy the request now, necessary purchases can be done at a later time (before end of year).
+
+Detailed purchase requirements:
+
+FTP Requirements
+================
+
+1). FTP in HH (R/O) with space in HX (R/W). 75TB is perfect. Please go ahead with a 1 hour mirroring cycle as you suggested below. From what Mag says we can have this possibly by today? To confirm this will provide an FTP and HTTP server (see later for future near-term requirements)
+
+Disk Requirements
+=================
+
+2). Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm
+
+3). NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX
+
+4). An NFS area attached to HX farm at /nfs/software and an area made available under /nfs/software/ensembl with write access only to the user ensw
+
+Compute Requirements
+====================
+
+5). Farm compute supplement attached to HX farm. As we said before we use about 500 CPU years of compute on the Sanger farm. Can we have a rough costing of a set of nodes that may be able to deliver such a level of compute? If there's an algorithm we should apply to the Sanger compute to get a rough sensible figure back to you
+
+Future FTP Requirements
+=======================
+
+6). The current ftp.ensembl.org is available over an rsync connection. We believe a number of our users currently use rsync as their transfer protocol. In addition we believe there is interest in accessing our data over globus grid ftp. Is there a possibility of having our LDC FTP disks made available over these protocols in addition to the FTP and HTTP servers currently requested? 
+
+
+07/07 Hardware is on-site and being brought into production. Awaiting 4 weeks for this
