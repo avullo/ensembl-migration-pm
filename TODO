@@ -6,7 +6,7 @@ contact Dan S about production/shutdown
 contact Steve, ask catch up about shutdown (to become regular, eventually)
 - FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
 - ensembldb transfer going at full speed? ETA, how about nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
-- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal, , archives, FTP, public MySQL, shutdown temporary failover/long-term solutions
+- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal then recreated? can we wait the overhead, has been tested?), archives (remain at Sanger, access user/hive at EBI), FTP (will be moved, also for mirrors, deadline?), public MySQL (?), shutdown temporary failover/long-term solutions
 enquire Andy about: 
 - HW request form
 - FTP: rsync? must be at EBI for shutdown? (mirrors)
