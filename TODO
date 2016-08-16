@@ -4,7 +4,13 @@ contact Dan S about production/shutdown
 
 17/08/2016.
 contact Steve, ask catch up about shutdown (to become regular, eventually)
-enquire Andy about HW request form and FTP/CVS (meeting at some point about RH6/7)
+- FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
+- ensembldb transfer going at full speed? ETA, public MySQL affected only by FTP for shutdown? transferred where?
+- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS, shadowland with Sanger, what else?, web servers (moved to non suicidal, , archives, FTP, public MySQL, shutdown temporary failover/long-term solutions
+enquire Andy about: 
+- HW request form
+- FTP: rsync? must be at EBI for shutdown? (mirrors)
+- meet at some point about RH6/7
 
 16/08/2016.
 X finish set up new archive server (load data, set networking)
