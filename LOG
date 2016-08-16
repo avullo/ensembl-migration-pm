@@ -6,7 +6,6 @@
 
 - FTP
 
-
 04/08 internal beta testing is now enabled for FTP, HTTP and RSYNC.
 
 For FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
@@ -22,7 +21,7 @@ can start with transfers right now, can use aspera but need to perform a number 
 
 setting up the FTP servers in London
 
-02/08 Need an FTP site for the mirrors (load flat files). 
+02/08 Need an FTP site for the mirrors (load flat files from FTP into live tools), or could have a reduced level of service for these (shutdown) 
 27/07 FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster.
 there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/)
 
@@ -86,13 +85,14 @@ email about details shutdown, use it to remind significant things to various tea
 
 web
 mostly taken care by Steve & C.
-possible disaster recovery plans - ongoing
+possible disaster recovery plans - mail AndyB 03-04/08
 possible weekly slot with Steve to get updates?
 
 15/08 
 users/tools DB should be ready in one week/before shutdown at most (Harpreet to be probed in time)
 web servers on suicidal blades should be ok, can use old/new HW (how?) and recreate services easily(?)
 AWS-EBI VPN (for accounts) working 
+mirror websites have a dependency on our FTP site so we need to have a strategy for making that data that available to them during the Sanger datacenter outage
 
 production
 staging3 too slow, back to staging1/2, systems have not yet come up with a solution
@@ -102,7 +102,7 @@ Teams know which machines are on suicidal, make sure they run things on non faul
 13/07 The fall back position, of having master-slave databases at EBI rather than Galera, would suffice. For either of these we'd need connections to/from it for WTSI webservers, WTSI LSF, AWS webservers, and Embassy. 
 AWS: could be done with VPN
 Embassy: could be done with internal network connections(?)
-Sanger web/archive servers/LSF: shadowload (private) link (what's the difference with internal network?)
+Sanger web/archive servers/LSF: shadowland (dedicated private) link (what's the difference with internal network?)
 07/07 The dedicated institute network 10G line for us is going well. How can we use this to transfer data rather than going via Globus?
 
 Shadowland: 
