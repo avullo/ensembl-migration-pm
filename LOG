@@ -1,4 +1,5 @@
 - Archives
+17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime
 16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown?
 10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move? Mark Flint (12/07): possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
 08/08 Luke to investigate why some images don't boot
@@ -46,8 +47,8 @@ if we can do for it, we have a procedure for the production DBs
 enquire DBA
 
 10/08 Steve transferring ensembldb files using shadowland to EBI warehouse, will take?
-22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ.
-21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set.  This will reduce transfer time greatly (Paul Bevan)
+22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ, will take about 2.5 - 3 weeks
+21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set. This will reduce transfer time greatly (Paul Bevan)
 
 05/08 HW ready at EBI
 
