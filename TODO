@@ -1,9 +1,14 @@
 22/08/2016.
 migration meeting
 contact Dan S about production/shutdown
+- shutdown from the perspective of production
+  - 86 work will be finished, genebuilders might be running some pipeline, they're aware they have to use non-faulty HW
+  - we're back to staging 1/2, be sure to go back to non-suicidal before shutdown
+  - Micheal raised a point: storage is not affected, but how to recover the mount points from faulty machines in case they don't survive? Should we take note of these?
+  - lustre warehouse not affected , pipelines can continue safely
 - we have?
-  - 100TB of clustered file system (lustre) attached to HX farm. Can use 'our share' of the 5PB Lustre just published
-  - 300TB of NFS/medium storage areas (longer term warehousing for lustre's processes backups)
+  - 100TB of clustered file system (lustre, total usage ATMO is 43TB) attached to HX farm. Can use 'our share' of the 5PB Lustre just published
+  - 300TB of NFS/medium storage areas (longer term warehousing for lustre's processes backups, currently at 200TB including the flat-file stores)
   - NFS area attached to HX farm (/nfs/software/ensembl ensw rw access only) for software installation (RH7)
   - HW request form sent to request production HW
 - we need
@@ -16,7 +21,7 @@ verify we have 300TB of NFS/medium storage for warehouse, mount where?
 contact Steve, ask catch up about shutdown (to become regular, eventually)
 - FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
 - ensembldb transfer going at full speed? ETA, how about nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
-- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal then recreated? can we wait the overhead, has been tested?), archives (remain at Sanger, access user/hive at EBI), FTP (will be moved, also for mirrors, deadline?), public MySQL (?), shutdown temporary failover/long-term solutions
+- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal then recreated? can we wait the overhead, has been tested?), archives (remain at Sanger, access user/hive at EBI via shadowland?), FTP (will be moved, also for mirrors, deadline?), public MySQL (?), shutdown temporary failover/long-term solutions
 enquire Andy about: 
 - HW request form
 - FTP: rsync? must be at EBI for shutdown? (mirrors)
