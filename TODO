@@ -16,13 +16,16 @@ contact Dan S about production/shutdown
   - DB server move, version strategy? when, who, how?
 - timeline for migration, what he need for that to happen, should be in charge, need to set a date and tell the other teams
 
-17/08/2016.
-verify we have 300TB of NFS/medium storage for warehouse, mount where?
-contact Steve, ask catch up about shutdown (to become regular, eventually)
+18/08/2016.
+meet Steve in the morning (to become regular, eventually)
 - FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
-- ensembldb transfer going at full speed? ETA, how about nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
+- ensembldb transfer going at full speed? ETA, how about warehouse/nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
 - shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal then recreated? can we wait the overhead, has been tested?), archives (remain at Sanger, access user/hive at EBI via shadowland?), FTP (will be moved, also for mirrors, deadline?), public MySQL (?), shutdown temporary failover/long-term solutions
+
+17/08/2016.
+X contact Steve, ask catch up about shutdown 
 enquire Andy about: 
+- verify we have 300TB of NFS/medium storage for warehouse, mount where?
 - HW request form
 - FTP: rsync? must be at EBI for shutdown? (mirrors)
 - meet at some point about RH6/7
