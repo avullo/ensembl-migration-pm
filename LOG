@@ -1,12 +1,12 @@
 - Archives
-17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime
-16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown?
+17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
+16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown
 10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move? Mark Flint (12/07): possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
 08/08 Luke to investigate why some images don't boot
 07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
 
 - FTP
-
+17/08 shutdown: affects mirrors by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts, might be bypassed, how?
 04/08 internal beta testing is now enabled for FTP, HTTP and RSYNC.
 
 For FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
@@ -20,7 +20,7 @@ Andy wants rsync access to avoid ascp or FTP transfer
 ensemblorg -> on the EBI cluster /nfs/ftp/ensemblorg
 ensemblftp -> on the EBI cluster /nfs/ensemblftp  
 
-can start with transfers right now, can use aspera but need to perform a number of re-syncs of Sanger based FTP to EBI based FTP before we are sure the service is ready to go live. ascp can provide resuming and do some basic comparison of files (or full md5 if you need to) and move it across. Asier installing rsync or we do for aspera?
+can start with transfers right now, can use aspera but need to perform a number of re-syncs of Sanger based FTP to EBI based FTP before we are sure the service is ready to go live. ascp can provide resuming and do some basic comparison of files (or full md5 if you need to) and move it across. Asier installing rsync or we go for aspera?
 
 setting up the FTP servers in London
 
@@ -65,6 +65,7 @@ Making sure the teams have tested the pipelines
 Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. Can use 'our share' of the 5PB Lustre just published.
 NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup), available next week
 An NFS area attached to HX farm at /nfs/software and an area made available under /nfs/software/ensembl with write access only to the user ensw, available next week
+warehouse storage being transferred
 
 Compute requirements
 Use 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is for that, has plenty of free cpu capacity.
@@ -77,9 +78,10 @@ need to set a date and tell the other teams
 
 -- machines set up
 creating VMs, making sure people can use them. 
-11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
 
-05/08 HW ready at EBI
+17/08 form submitted, will likely be available after shutdown. warehouse/NFS data transferred soon
+11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
+05/08 HW ready at EBI (production/web), FTP/farm will be covered soon by a late purchase
 
 - websites
 
