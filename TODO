@@ -18,6 +18,7 @@ contact Dan S about production/shutdown
 
 18/08/2016
 ==========
+prob Dan about production meeting, seems he responds to email
 meet Steve in the morning (to become regular, eventually), shutdown recap et al.
 - ensembldb transfer going at full speed or DMZ 1G link? ETA, how about warehouse/nfs data move? Mirrors affected only by FTP for shutdown? transferred where? 
 - FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when?
@@ -27,12 +28,13 @@ meet Steve in the morning (to become regular, eventually), shutdown recap et al.
 - anything else?
 - shutdown from web perspective: 
   - architecture coping shutdown: 
+    - shadowland is for webservers (incl archives)/web LSF to connect to user/hive dbs at EBI, anything else (apart from data transfer), ready?
     - ensembl user/hive dbs (VPN with AWS OK, shadowland/internal network links? for archives/web servers). why was it decided to transfer them first before shutdown, because of suicidal blades? temporary disaster recovery architecture with HH failover
     - web servers: some are on suicidal blades, what happens if something goes wrong? web app components transferred to non suicidal then recreated? can we wait the overhead, has been tested?
     - archives: remain at Sanger, access user/hive at EBI via shadowland?
-    - FTP won't be moved before fall, 
+    - FTP won't be moved before fall: steps?
     - public MySQL: where are they, are they safe? deadline for migration, what need to be done for that to happen?
-    - mirrors (AWS?): affected by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts
+    - mirrors (AWS?): affected by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts, can it be bypassed/done elsewhere wo FTP (strategy?) or do we accept service degradation
   - disaster recovery architecture long-term solutions
 
 migration meeting with Sanger: catch up on how the data and VM migration is going and whether there are any issues
@@ -40,7 +42,9 @@ migration meeting with Sanger: catch up on how the data and VM migration is goin
 - FTP: internal beta testing enabled for FTP/HTTP/RSYNC, data move by rsync, when?
 - HW request by form for production machines, likely to be available just after shutdown, need to know precise dates when production moves (will talk soon to coordinator), pipelines almost fully tested, long-term software environment almost ready, farm/warehouse filesystems ready and accepting/receiving data 
 - archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to suggest solution (12/07)
-- web mainly involved in shutdown: should be almost safe (user/hive at EBI ready? AWS VPN OK, Sanger VPN OK?), data transfer via shadowland (slow), nothing can be done about link speed?
+- web mainly involved in shutdown: should be almost safe (user/hive at EBI ready? AWS VPN OK, Sanger VPN OK?), data transfer via shadowland (slow)T, nothing can be done about link speed?
+
+logs/milestones by WP: start
 
 17/08/2016
 X contact Steve, ask catch up about shutdown 
