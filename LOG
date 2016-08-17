@@ -1,6 +1,6 @@
 - Archives
 16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown?
-10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move?
+10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move? Mark Flint (12/07): possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
 08/08 Luke to investigate why some images don't boot
 07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
 
@@ -11,6 +11,8 @@
 For FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
 For HTTP: http://hh-ens-http-001.ebi.ac.uk
 For RSYNC: rsync://hh-ens-rsync-001/
+
+Andy wants rsync access to avoid ascp or FTP transfer
 
 03/08 ensemblftp is now on the dedicated link to Sanger. once logged in you see two subfolders,
 
@@ -57,7 +59,7 @@ Need a reconciliation between RH6/7. Should meet with Andy
 Goal: making it as simple as possible for the teams.
 Making sure the teams have tested the pipelines 
 
-26/06 the new /nfs/software is available on the cluster
+26/07 the new /nfs/software is available on the cluster
 15/07 Disk requirements
 Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. Can use 'our share' of the 5PB Lustre just published.
 NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup), available next week
