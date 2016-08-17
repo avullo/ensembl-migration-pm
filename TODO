@@ -17,25 +17,37 @@ contact Dan S about production/shutdown
 - timeline for migration, what he need for that to happen, should be in charge, need to set a date and tell the other teams
 
 18/08/2016
-meet Steve in the morning (to become regular, eventually)
-- FTP: who/when do the transfer, test FTP/HTTP/rsync servers?
-- ensembldb transfer going at full speed? ETA, how about warehouse/nfs data move? public MySQL affected only by FTP for shutdown? transferred where?
-- shutdown from web perspective: user/hive dbs at EBI (VPN with AWS OK, shadowland with Sanger OK?, internal network links? DMZ?, what else?, web servers (moved to non suicidal then recreated? can we wait the overhead, has been tested?), archives (remain at Sanger, access user/hive at EBI via shadowland?), FTP (will be moved, also for mirrors, deadline?), public MySQL (?), shutdown temporary failover/long-term solutions
-
+==========
+meet Steve in the morning (to become regular, eventually), shutdown recap et al.
+- ensembldb transfer going at full speed or DMZ 1G link? ETA, how about warehouse/nfs data move? Mirrors affected only by FTP for shutdown? transferred where? 
+- FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when?
+- warehouse: transfer follows after ensembldb, when/who/where? 
+- NFS data move: who/when/how?
+- projects.ensembl.org available as tarball, what to do?
+- anything else?
+- shutdown from web perspective: 
+  - architecture coping shutdown: 
+    - ensembl user/hive dbs (VPN with AWS OK, shadowland/internal network links? for archives/web servers). why was it decided to transfer them first before shutdown, because of suicidal blades? temporary disaster recovery architecture with HH failover
+    - web servers: some are on suicidal blades, what happens if something goes wrong? web app components transferred to non suicidal then recreated? can we wait the overhead, has been tested?
+    - archives: remain at Sanger, access user/hive at EBI via shadowland?
+    - FTP won't be moved before fall, 
+    - public MySQL: where are they, are they safe? deadline for migration, what need to be done for that to happen?
+    - mirrors (AWS?): affected by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts
+  - disaster recovery architecture long-term solutions
 
 migration meeting with Sanger: catch up on how the data and VM migration is going and whether there are any issues
-- transferring ensembldb, status? can be used to load the archive DB
-- FTP: internal beta testing enabled for FTP/HTTP/RSYNC, data move?
-- HW request form for production machines?
-- archives: data moving (81-85 left out at the moment?) Pbs. with 67 instance, Luke to update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one
+- transferring ensembldb, status? can be used to load the archive DB, public MySQL at EBI when available?
+- FTP: internal beta testing enabled for FTP/HTTP/RSYNC, data move by rsync, when?
+- HW request by form for production machines, likely to be available just after shutdown, need to know precise dates when production moves (will talk soon to coordinator), pipelines almost fully tested, long-term software environment almost ready, farm/warehouse filesystems ready and accepting/receiving data 
+- archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to suggest solution (12/07)
+- web mainly involved in shutdown: should be almost safe (user/hive at EBI ready? AWS VPN OK, Sanger VPN OK?), data transfer via shadowland (slow), nothing can be done about link speed?
 
 17/08/2016
-==========
 X contact Steve, ask catch up about shutdown 
-enquire Andy about: 
-- HW request form
-- verify we have 300TB of NFS/medium storage for warehouse, mount where?
-- FTP: rsync? must be at EBI for shutdown? (mirrors), internal beta testing, who does what and when? data move?
+X enquire Andy about: 
+- HW request form (done last week, will likely have after shutdown)
+- verify we have 300TB of NFS/medium storage for warehouse (yes, Steve is transferring ensembldb to it)
+- FTP: rsync? must be at EBI for shutdown? (mirrors), internal beta testing, who does what and when? data move? need a decision
 - meet at some point about RH6/7
 
 16/08/2016
