@@ -21,7 +21,7 @@ contact Dan S about production/shutdown
 ==========
 X prob Dan about production meeting, seems he responds to email. Meet on Monday via Slack
 meet Steve in the morning (to become regular, eventually), shutdown recap et al.
-- ensembldb transfer not going at full speed, DMZ 1G link. ETA? martdb missing
+- ensembldb transfer not going at full speed, DMZ 1G link. ETA: middle next week, martdb missing (asked MB 22TB data)
 - FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when? Andy's in charge for that
 - warehouse: transfer follows after ensembldb, when/who/where? what need to be done, cleaning?
 - NFS data move: who/when/how?
@@ -39,17 +39,21 @@ meet Steve in the morning (to become regular, eventually), shutdown recap et al.
     mirrors have a copy of some of the required data (AceDB/VCF files), missing BAM & C. files from regulation/genebuild. Service will be available, graceful degration
   - disaster recovery architecture long-term solutions
 
-migration meeting with Sanger: catch up on how the data and VM migration is going and whether there are any issues
-- archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to propose solution (12/07)
+X migration meeting with Sanger: catch up on how the data and VM migration is going and whether there are any issues
+- archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to propose solution (12/07), can possibly use shadowland
+  54/67 will need to migrate together since they share a database
+Luke's on holiday, Paul to contact him about our issues
 - FTP: 75TB storage available, internal beta testing enabled for FTP/HTTP/RSYNC, testing/data move by rsync commence soon
-- public MySQL: transferring ensembldb, status? migration timeline: two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 at EBI, keep MySQL 4. Aiming at e!86 (Sep 20)
-  martdb not yet transferred (need to contact martin burton)
+- public MySQL: transferring ensembldb, 31/54TB done, ETA: middle next week, migration timeline: two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 at EBI, keep MySQL 4. Aiming at e!86 (Sep 20)
+  martdb not yet transferred (contacted Martin Burton), need to copy the same way (22TB)
 - production:
   - HW request by form for production machines, likely to be available just after shutdown, need to know precise dates when production moves (will talk soon to coordinator)
-  - pipelines almost fully tested
+  - pipeline testing going on: core (~100%), variation (70%), regulation (0%), genebuild (10-25%?), compara ?
   - long-term software environment almost ready
   - farm/warehouse filesystems ready and accepting/receiving data, warehouse data transfer follows ensembldb
-- web mainly involved in shutdown: should be almost safe (AWS VPN OK, Sanger VPN OK, user/hive at EBI ready by Monday), web to send a list of webservers which will require attention during shutdown
+- web mainly involved in shutdown: should be almost safe (AWS VPN OK, Sanger VPN OK, user/hive at EBI ready by Monday), web to send a list of webservers which will require attention during shutdown (Helen Brimber)
+frontend (Sawston building), www.ensembl.org presents a page with links to the mirrors
+once machines are ready, can start switching DNS
 
 X logs/milestones by WP: start
 
