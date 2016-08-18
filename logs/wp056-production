@@ -16,6 +16,12 @@ need to set a date and tell the other teams
 -- machines set up
 creating VMs, making sure people can use them. 
 
+18/08 pipeline tests status:
+- core 100%
+- variaiton 70%
+- regulation 0%
+- genebuild 10-25%?
+- compara ?
 
 17/08 form submitted, will likely be available after shutdown. warehouse data transferred soon (follows ensembldb)
 
