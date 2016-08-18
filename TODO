@@ -6,23 +6,24 @@ contact Dan S about production/shutdown
   - we're back to staging 1/2, be sure to go back to non-suicidal before shutdown
   - Micheal raised a point: storage is not affected, but how to recover the mount points from faulty machines in case they don't survive? Should we take note of these?
   - lustre warehouse not affected , pipelines can continue safely
-- we have?
+- we have
   - 100TB of clustered file system (lustre, total usage ATMO is 43TB) attached to HX farm. Can use 'our share' of the 5PB Lustre just published
   - 300TB of NFS/medium storage areas (longer term warehousing for lustre's processes backups, currently at 200TB including the flat-file stores)
   - NFS area attached to HX farm (/nfs/software/ensembl ensw rw access only) for software installation (RH7)
-  - HW request form sent to request production HW
+  - HW request form sent to request production HW, available after shutdown
 - we need
   - strategy for moving warehouse
-  - DB server move, version strategy? when, who, how?
-- timeline for migration, what he need for that to happen, should be in charge, need to set a date and tell the other teams
+  - DB server move, cleaning first?, version strategy? when, who, how?
+  - communicate list of servers which will require attention at reboot (Helen ? from ISG deals with e!)
+- timeline for migration, what he needs for that to happen, should be in charge, need to set a date and tell the other teams
 
 18/08/2016
 ==========
-prob Dan about production meeting, seems he responds to email
+X prob Dan about production meeting, seems he responds to email. Meet on Monday via Slack
 meet Steve in the morning (to become regular, eventually), shutdown recap et al.
-- ensembldb transfer going at full speed or DMZ 1G link? ETA, how about warehouse/nfs data move? Mirrors affected only by FTP for shutdown? transferred where? 
-- FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when?
-- warehouse: transfer follows after ensembldb, when/who/where? 
+- ensembldb transfer not going at full speed, DMZ 1G link. ETA? martdb missing
+- FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when? Andy's in charge for that
+- warehouse: transfer follows after ensembldb, when/who/where? what need to be done, cleaning?
 - NFS data move: who/when/how?
 - projects.ensembl.org available as tarball, what to do?
 - anything else?
@@ -33,18 +34,24 @@ meet Steve in the morning (to become regular, eventually), shutdown recap et al.
     - web servers: some are on suicidal blades, what happens if something goes wrong? web app components transferred to non suicidal then recreated? can we wait the overhead, has been tested?
     - archives: remain at Sanger, access user/hive at EBI via shadowland?
     - FTP won't be moved before fall: steps?
-    - public MySQL: where are they, are they safe? deadline for migration, what need to be done for that to happen?
+    - public MySQL: where are they, are they safe? deadline for migration, what need to be done for that to happen? old version of Mysql running there, which ones are we going to updgrade to 5.6, and how. if we can do for it, we have a procedure for the production DBs
     - mirrors (AWS?): affected by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts, can it be bypassed/done elsewhere wo FTP (strategy?) or do we accept service degradation
+    mirrors have a copy of some of the required data (AceDB/VCF files), missing BAM & C. files from regulation/genebuild. Service will be available, graceful degration
   - disaster recovery architecture long-term solutions
 
 migration meeting with Sanger: catch up on how the data and VM migration is going and whether there are any issues
-- transferring ensembldb, status? can be used to load the archive DB, public MySQL at EBI when available?
-- FTP: internal beta testing enabled for FTP/HTTP/RSYNC, data move by rsync, when?
-- HW request by form for production machines, likely to be available just after shutdown, need to know precise dates when production moves (will talk soon to coordinator), pipelines almost fully tested, long-term software environment almost ready, farm/warehouse filesystems ready and accepting/receiving data 
-- archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to suggest solution (12/07)
-- web mainly involved in shutdown: should be almost safe (user/hive at EBI ready? AWS VPN OK, Sanger VPN OK?), data transfer via shadowland (slow)T, nothing can be done about link speed?
+- archives: data moving (ensembldb), 81-85 on hold at the moment (DBA vacation) Pbs. with 67 instance, Luke to further investigate and update on Friday, Dan suggests rsync directories out of running instance to blank one. Asked archive immediately before/after that one, no reply. NFS data move? Mark was to propose solution (12/07)
+- FTP: 75TB storage available, internal beta testing enabled for FTP/HTTP/RSYNC, testing/data move by rsync commence soon
+- public MySQL: transferring ensembldb, status? migration timeline: two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 at EBI, keep MySQL 4. Aiming at e!86 (Sep 20)
+  martdb not yet transferred (need to contact martin burton)
+- production:
+  - HW request by form for production machines, likely to be available just after shutdown, need to know precise dates when production moves (will talk soon to coordinator)
+  - pipelines almost fully tested
+  - long-term software environment almost ready
+  - farm/warehouse filesystems ready and accepting/receiving data, warehouse data transfer follows ensembldb
+- web mainly involved in shutdown: should be almost safe (AWS VPN OK, Sanger VPN OK, user/hive at EBI ready by Monday), web to send a list of webservers which will require attention during shutdown
 
-logs/milestones by WP: start
+X logs/milestones by WP: start
 
 17/08/2016
 X contact Steve, ask catch up about shutdown 
