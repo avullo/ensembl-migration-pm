@@ -1,0 +1,49 @@
+Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
+
+17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
+
+16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown
+
+10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move?
+
+08/08 Luke to investigate why some images don't boot
+
+12/07 NFS data move (Mark Flint): possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
+
+07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
+
+05/07 The 70TB of Embassy storage that Ensembl have purchased is now ready. 
+
+24/05 No progress yet on the requested archive images.
+Problems with uploading OVA images from the Sanger farm. This wasn't an issue with the first attempt using archive 82. 
+
+20/04 Sanger is setting up requested archive (36/67) images.
+
+19/04 Security based access to Embassy trial available. Can only ssh in via "bastion" host. From that machine there is password less ssh, via a key stored there, to any other machine. If necessary for rsync, scp, etc, we can use port forwarding via the bastion. Now moving onto logging and reporting in this package next.
+
+We will not get any extra disc storage for Embassy in the short term. There is none available on the architecture our VMs are on and we will only have more to move our instances to when we've had hardware procured. We will therefore be a bit longer getting into production with this (there's not enough nfs even for the 82 archive).
+
+10/04 Web team reasonably confident embassy migration approach will work for e71 onwards. At the moment, they don't know about the two older ones (e54, e67).
+Requested to Sanger VM OVAs for Ensembl 54 and 67 archives.
+
+08/04 Archive 82 successfully set up on Embassy. Checked the basic pages, sessions, search and biomart, but not yet looked at the more obscure pages which rely extensively on helper applications, nor at flat files.
+
+After archive 82 successful set up, the plan is try to focus on more "target" archives with different operating systems.
+
+Ensembl Version 54 (called ensembl-archive-36), is an etch machine(!) and so is only six years past the date when debian stopped providing security updates. As well as migrating this to EBI, it might be worth us seeing if we can push this forward at least a release or so. It might not be easy, but worth trying. We're only exposing port 80, so we mainly need to make sure httpd and nginx are watertight (most, but not all of the attack surface). Ensembl version 67 (ensembl-archive-67) is a lenny box. Also worth a go with. (A mere four years without security updates).
+From 73 onwards we are on ubuntu precise, which isn't EOL for another year yet, the same as the existing trial of 82.
+
+31/03 Sanger has provided updates for the archive server. Previous image was still containing traces of Sanger-based configuration.
+Problems uploading the new image or any image from Sanger using ovftool ("Error: cURL error: Couldn't connect to server"). Requested help to Sanger but cannot help at the moment.
+
+17/03 Completed creation and partial configuration of the archive 82 servers: MySQL servers for species/mart, NFS server, www and search instances. 82 databases copied by DB team from mysql-ensembl-mirror/mysql-ensembl-mart-mirror EBI mirrors.
+Not enough space for a complete configuration capable of hosting all archives, e.g. db servers contains just enough space for a release. NFS server runs on 2TB, needs ~12TB.
+
+10/02 Successfully upload Solr search instance OVA into Embassy from Sanger using ovftool. VM quite big (~650GB).
+
+04/02 Solr search instance OVA available to upload. Image is big (~200GB), impractical to upload from laptop.
+
+02/02 Successfully imported test OVA as vApp template into vCloud director on Embassy. Small image (~8GB), unfolds into 46GB disk VM. Used laptop, need to do that from Sanger.
+
+28/01 Sanger has made the test OVA for the archive 82 server ready.
+

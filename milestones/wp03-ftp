@@ -1,0 +1,21 @@
+Objective: migrate by fall 2016
+
+August 2016: 50%
+- internal beta testing available for FTP/HTTP/Rsync
+- can start transfering data
+
+July 2016: 25%
+- FTP layout agreement with systems (mirroring, manual failover)
+- requisitioned space (75TB, covered by late purchase), mount point available on EBI cluster
+
+April 2016: 5%
+- test transfer release 82/83 FTP data
+
+February 2016: 2%
+- tested FTP transfer, aspera copy
+
+January 2016: 1%
+- 5TB volume to test data transfer and backup volume created, mount point/access from Sanger server enabled
+
+September 2015: 0%
+- pilot study into move starts

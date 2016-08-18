@@ -1,0 +1,14 @@
+issue: old version of Mysql running there
+which ones are we going to updgrade to 5.6, and how
+if we can do for it, we have a procedure for the production DBs
+enquire DBA
+
+10/08 Steve transferring ensembldb files using shadowland to EBI warehouse, will take?
+
+22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ, will take about 2.5 - 3 weeks
+
+21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set. This will reduce transfer time greatly (Paul Bevan)
+
+05/08 HW from initial purchase ready at EBI, need to send form for request
+
+15/07 300TB warehouse ready, can receive ensembldb files from Sanger
