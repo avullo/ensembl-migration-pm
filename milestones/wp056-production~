@@ -9,9 +9,6 @@ August 2016: 70%
 - pipelines tested (RH6):
   - core 100%
   - variation 70%
-  - regulation 0%
-  - genebuild 10-25%?
-  - compara no testing, wait RH7 (software is main issue)
 
 July 2016: 50%
 - RH7 software area ready

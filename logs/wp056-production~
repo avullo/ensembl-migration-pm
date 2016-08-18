@@ -18,7 +18,7 @@ creating VMs, making sure people can use them.
 
 18/08 pipeline tests status (RH6):
 - core 100%
-- variation 70%
+- variaiton 70%
 - regulation 0%
 - genebuild 10-25%?
 - compara no tests, wait RH7 (software is main issue)

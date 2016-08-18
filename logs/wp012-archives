@@ -1,5 +1,7 @@
 Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
 
+18/08 Luke's on holiday, Paul to contact him about our issues next week. NFS data move? Mark was to propose solution (12/07), can possibly use shadowland like ensembldb
+
 17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
 
 16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown
