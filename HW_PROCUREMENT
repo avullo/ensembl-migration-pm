@@ -1,5 +1,9 @@
 15/08 HW request form (production servers) sent, likely to be available after shutdown
+
+05/08 HW brought into production
+
 15/07 FTP/farm/warehouse HW ready: some already available, some covered by late purchase
+
 14/07 Next ensembl purchase for FTP/farm/warehouse: put in a request to Pete J for the following
 
 - 50TB FTP in HH (with appropriate scale-up, need failover at HX)
@@ -40,4 +44,26 @@ Future FTP Requirements
 6). The current ftp.ensembl.org is available over an rsync connection. We believe a number of our users currently use rsync as their transfer protocol. In addition we believe there is interest in accessing our data over globus grid ftp. Is there a possibility of having our LDC FTP disks made available over these protocols in addition to the FTP and HTTP servers currently requested? 
 Asier? working on it
 
-07/07 Hardware is on-site and being brought into production. Awaiting 4 weeks for this. Discovered last purchase does not cover some farm/FTP 
+07/07 Hardware is on-site and being brought into production. Awaiting 4 weeks for this.
+
+05/07 The 70TB of Embassy storage that Ensembl have purchased is now ready. 
+
+29/06 HW procurement is well ahead, hypevisor CPU/RAM resources available. Storage expected to become available in one week, after that it takes 4-5 weeks for the complete set up.
+HW provision does not include the requested storage for FTP (~100TB) and requirements for shared NFS capacity/cluster usage, which will be covered when the Sanger grant starts (Oct). Need to speak with Pete J to find solution
+
+11/05 Everything's approved in writing, proceed with the order
+
+09/05 WT gives Paul F a verbal and emailed ok regarding the budget plan which is confirmed £250K from the Ensembl grant and the remainder from EMBL funds.
+
+06/05 We have quotes required for HW purchases to satisfy the VM needs. This excludes the requirements for shared NFS capacity and cluster usage which are to be confirmed by Ensembl team.
+There are two purchases required for VM needs, one for the hypervisors (servers) and one for the storage. Need to pass on delivery details to whomever places the orders.
+
+19/04 System team has taken requirements, defined by data centres and divided by storage requirements, and is currently working with storage systems (devising the type of devices etc). They need to go back and forth with the vendor before going for a configuration that can be handed over to the vendor (which can come back very quickly). In two weeks, 3 quotes (will say delivery time with price and we can do that within that date), then engage with purchasing systems (long time).
+There's a certain level of flexibility should an under specification occur. Lack flexibility only when we buy something for different data centres.
+
+07/04 Paul talked to the Trust which shows to be receptive to the idea of purchasing with current grant funds plus EMBL funds that we "reimburse" from the new grant after 1 October. The programme officer will discuss this with the appropriate finance officer at the Trust and we should have confirmation that this is ok by next week.
+
+05/04 plan suggested by the grants office (Emma):
+- buy in compute on the Ensembl overhang budget currently ~€325k (~£250k) creating a ~£150k shortfall
+- EBI creates a pre-award to push the shortfall into
+- once the new award is available in October we then charge the EBI pre-award cost centre to the new WT award
