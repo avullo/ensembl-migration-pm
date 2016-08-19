@@ -1,5 +1,4 @@
 22/08/2016
-migration meeting
 contact Dan S about production/shutdown
 - shutdown from the perspective of production
   - 86 work will be finished, genebuilders might be running some pipeline, they're aware they have to use non-faulty HW
@@ -14,13 +13,37 @@ contact Dan S about production/shutdown
 - we need
   - strategy for moving warehouse
   - DB server move, cleaning first?, version strategy? when, who, how?
-  - communicate list of servers which will require attention at reboot (Helen ? from ISG deals with e!)
+  - communicate list of servers which will require attention at reboot (Helen ? from ISG deals with e!), ST will probably do that for web including production machines
 - timeline for migration, what he needs for that to happen, should be in charge, need to set a date and tell the other teams
 
-18/08/2016
+migration meeting
+
+ask Paul B if he's contacted Luke
+
+ask Andy about github/jeckyll to set up pages from PM logs, can link from confluence, what's the procedure he applied for projects.ensembl.org?
+
+asana/gaant of FTP/public MySQL/production, starts
+
+organise meeting for warehouse
+
+Steve's updates 19/08 13:12
+
+19/08/2016
 ==========
+X update HW procurement docs based on confluence
+
+X Sanger migration meeting minutes
+
+X send Steve updates on yesterday's discussion to complete
+
+X ask Andy plan about FTP, what happened to CVS (there's a page on confluence), projects.ensembl.org migration to Jekyll, ask to contribute
+
+work on data review slides, email Paul F 12/08 (ensembl campus) about shutdown
+
+18/08/2016
 X prob Dan about production meeting, seems he responds to email. Meet on Monday via Slack
-meet Steve in the morning (to become regular, eventually), shutdown recap et al.
+
+X meet Steve in the morning (to become regular, eventually), shutdown recap et al.
 - ensembldb transfer not going at full speed, DMZ 1G link. ETA: middle next week, martdb missing (asked MB 22TB data)
 - FTP ready for transfer/testing: who/when/how (rsync?) do the transfer, test FTP/HTTP/rsync servers, who/when? Andy's in charge for that
 - warehouse: transfer follows after ensembldb, when/who/where? what need to be done, cleaning?
