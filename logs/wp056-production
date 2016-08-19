@@ -16,6 +16,9 @@ need to set a date and tell the other teams
 -- machines set up
 creating VMs, making sure people can use them. 
 
+19/08 warehouse not yet available for team members, archive policy/targets haven't been addressed yet, call meeting
+Steve: We have a 10Tb volume for the backups of the FTP datafiles*. That's virtually full and given that it's likely to grow much larger I'd like to move away from multiple areas each of fixed size. We have also ended up squeezing files onto different partitions and adding symlinks to make the full use of the available space, not great. One large partition feels better, but I don't know what the storage team would advise 
+
 18/08 pipeline tests status (RH6):
 - core 100%
 - variation 70%
@@ -28,8 +31,10 @@ creating VMs, making sure people can use them.
 11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
 
 05/08 HW ready at EBI (production/web), FTP/farm will be covered soon by a late purchase
+300TB NFS archive area created and mounted on /nfs/ensemblarch
 
 26/07 the new /nfs/software is available on the cluster
+
 15/07 Disk requirements
 Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. Can use 'our share' of the 5PB Lustre just published.
 NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup)

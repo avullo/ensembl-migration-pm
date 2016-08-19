@@ -1,5 +1,9 @@
 Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
 
+19/08 Luke's last attempt: shutdown 67 and try to clone again. Requested 73 image
+Ask to migrate all in one go: less complex in terms of usage/service monitoring, also save having to make piecemeal changes to DNS
+Steve asked warehouse subdir /nfs/ensemblarch/ensnfs to store NFS data
+
 18/08 Luke's on holiday, Paul to contact him about our issues next week. NFS data move? Mark was to propose solution (12/07), can possibly use shadowland like ensembldb
 
 17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
