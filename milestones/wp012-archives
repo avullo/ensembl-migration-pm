@@ -1,8 +1,9 @@
 Objective: migrate by Autumn 2016
 
 August 2016: 40%
-- debugging VM boot problems
-- moving data (ensembldb) via shadowland
+- plan deviation: we migrate all in one go
+- debugging VM boot problems (67)
+- data transfer (ensembldb/nfs?) to EBI warehouse via shadowland
 - requisition enough storage (80TB), allocate enough for main/mart servers
 
 July 2016: 25%

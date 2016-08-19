@@ -1,8 +1,8 @@
 Objective: migrate by fall 2016
 
 August 2016: 50%
+- data transfer to EBI warehouse via shadowland?
 - internal beta testing available for FTP/HTTP/Rsync
-- can start transfering data
 
 July 2016: 25%
 - FTP layout agreement with systems (mirroring, manual failover)
