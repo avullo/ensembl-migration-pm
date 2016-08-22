@@ -1,9 +1,27 @@
+24/08/2016
+talk with Dan S about production migration plans/shutdown (anytime after 10:30am)
+
+organise meeting for warehouse
+
+23/08/2016
+RT migration catch up
+
+user/hive/tools DB should have been transferred (pm), ask Steve
+
+ask Andy if he agress on production suicidal priority list (include staging1/2 in web live slot?)
+
+
 22/08/2016
-contact Dan S about production/shutdown
+==========
+X contact Dan S about production/shutdown
 - shutdown from the perspective of production
   - 86 work will be finished, genebuilders might be running some pipeline, they're aware they have to use non-faulty HW
   - we're back to staging 1/2, be sure to go back to non-suicidal before shutdown
+	(1) We'll announce that we're shutting down processes on staging-1/2 on Thursdy afternoon and all pipelines need to finish by then
+	(2) We'll copy everything from staging-1/2 to ens-staging3 on Thursday afternoon
+	(3) We'll cross our fingers that staging-1/2 come back to life, but need confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back.
   - Micheal raised a point: storage is not affected, but how to recover the mount points from faulty machines in case they don't survive? Should we take note of these?
+    That's not a problem, as the disk with data contains the OS as well
   - lustre warehouse not affected , pipelines can continue safely
 - we have
   - 100TB of clustered file system (lustre, total usage ATMO is 43TB) attached to HX farm. Can use 'our share' of the 5PB Lustre just published
@@ -16,20 +34,15 @@ contact Dan S about production/shutdown
   - communicate list of servers which will require attention at reboot (Helen ? from ISG deals with e!), ST will probably do that for web including production machines
 - timeline for migration, what he needs for that to happen, should be in charge, need to set a date and tell the other teams
 
-migration meeting
+X migration meeting
 
-ask Paul B if he's contacted Luke
+X asana/gaant of FTP start
 
-ask Andy about github/jeckyll to set up pages from PM logs, can link from confluence, what's the procedure he applied for projects.ensembl.org?
+X steve to receive production HW priority list for shutdown
 
-asana/gaant of FTP/public MySQL/production, starts
-
-organise meeting for warehouse
-
-Steve's updates 19/08 13:12
+X allocate extra storage for archive NFS server
 
 19/08/2016
-==========
 X update HW procurement docs based on confluence
 
 X Sanger migration meeting minutes

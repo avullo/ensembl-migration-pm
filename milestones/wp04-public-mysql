@@ -1,7 +1,7 @@
-Objective: migrate by e!86 (Sep 20)
+Objective: migrate when? (talk with Andy/Steve)
 
 August 2016: 70%
-- data transfer from ensembldb (all releases?)/martdb using shadowland to EBI warehouse (78TB)
+- data transfer from ensembldb/martdb using shadowland to EBI warehouse (78TB)
 - HW ready but not available at EBI
 
 July 2016: 5%

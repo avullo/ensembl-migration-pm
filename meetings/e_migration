@@ -1,0 +1,23 @@
+22/08/2016
+==========
+- Production HW ready at EBI, request submitted (available after shutdown)
+
+- Farm infrastructure ready:
+  - clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. 	Can use 'our share' of the 5PB Lustre just published.
+  - NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup). mount point at /nfs/ensemblarch/?
+  - An NFS area attached to HX farm at /nfs/software and an area made available under /nfs/software/ensembl with write access only to the user ensw
+  - Compute requirements: 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is for that, has plenty of free cpu capacity.
+  - Long term software environment (RH7) almost ready, /nfs/software/ensembl, Andy to teach us how to use
+
+- Transferring warehouse via shadowland soon, mount point ready but not yet available for members (to be discussed soon)
+
+- Discussing migration plan, will communicate soon
+
+- Clean up DB servers
+
+- Shutdown:
+  - production work (almost) finished (mart build left), staging back to suicidal
+	(1) We'll announce that we're shutting down processes on staging-1/2 on Thursdy afternoon and all pipelines need to finish by then
+	(2) We'll copy everything from staging-1/2 to ens-staging3 on Thursday afternoon
+	(3) We'll cross our fingers that staging-1/2 come back to life, but need confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back.
+  - use non faulty HW if you have work you want to do

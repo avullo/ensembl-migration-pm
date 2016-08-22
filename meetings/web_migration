@@ -1,0 +1,37 @@
+22/08/2016
+==========
+
+Harpreet:
+switch over tomorrow, following procedures, setting cron jobs to deal with tools db switch off
+happy to switch tomorrow
+
+Dan:
+Setting up EBI VPN connection, making it secure (two layers of protection)
+configured test useast to use new mysql server
+keep for a few days sessions DBs on Sanger machine
+
+Steve:
+copying ensembldb, we can then look at getting it into archives
+after shutdown to get services over ensembldb
+use same shadowland connection to get nfs/ftp across
+
+Websites migration
+------------------
+
+pending the second meeting in september
+ask about dev/sandbox machines
+
+Archives
+--------
+
+Haven't heard from Luke
+NFS will probably need ~15-17TB considering new data
+
+Software
+--------
+
+got set of recipes that can boost a set of farm environments
+each component is split into very small areas, talks could be run in different envs, we need to plan what web layout/env should look like
+
+
+

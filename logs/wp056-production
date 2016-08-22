@@ -1,23 +1,15 @@
-Shutdown: staging3 too slow, back to staging1/2, systems have not yet come up with a solution 
-Dan S to be probed about reverting back to non suicical after production ends most of its business
-Teams know which machines are on suicidal, make sure they run things on non faulty HW (mostly genebuilder), 
+22/08 created /nfs/ensemblarch/warehouse for data move
+300TB warehouse is not enough to accomodate ensembldb/mart/ftp/nfs and actual Sanger warehouse alltogether. warehouse will probably move later
+cannot move staging to ens-dump for the shutdown, as it does not have enough room to build mart (deadline Sep 2), the disk on ens-dump had limits in the attached disk size.
+Sanger systems could reattach the storage from st-1/2 to different machines.
 
--- software running
-Have all the SW installed (on RH6)
-Need a reconciliation between RH6/7. Should meet with Andy
-Goal: making it as simple as possible for the teams.
-Making sure the teams have tested the pipelines 
-
--- staging at the EBI
-First we move the live websites
-About when we move production, something to discuss with Dan S (timeline), what he needs for that to happen, should be in charge
-need to set a date and tell the other teams
-
--- machines set up
-creating VMs, making sure people can use them. 
+Plan:
+(1) We'll announce that we're shutting down processes on staging-1/2 on Thursdy afternoon and all pipelines need to finish by then
+(2) We'll copy everything from staging-1/2 to ens-staging3 on Thursday afternoon
+(3) We'll cross our fingers that staging-1/2 come back to life, but need confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back.
 
 19/08 warehouse not yet available for team members, archive policy/targets haven't been addressed yet, call meeting
-Steve: We have a 10Tb volume for the backups of the FTP datafiles*. That's virtually full and given that it's likely to grow much larger I'd like to move away from multiple areas each of fixed size. We have also ended up squeezing files onto different partitions and adding symlinks to make the full use of the available space, not great. One large partition feels better, but I don't know what the storage team would advise 
+Steve: We have a 10TB volume for the backups of the FTP datafiles*. That's virtually full and given that it's likely to grow much larger I'd like to move away from multiple areas each of fixed size. We have also ended up squeezing files onto different partitions and adding symlinks to make the full use of the available space, not great. One large partition feels better, but I don't know what the storage team would advise 
 
 18/08 pipeline tests status (RH6):
 - core 100%
@@ -26,7 +18,7 @@ Steve: We have a 10Tb volume for the backups of the FTP datafiles*. That's virtu
 - genebuild 10-25%?
 - compara no tests, wait RH7 (software is main issue)
 
-17/08 form submitted, will likely be available after shutdown. warehouse data transferred soon (follows ensembldb)
+17/08 HW request form submitted, will likely be available after shutdown. warehouse data transferred soon (follows ensembldb)
 
 11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
 
