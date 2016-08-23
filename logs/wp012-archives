@@ -1,5 +1,14 @@
 Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
 
+23/08 archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
+mart dbs are not there yet
+
+options for moving to Embassy:
+- NFS mount main archive DB disk on bastion host (slower)
+- ssh tunnelling through bastion host (reverse SSH tunnel)
+
+transfer can start now but Embassy will be shut down soon. If we use rsync we can resume
+
 22/08 NFS server will probably need 15-17TB storage, currently 10TB. Allocated extra storage
 
 19/08 Luke's last attempt: shutdown 67 and try to clone again. Requested 73 image
