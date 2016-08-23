@@ -1,0 +1,163 @@
+Ensembl Goals and Expectations
+- Migration of ensembl-helpdesk and associated queues to the EBI RT system
+- Attempting to keep to a 48hr downtime period
+- Keep communications open on existing tickets
+- Migrate all users across
+- Emily admin access for things like adding members to queues, global response messages
+- Flagging suspect/problematic users
+
+
+10/08 Plan is to migrate within the first two weeks of September
+EBI wants to start the consulting process (get as much of the planning and any issues)
+Tim Cutts from Sanger is on holiday and back end of August
+
+Areas of concerns which may already be covered in the Remote Professional Services RT contract
+
+(A) Possible to decrease the export time? We would like to keep the 
+total downtime to no more than 48 hours.
+
+(B) A method to accept or queue replies to open Sanger tickets into EBI 
+RT during the export/import and merge or attach them to the appropriate 
+imported ticket.
+
+(C) Solve the database conflicts as described above.
+
+(D) Develop email handling code to manage Sanger ID tickets (capture in 
+a custom ID) to new EBI ticket ID.
+
+07/07 Consultancy purchased
+
+05/07 Signed EBI-BP master agreement
+
+29/06 Consultancy timeframe: do this towards the start of August
+
+02/06 Sanger/EBI/BP meeting
+
+Current BP proposal:
+10 days support, split in two main parts:
+
+- export the data from Sanger RT, 3-5 days
+
+- import the data into EBI RT, with the following blockers
+  ~ reconcile ticket ids between the two systems
+  ~ reconcile user ids and LDAP issues
+  ~ add custom scripts
+  ~ any other issues that might occur
+
+
+We have identified the following steps to fulfill the migration:
+- update Sanger RT to 4.2.12
+- dump out Ensembl data
+- upload in a test instance
+- run RT validator
+- create Ensembl queues at the EBI
+- redirect alias to EBI RT
+- create backup of existing RT
+- upload history to EBI RT
+
+
+Comments on BP proposal:
+
+- export the data from Sanger RT
+TC has used the RT Serializer to dump out all Ensembl queues from Sanger RT, with good success.
+He reckons we (he) can do the whole export without help from BP, which would probably half the estimated cost.
+The size of the dump is rougly 2.9G.
+
+- reconcile ticket ids between the two systems
+When the data is dumped out, the existing ticket id is stored as an additional attribute, sangerID.
+When the data is uploaded, it is stored with a new auto-increment id and the sanger ID is used to link old tickets together, as well as replies to existing tickets coming in later.
+
+- reconcile user ids and LDAP issues
+LDAP is used for Sanger users on the Sanger RT and for EBI users on the EBI RT.
+We don't see it being a problem, as there is no overlap.
+
+- add custom scripts
+There are currently none identified and it should be easy to create new ones on request (Emily from Outreach will probably have ideas on what she wants).
+
+
+Remaining issues:
+
+- coordinate the switch over
+Once we start redirecting to the EBI RT, tickets will come in at the EBI with history still at the Sanger.
+To avoid this, it is recommended to hold any new emails until the upload is complete.
+As this can take several hours, this means the service is effectively down for that period.
+
+  ~ process one queue at a time
+The overall downtime will be the same, but each queue will be affected for a shorter period.
+There might be issues with tickets linking across queues.
+
+  ~ process only 'recent' (define recent) tickets first, then process the rest of the history.
+Once the system is back with the recent tickets, there will be a period where someone could be replying to an old ticket, but that ticket does not yet exist in the system.
+
+  ~ incremental upgrade
+Might be the same as the solutions described above.
+The RT Serializer can tag processed tickets and dump them in batches.
+This was described as experimental.
+
+  ~ process all at once
+This guarantees a better integrity of all the data, but means the service is out of action for a longer period of time.
+
+- run RT validator after upload
+This would identify any mismatched/missing data but will extend the downtime period.
+
+- identify the required queues
+TC listed over a dozen queues which have EBI users.
+We are unsure which ones are from Ensembl, although it might be a good opportunity to move them over regardless.
+Lists like Ensembl, Vega and Wormbase are definitely Ensembl realm.
+I am unsure about RFAM or Havana.
+1000g should be included as well.
+
+
+Actions:
+- TC to run a full dump of Ensembl RT data
+- SN to create a test instance and upload the dump
+- AY to list queues to move over
+- All to decide on a strategy for the switch over
+
+29/05 BP RT consulting quote:
+BP will provide EBI ten days of professional services, a mixture of Professional Services and development, to achieve the following tasks:
+1. Upgrade the Sanger instance to 4.2.12 to leverage RT’s core serializer/importer feature. In order to achieve EBI’s goal of extracting specific queues from one instance to another, Best Practical will need to extend RT’s serializer.The serializer extension work will require 3-5 days of development time for Best Practical to assure that it will meet EBI’s
+needs.
+2. EBI will create a test RT instance and do a test import using the newly updated rt-serializer/importer tool. This step will ensure that EBI can check the imported data and confirm it looks ok and to report and fix any bugs and try again until the data looks right.
+3. Once EBI has confirmed that the import was successful, they will take a good backup. BP will provide guidance and assistance on running rt-serializer/importer and updating configurations in the EBI system for:
+* Configurations for new email addresses including any queue configuration details.
+* Put any special email handling code in place to manage old tickets. BPS can help with an email plugin to redirect
+responses from the old ticket id to the newly assigned one since all tickets will have new IDs.
+* Update LDAP integration as necessary to handle new users.
+* Apply an manual updates needed for imported scrips.
+
+24/05 There isn't much downtime allowance, because the Ensembl RT queues are just three of a total of 226 queues on this RT instance.
+There are 29,000 Ensembl queue tickets, out of a total of 467,000 tickets. The non-Ensembl EBI queues contain a further 24,000 tickets.
+
+19/04 EBI finance discussing contract terms and clauses for RT migration consultancy with BT. Master agreement under processing.
+
+21/03 Many non Ensembl EBI queues need to migrate as well (13 queues). 
+Queue name	Tickets (16/3/16)
+ensembl-helpdesk	14861
+ensembl-genomes	1326
+1000genomes	1704
+ensemblweb	6506
+ebi-dgva-admin	440
+ebi-ega-helpdesk	10310
+ebi-era-admin	9
+ebi-micromes	3426
+ebi-pombase	2636
+vega	611
+gencode	1
+havana	233
+	
+total	42063
+
+
+There's consensus on buying the consultancy together, very expensive (estimated 10 days @ 2000$/day). 
+3 migration options:
+1). Move it all across, strip anything that's not our ticket from the DB and have our Sanger RT at EBI
+2). Do point 1 but have it as an archive and use the EBI RT
+3). Merge into the EBI archive
+
+Paul F has vetoed the 2nd option. Option 1 seems very unlikely considering EBI has just merged two RTs together. That leaves us with option 3 and that's the most expensive/troublesome option :)
+
+14/03 RT queue Ensembl specific customisations identified.
+Lists of Sanger/EBI RT extensions and Sanger customisations
+
+02/03 Enquire BP about possible Consultation to help migrate and maintain history between two RTs
