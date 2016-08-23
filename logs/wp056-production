@@ -35,4 +35,10 @@ An NFS area attached to HX farm at /nfs/software and an area made available unde
 Compute requirements
 Use 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is for that, has plenty of free cpu capacity.
 
+01/06 cvs.sanger.ac.uk is turned off
+
+26/05 CVS transferred from cvs.sanger.ac.uk to EBI. 
+Done using scp and with no checks on file integrity. Total size is 31GB
+
+01/04 CVS at Sanger becomes read only
 

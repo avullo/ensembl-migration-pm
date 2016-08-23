@@ -1,7 +1,5 @@
 Objective: ? (talk to Dan S)
 
-Note: put CVS server move
-
 August 2016: 70%
 - Production HW ready at EBI, request submitted (available after shutdown)
 - staging3 too slow, moves back to suicidal blades
@@ -20,12 +18,14 @@ July 2016: 50%
 
 June 2016: 16%
 - Andy commence work on RH7 software environment (brew like controlled automated installation)
+- cvs.sanger.ac.uk is turned off
 
 May 2016: 15%
 - EBI farm minicourse
 - Compara software installed (RH6)
 - /nfs/ensembl on old unexpandable area, moved to new storage area (1.5TB)
 - HW purchase
+- CVS transferred from cvs.sanger.ac.uk to EBI
 
 April 2016: 5%
 - EBI cluster update to RH7! 
