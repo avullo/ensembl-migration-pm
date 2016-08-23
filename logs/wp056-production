@@ -1,3 +1,10 @@
+23/08 Sanger Hinxton Data Centre Shutdown starts at 5:00pm 26/08
+Farm systems are expected to be back from 1:00pm on Tuesday 30th August
+
+The long, parallel and hugemem-restricted queues will be set inactive today ~5pm
+All queues will be closed to jobs at around 5:00pm on Thursday 25th August.
+
+
 22/08 created /nfs/ensemblarch/warehouse for data move
 300TB warehouse is not enough to accomodate ensembldb/mart/ftp/nfs and actual Sanger warehouse alltogether. warehouse will probably move later
 cannot move staging to ens-dump for the shutdown, as it does not have enough room to build mart (deadline Sep 2), the disk on ens-dump had limits in the attached disk size.
@@ -38,7 +45,15 @@ Use 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is fo
 01/06 cvs.sanger.ac.uk is turned off
 
 26/05 CVS transferred from cvs.sanger.ac.uk to EBI. 
-Done using scp and with no checks on file integrity. Total size is 31GB
+CVS repository copied across from Sanger and hosted in:
+/nfs/production/panda/ensembl/sanger-cvsroot
+
+We also have a tarball in:
+/nfs/production/panda/ensembl/sanger-cvsroot.tar.gz
+
+Transfer done using scp (no rsync) and with no checks on file integrity. Total size is 31GB
+Can checkout projects from CVS locally but with write access enabled.
+
 
 01/04 CVS at Sanger becomes read only
 
