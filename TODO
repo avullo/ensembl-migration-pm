@@ -1,26 +1,31 @@
 30/08/2016
-set up reverse tunnelling for EBI-Embassy archive data trasfer
+set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution
 
-organise meeting for warehouse
+organise meeting for warehouse?
+
+25/08/2016
+
+instantiate 67 instance as 82 clone
+
+slides data review
 
 24/08/2016
 ==========
-meeting with Sanger, shutdown migration catch up: confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back
+X meeting with Sanger, shutdown migration catch up: confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back
 
-ask Steve:
+X ask Steve:
 - user/hive/tools DB should have been ready at EBI, what needs to be done?
-- NFS data move, when? 
-- FTP data move, when?
-- ensembldb transfer finished?
+- NFS data move, when? Happening now
+- FTP data move, when? Will ask a shadoland endpoint next week
 
-talk with Dan S about production migration plans/shutdown (anytime after 10:30am)
+X talk with Dan S about production migration plans/shutdown (anytime after 10:30am)
 
-test ssh reverse tunnelling on Embassy
+X test ssh reverse tunnelling on Embassy, not being able to make it work. Dan's talking about port forwarding
 
 23/08/2016
 X RT migration catch up
 
-user/hive/tools DB should have been transferred (pm), ask Steve
+user/hive/tools DB at EBI should be ready (pm), ask Steve
 
 X ask Andy if he agress on production suicidal priority list (include staging1/2 in web live slot?) No need, agreed on Steve's production priority list
 
@@ -44,7 +49,7 @@ X contact Dan S about production/shutdown
 - we need
   - strategy for moving warehouse
   - DB server move, cleaning first?, version strategy? when, who, how?
-  - communicate list of servers which will require attention at reboot (Helen ? from ISG deals with e!), ST will probably do that for web including production machines
+  - communicate list of servers which will require attention at reboot (Helen Brimmer from ISG deals with e!), ST will probably do that for web including production machines
 - timeline for migration, what he needs for that to happen, should be in charge, need to set a date and tell the other teams
 
 X migration meeting
