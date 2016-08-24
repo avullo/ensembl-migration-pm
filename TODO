@@ -1,18 +1,31 @@
-24/08/2016
-talk with Dan S about production migration plans/shutdown (anytime after 10:30am)
+30/08/2016
+set up reverse tunnelling for EBI-Embassy archive data trasfer
 
 organise meeting for warehouse
 
+24/08/2016
+==========
+meeting with Sanger, shutdown migration catch up: confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back
+
+ask Steve:
+- user/hive/tools DB should have been ready at EBI, what needs to be done?
+- NFS data move, when? 
+- FTP data move, when?
+- ensembldb transfer finished?
+
+talk with Dan S about production migration plans/shutdown (anytime after 10:30am)
+
+test ssh reverse tunnelling on Embassy
+
 23/08/2016
-RT migration catch up
+X RT migration catch up
 
 user/hive/tools DB should have been transferred (pm), ask Steve
 
-ask Andy if he agress on production suicidal priority list (include staging1/2 in web live slot?)
+X ask Andy if he agress on production suicidal priority list (include staging1/2 in web live slot?) No need, agreed on Steve's production priority list
 
 
 22/08/2016
-==========
 X contact Dan S about production/shutdown
 - shutdown from the perspective of production
   - 86 work will be finished, genebuilders might be running some pipeline, they're aware they have to use non-faulty HW
