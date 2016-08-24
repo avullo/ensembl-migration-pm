@@ -2,7 +2,7 @@ Objective: ? (talk to Dan S)
 
 August 2016: 70%
 - Production HW ready at EBI, request submitted (available after shutdown)
-- staging3 too slow, moves back to suicidal blades
+- staging3 too slow, moves back to suicidal blades with backup to genebuild9
 - long-term (RH7) software environment almost ready
 - pipelines tested (RH6):
   - core 100%

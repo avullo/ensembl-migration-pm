@@ -3,9 +3,10 @@ which ones are we going to updgrade to 5.6, and how
 if we can do for it, we have a procedure for the production DBs
 enquire DBA
 
+24/08 ensembldb transfer finished?
+
 18/08 copying the data from martdb (ensembldb2b) to EBI, same approach as ensembldb, should take <1w
-Migration strategy: ask/set up two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 from 5.1 at EBI, keep MySQL 4 (need to request). Aiming at e!86 (Sep 20)
-how about GRCh37?
+Migration strategy: ask/set up two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 from 5.1 at EBI, keep MySQL 4 (need to request). Aiming at e!86 (Sep 20), how about GRCh37?
 
 10/08 Steve transferring ensembldb files using shadowland to EBI warehouse, will complete ~2w
 

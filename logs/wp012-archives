@@ -9,7 +9,8 @@ options for moving to Embassy:
 
 transfer can start now but Embassy will be shut down soon. If we use rsync we can resume
 
-22/08 NFS server will probably need 15-17TB storage, currently 10TB. Allocated extra storage
+22/08 /nfs/ensemblarch/ensnfs ready
+NFS server will probably need 15-17TB storage, currently 10TB. Allocated extra storage
 
 19/08 Luke's last attempt: shutdown 67 and try to clone again. Requested 73 image
 Ask to migrate all in one go: less complex in terms of usage/service monitoring, also save having to make piecemeal changes to DNS
