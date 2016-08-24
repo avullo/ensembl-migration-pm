@@ -1,5 +1,10 @@
 Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
 
+24/08 NFS data is copying
+67 export and reboot continue to fails, we have to create a new VM and copy 67 data there (can clone 82). Luke to provide 73 instance soon
+Trying to set up reverse ssh tunnelling for archive EBI-Embassy data move, doesn't work.
+Should be doable with port forwarding, seems it needs set up of iptables. Dan S claims there's a simple way to specify via command line ssh 
+
 23/08 archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
 mart dbs are not there yet
 
