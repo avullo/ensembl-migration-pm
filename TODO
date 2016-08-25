@@ -1,16 +1,19 @@
 30/08/2016
 set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution
+can use rsync through a remove firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
 
 organise meeting for warehouse?
 
-25/08/2016
-
-instantiate 67 instance as 82 clone
-
+26/08/2016
+==========
 slides data review
 
+25/08/2016
+X instantiate 67 instance as 82 clone
+
+X slides data review
+
 24/08/2016
-==========
 X meeting with Sanger, shutdown migration catch up: confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back
 
 X ask Steve:
