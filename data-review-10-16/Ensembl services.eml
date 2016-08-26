@@ -1,0 +1,121 @@
+Return-Path: <steve@ebi.ac.uk>
+Received: from imap05.ebi.ac.uk ([unix socket])
+	 by imap05.ebi.ac.uk (Cyrus v2.3.16-Fedora-RPM-2.3.16-6.el6_2.5) with LMTPA;
+	 Mon, 08 Aug 2016 23:33:12 +0100
+X-Sieve: CMU Sieve 2.3
+Received: from smtp03.ebi.ac.uk (smtp03.ebi.ac.uk [172.28.241.3])
+	by imap05.ebi.ac.uk (8.14.4/8.14.4) with ESMTP id u78MXC6t032280
+	for <avullo@imap05.ebi.ac.uk>; Mon, 8 Aug 2016 23:33:12 +0100
+Received: from hx-mx1.ebi.ac.uk (mx1.ebi.ac.uk [193.62.195.238])
+	by smtp03.ebi.ac.uk (8.13.8/8.13.8) with ESMTP id u78MXC1v010059;
+	Mon, 8 Aug 2016 23:33:12 +0100
+Received: from hx-mx1.ebi.ac.uk (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id 40F1E22D782_7A908A8B;
+	Mon,  8 Aug 2016 22:33:12 +0000 (GMT)
+Received: from [127.0.0.1] (cpc92316-cmbg19-2-0-cust316.5-4.cable.virginm.net [82.12.1.61])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	by hx-mx1.ebi.ac.uk (Sophos Email Appliance) with ESMTPSA id 7945322D50A_7A908A7F;
+	Mon,  8 Aug 2016 22:33:11 +0000 (GMT)
+From: steve trevanion <steve@ebi.ac.uk>
+Subject: Ensembl services
+To: Andy Yates <ayates@ebi.ac.uk>, Harpreet Riat <harpreet@ebi.ac.uk>,
+        Alessandro Vullo <avullo@ebi.ac.uk>, nickl@ebi.ac.uk
+Message-ID: <ab65ca2c-d9f7-1f1e-3419-2d189eaa1831@ebi.ac.uk>
+Date: Mon, 8 Aug 2016 23:33:11 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.2.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Antivirus: avast! (VPS 160807-0, 07/08/2016), Outbound message
+X-Antivirus-Status: Clean
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ebi.ac.uk; h=from:subject:to:message-id:date:mime-version:content-type:content-transfer-encoding; s=ebi.ac.uk; bh=Nh/dq4GCvCb93RlIiPQoqsopM/2VVO6cTr8JBX5ICF8=; b=TIv9Ci70amJeGJHiBuMZ69YF0trJzdcLXpWiWodbhIfj0ccmhLq6Cyyz9t0nkHDGw3FbpFrYVwOXafQtU3fFsgAtTQUt3+6//nJ5LYgHIBJqTZpYH9QtBOf8ph5X2ftPXWpwF1SIOvT4vAawTybAAiW78nCSqXRd//qzYKCya9WIHu/049z/j8NFGhGTlx410flALkU1sgIgXXZ41bSuLh/V/cXc5efQIMeOmbi1ZVp3uN78/CznI3nhpypzFHG7GOJSvlIqHolW4Eo0OGp76GGzJopmhl/u3zLITga/cGqmhwjEA9us6YMdO6nwWW23LBSXKaJZVIdptqfaxFfdAQ==
+
+Hi all,
+
+Andy has generated a flow diagram showing the different components of 
+Ensembl. Here are my thoughts on what to present, taking a slightly 
+different slant:
+
+We have five services - website, search, userdata, logins and tools. 
+What are we prepared to accept in terms of availability of each of these 
+? The first two need 100% availability, userdata currently has 100% but 
+we could live with less (could we?), for the other two we currently 
+accept downtime. In the long term I would like there to be a roadmap by 
+which all five can eventually have 100% availability.
+
+We currently have monitoring of each of the below at the system level
+
+The components of each of these services are below
+
+Meet to talk about it at 1-30 ?
+
+Steve
+
+
+Website
+
+- ~2.5Tb r/o databases. Note access to filesystem needed for deployment 
+and post release fixes
+
+- ~10Tb (and growing) files. r/o if /nfs or r/w if FUSE. The latter, 
+which is there on the mirrors, introduces a dependency on the FTP site.
+
+- 100's Gb of pre-generated cached data on r/o local disc (but again we 
+need to be able to update these post-release)
+
+- r/w database for sessions ( a few Gb), needs backups and replication.
+
+- r/w file system for temporary files (images and logs). Size...?
+
+- no backups are essential for any of the above apart from sessions
+
+- email server
+
+- growing dependency on REST
+
+- load balancing, for both webservers and databases
+
+
+Search
+
+- ~500Gb r/w local disc - write needed for the deployment procedure - 
+replication by URL - and also solr locks)
+
+- ~ 10's Gb of r/w temporary space (logs)
+
+- load balancing
+
+
+Userdata
+
+- r/w filesystem of 100Gbs with backups (and replication if we want 100% 
+availability)
+
+- accessible by post-Embassy archives
+
+
+Tools
+
+- ~100's Gb r/o filesystem (can be r/o as long as we pregenerate VEP 
+index files)
+
+- LSF cluster with r/w filesystem with backups (and replication if we 
+want 100% availability). Size...?
+
+- ~100Gb r/w database with backups (and replication if we want 100% 
+availability)
+
+- VPN access for mirrors
+
+- accessible by post-Embassy archives
+
+
+Logins
+
+- 10Gb r/w database with backups (and replication if we want 100% 
+availability)
+
+- VPN access for mirrors and Embassy
+
