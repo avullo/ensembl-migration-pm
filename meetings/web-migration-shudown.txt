@@ -1,0 +1,35 @@
+Dan S.
+------
+Newer and older archives are fine
+Issue with some version, e.g. 67, does not boot
+
+Setting up the VPN in AWS.
+
+Andy
+----
+
+FTP site space made available, mount available at Sanger and here.
+We'll try to have a fall back. Need to mount + host
+
+Ensembl db transfer to start at the earliest, copying today.
+
+Purchase of the HW came thorugh. We can request VMs
+
+Software wise: bootstrapping's a problem
+
+Harpreet
+--------
+
+Requested 2 instances (hive + tools) in HH/Hinxton
+
+Nick
+----
+
+Shutdown meeting: confluence and JIRA will be gone first (Friday).
+
+Steven
+------
+
+Need to think what to transfer
+
+Deployment methods
