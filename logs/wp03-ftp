@@ -1,8 +1,11 @@
-24/08 Steve to ask shadowland endpoint for FTP next week
+2016-08-24 Shadowland FTP endpoint
+Steve to ask shadowland endpoint for FTP next week.
 
-22/08 /nfs/ensemblarch/ftp ready
+2016-08-22 Warehouse for FTP ready
+/nfs/ensemblarch/ftp ready.
 
-19/09 Steve asked warehouse subdir /nfs/ensemblarch/ftp to store FTP data
+2016-08-19 Shadowland FTP endpoint & C.
+Steve asked warehouse subdir /nfs/ensemblarch/ftp to store FTP data.
 
 Requisition machines/internal beta testing/data move: haven't yet been assigned (one of us or web depending on time), need to set up asana/gaant for that
 
@@ -10,58 +13,66 @@ Missing "redirect domain from Sanger to EBI" from plan
 
 Well we have two modes
 
-1). Partial redirection. Ask sanger to redirect X.ensembl.org to EBI load balancers.
-2). Total redirection. All services (or most) need to be here at EBI with rules on the EBI LBs to either point to the right internal resource (we need a service map) or back to Sanger. Sanger will switch their DNS expiry to 5 minutes a week or so before the move. When the switch happens EBI sets their expiry to a reasonable amount of time. Overall effect is within 5 minutes ensembl.org will move from Sanger to EBI.
+1. Partial redirection. Ask sanger to redirect X.ensembl.org to EBI load balancers.
+2. Total redirection. All services (or most) need to be here at EBI with rules on the EBI LBs to either point to the right internal resource (we need a service map) or back to Sanger. Sanger will switch their DNS expiry to 5 minutes a week or so before the move. When the switch happens EBI sets their expiry to a reasonable amount of time. Overall effect is within 5 minutes ensembl.org will move from Sanger to EBI.
 
-18/08 Mirrors are loaded with a fraction of the data required from FTP. Service will be up, but with slightly reduced functionality
+2016-08-18 FTP and mirrors
+Mirrors are loaded with a fraction of the data required from FTP. Service will be up, but with slightly reduced functionality.
 
-17/08 shutdown: affects mirrors by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts, might be bypassed, how?
+2016-08-17 Shutdown and mirrors
+Shutdown: affects mirrors by FTP-provided flat-file loading (e.g. BAM) facility from FUSE mounts, might be bypassed, how?
 
-04/08 internal beta testing is now enabled for FTP, HTTP and RSYNC.
+2016-08-04 Internal beta FTP testing
+Internal beta testing is now enabled for FTP, HTTP and RSYNC.
 
-For FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
-For HTTP: http://hh-ens-http-001.ebi.ac.uk
-For RSYNC: rsync://hh-ens-rsync-001/
+- FTP: ftp://hh-ens-ftp-001.ebi.ac.uk
+- HTTP: http://hh-ens-http-001.ebi.ac.uk
+- RSYNC: rsync://hh-ens-rsync-001/
 
 Andy wants rsync access to avoid ascp or FTP transfer
 
-03/08 ensemblftp is now on the dedicated link to Sanger. once logged in you see two subfolders,
+2016-08-03 FTP storage and servers
+ensemblftp is now on the dedicated link to Sanger. once logged in you see two subfolders,
 
 ensemblorg -> on the EBI cluster /nfs/ftp/ensemblorg
 ensemblftp -> on the EBI cluster /nfs/ensemblftp  
 
-can start with transfers right now, can use aspera but need to perform a number of re-syncs of Sanger based FTP to EBI based FTP before we are sure the service is ready to go live. ascp can provide resuming and do some basic comparison of files (or full md5 if you need to) and move it across. Asier installing rsync or we go for aspera?
+Can start with transfers right now, can use aspera but need to perform a number of re-syncs of Sanger based FTP to EBI based FTP before we are sure the service is ready to go live. ascp can provide resuming and do some basic comparison of files (or full md5 if you need to) and move it across. Asier installing rsync or we go for aspera?
 
-setting up the FTP servers in London
+Setting up the FTP servers in London.
 
-02/08 Need an FTP site for the mirrors (load flat files from FTP into live tools), or could have a reduced level of service for these (shutdown) 
+2016-08-02 Shutdown and mirrors
+Need an FTP site for the mirrors (load flat files from FTP into live tools), or could have a reduced level of service for these (shutdown).
 
-27/07 FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster. there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/)
+2016-07-27 FTP storage
+FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster. there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/).
 
-15/07 Proposed FTP layout
+2016-07-15 Proposed FTP layout
+### Proposed FTP layout 
+
 75TB usable ftp space in London and Hinxton. One of them will be a read-only copy (ideally London). Can ingest data only to one (the read-write). ftp service will initially live in one location. They will be mirrored. There's no failover at the moment, semi-manual process.
 
-Data ingest in Hinxton
-Serving from London, ie. 2 load balanced ftp servers in london
-Mirror every hour
-No failover, no need to go too complicated here since this is a failover for files we need from FTP to run the website not for external users (?!)
-ftp.ensembl.org to point to LDC and ftp-ensembl.ebi.ac.uk to point to a HX FTP/HTTP server and manage the switchover manually.
+Data ingest in Hinxton. Serving from London, ie. 2 load balanced ftp servers in London. Mirror every hour. No failover, no need to go too complicated here since this is a failover for files we need from FTP to run the website not for external users (?!) ftp.ensembl.org to point to LDC and ftp-ensembl.ebi.ac.uk to point to a HX FTP/HTTP server and manage the switchover manually.
 
-07/07 FTP will not migrate until later on in the year. We found out the current order lacked FTP space (an oversight). This is pending a meeting with Pete J @ EBI
+2016-07-07 FTP migration update
+FTP will not migrate until later on in the year. We found out the current order lacked FTP space (an oversight). This is pending a meeting with Pete J @ EBI
 
-29/06 Andy C informed us the HW provision does not include the requested storage for FTP (~100TB), which will be covered when the Sanger grant starts in October.
+2016-06-29 HW provision does not include FTP storage
+Andy C informed us the HW provision does not include the requested storage for FTP (~100TB), which will be covered when the Sanger grant starts in October.
 Pb is that we would like to migrate the existing FTP content before that date, for which we would need ~35TB. Andy told us we would need to speak with Pete J to see if it's possible to find a temporary solution.
 
-05/04 Problem with aspera copy from Sanger solved (wrong permission on ftp user folder).
-Successfully transferred release 82/83 FTP data. Data in subdirectories with symlinks has not been copied, need to take that into account when setting it up.
-Asked systems to set up FTP service, need some time to do that.
+2016-04-05 Problem with aspera copy from Sanger solved
+Problem with aspera copy from Sanger solved (wrong permission on ftp user folder). Successfully transferred release 82/83 FTP data. Data in subdirectories with symlinks has not been copied, need to take that into account when setting it up. Asked systems to set up FTP service, need some time to do that.
 
-23/02 Successfully tested FTP transfer, but not feasible for transferring data for entire releases. Tested aspera copy, issue with SSH connection (session initiation failed).
+2016-02-23 Successfully tested FTP transfer
+Successfully tested FTP transfer, but not feasible for transferring data for entire releases. Tested aspera copy, issue with SSH connection (session initiation failed).
 Issue with file permission when copying data directly to mount point (not owned by ftp user).
 
-25/01 Mount point enabled on EBI cluster (/nfs/ftp/ensemblorg). Can start transferring data by submitting LSF jobs.
+2016-01-25 Mount point enabled on EBI cluster
+Mount point enabled on EBI cluster (/nfs/ftp/ensemblorg). Can start transferring data by submitting LSF jobs.
 
-12/01 5TB volume to test data transfer and backup volume created.
+2016-01-12 Volume for data transfer test
+5TB volume to test data transfer and backup volume created.
 
-17/09/15 Pilot study into the move starts. Sysinf to look into allocating 50TB on their NetApp cluster and sort out the new FTP service.
-
+2015-09-17 Pilot study into the move starts
+Pilot study into the move starts. Sysinf to look into allocating 50TB on their NetApp cluster and sort out the new FTP service.
