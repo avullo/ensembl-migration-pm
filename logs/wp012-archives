@@ -1,12 +1,14 @@
-Shutdown: archives will run from Sanger, access user/tools DBs at EBI via shadowland
+2016-08-24 NFS data is copying
+NFS data is copying.
 
-24/08 NFS data is copying
-67 export and reboot continue to fails, we have to create a new VM and copy 67 data there (can clone 82). Luke to provide 73 instance soon
+67 export and reboot continue to fails, we have to create a new VM and copy 67 data there (can clone 82). Luke to provide 73 instance soon.
+
 Trying to set up reverse ssh tunnelling for archive EBI-Embassy data move, doesn't work.
-Should be doable with port forwarding, seems it needs set up of iptables. Dan S claims there's a simple way to specify via command line ssh 
+Should be doable with port forwarding, seems it needs set up of iptables. Dan S claims there's a simple way to specify via command line ssh.
 
-23/08 archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
-mart dbs are not there yet
+2016-08-23 archive databases at EBI
+Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
+Mart dbs are not there yet
 
 options for moving to Embassy:
 - NFS mount main archive DB disk on bastion host (slower)
@@ -14,59 +16,81 @@ options for moving to Embassy:
 
 transfer can start now but Embassy will be shut down soon. If we use rsync we can resume
 
-22/08 /nfs/ensemblarch/ensnfs ready
+2016-08-22 /nfs/ensemblarch/ensnfs ready
 NFS server will probably need 15-17TB storage, currently 10TB. Allocated extra storage
 
-19/08 Luke's last attempt: shutdown 67 and try to clone again. Requested 73 image
+2016-08-19 Luke's last attempt
+Luke's last attempt: shutdown 67 and try to clone again. Requested 73 image.
+
 Ask to migrate all in one go: less complex in terms of usage/service monitoring, also save having to make piecemeal changes to DNS
+
 Steve asked warehouse subdir /nfs/ensemblarch/ensnfs to store NFS data
 
-18/08 Luke's on holiday, Paul to contact him about our issues next week. NFS data move? Mark was to propose solution (12/07), can possibly use shadowland like ensembldb
+2016-08-18 Updates
+Luke's on holiday, Paul to contact him about our issues next week. 
 
-17/08 Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
+NFS data move. Mark was to propose solution (12/07), can possibly use shadowland like ensembldb
 
-16/08 Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown
+2016-08-17 How to solve the boot problem
+Dan proposes to do an rsync of our directories out of the running instance into a blank one. Asks if we could go with other archives in the meantime, no reply
 
-10/08 Steve transferring ensembldb files, can use them to load the archive DB server, how about nfs data move?
+2016-08-16 Reinstalled main archive servers
+Reinstalled main archive servers, expanded storage (mart server also). Luke to update on Friday. Can wait shutdown
 
-08/08 Luke to investigate why some images don't boot
+2016-08-10 Steve transferring ensembldb files
+Steve transferring ensembldb files. can use them to load the archive DB server, how about nfs data move?
 
-12/07 NFS data move (Mark Flint): possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
+2016-08-08 Luke to investigate why some images don't boot
 
-07/07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
+2016-07-12 NFS data move 
+Mark Flint: possible route for the NFS data, via transfer, need to come up with a security policy for that route, and know what the IP addresses at EBI end will be. caveat: right now, only addresses in the 10.7.0.0/16 range are possible for us to connect to.
 
-05/07 The 70TB of Embassy storage that Ensembl have purchased is now ready. 
+2016-07-07 Archives should be out of Sanger in the next 2-3 months pending more work by the webteam
 
-24/05 No progress yet on the requested archive images.
+2016-07-05 The 70TB of Embassy storage that Ensembl have purchased is now ready
+
+2016-05-24 No progress yet on the requested archive images
 Problems with uploading OVA images from the Sanger farm. This wasn't an issue with the first attempt using archive 82. 
 
-20/04 Sanger is setting up requested archive (36/67) images.
+2016-04-20 Sanger is setting up requested archive (36/67) images
 
-19/04 Security based access to Embassy trial available. Can only ssh in via "bastion" host. From that machine there is password less ssh, via a key stored there, to any other machine. If necessary for rsync, scp, etc, we can use port forwarding via the bastion. Now moving onto logging and reporting in this package next.
+2016-04-19 Security based access to Embassy trial available
+Security based access to Embassy trial available. Can only ssh in via "bastion" host. From that machine there is password less ssh, via a key stored there, to any other machine. If necessary for rsync, scp, etc, we can use port forwarding via the bastion. Now moving onto logging and reporting in this package next.
 
 We will not get any extra disc storage for Embassy in the short term. There is none available on the architecture our VMs are on and we will only have more to move our instances to when we've had hardware procured. We will therefore be a bit longer getting into production with this (there's not enough nfs even for the 82 archive).
 
-10/04 Web team reasonably confident embassy migration approach will work for e71 onwards. At the moment, they don't know about the two older ones (e54, e67).
+2016-04-10 Web update on archives
+Web team reasonably confident embassy migration approach will work for e71 onwards. At the moment, they don't know about the two older ones (e54, e67).
 Requested to Sanger VM OVAs for Ensembl 54 and 67 archives.
 
-08/04 Archive 82 successfully set up on Embassy. Checked the basic pages, sessions, search and biomart, but not yet looked at the more obscure pages which rely extensively on helper applications, nor at flat files.
+2016-04-08 Archive 82 successfully set up on Embassy
+Archive 82 successfully set up on Embassy. Checked the basic pages, sessions, search and biomart, but not yet looked at the more obscure pages which rely extensively on helper applications, nor at flat files.
 
 After archive 82 successful set up, the plan is try to focus on more "target" archives with different operating systems.
 
 Ensembl Version 54 (called ensembl-archive-36), is an etch machine(!) and so is only six years past the date when debian stopped providing security updates. As well as migrating this to EBI, it might be worth us seeing if we can push this forward at least a release or so. It might not be easy, but worth trying. We're only exposing port 80, so we mainly need to make sure httpd and nginx are watertight (most, but not all of the attack surface). Ensembl version 67 (ensembl-archive-67) is a lenny box. Also worth a go with. (A mere four years without security updates).
 From 73 onwards we are on ubuntu precise, which isn't EOL for another year yet, the same as the existing trial of 82.
 
-31/03 Sanger has provided updates for the archive server. Previous image was still containing traces of Sanger-based configuration.
+2016-03-31 Updates for archive 82 servers
+Sanger has provided updates for the archive server. Previous image was still containing traces of Sanger-based configuration.
+
 Problems uploading the new image or any image from Sanger using ovftool ("Error: cURL error: Couldn't connect to server"). Requested help to Sanger but cannot help at the moment.
 
-17/03 Completed creation and partial configuration of the archive 82 servers: MySQL servers for species/mart, NFS server, www and search instances. 82 databases copied by DB team from mysql-ensembl-mirror/mysql-ensembl-mart-mirror EBI mirrors.
+2016-03-17 Creation/configuration of archive main/mart servers
+Completed creation and partial configuration of the archive 82 servers: MySQL servers for species/mart, NFS server, www and search instances. 82 databases copied by DB team from mysql-ensembl-mirror/mysql-ensembl-mart-mirror EBI mirrors.
+
 Not enough space for a complete configuration capable of hosting all archives, e.g. db servers contains just enough space for a release. NFS server runs on 2TB, needs ~12TB.
 
-10/02 Successfully upload Solr search instance OVA into Embassy from Sanger using ovftool. VM quite big (~650GB).
+2016-02-10 Solr OVA import successful
+Successfully upload Solr search instance OVA into Embassy from Sanger using ovftool. VM quite big (~650GB).
 
-04/02 Solr search instance OVA available to upload. Image is big (~200GB), impractical to upload from laptop.
+2016-04-02 Solr instance OVA available
+Solr search instance OVA available to upload. Image is big (~200GB), impractical to upload from laptop.
 
-02/02 Successfully imported test OVA as vApp template into vCloud director on Embassy. Small image (~8GB), unfolds into 46GB disk VM. Used laptop, need to do that from Sanger.
+2016-02-02 OVA import successful
+Successfully imported test OVA as vApp template into vCloud director on Embassy. 
+Small image (~8GB), unfolds into 46GB disk VM. Used laptop, need to do that from Sanger.
 
-28/01 Sanger has made the test OVA for the archive 82 server ready.
+2016-01-28 Archive 82 OVA ready
+Sanger has made the test OVA for the archive 82 server ready.
 
