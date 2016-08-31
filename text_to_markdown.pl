@@ -19,9 +19,6 @@ opendir($DH, $milestones_dir) || die "Can't open $milestones_dir: $!";
 my @wp_milestones = grep { /^wp.+?[^\~]$/ && -f "$milestones_dir/$_" } readdir($DH);
 closedir $DH;
 
-# print "@wp_logs\n";
-# print "@wp_milestones\n";
-
 # test
 # try to convert just one instance
 my $file = "$log_dir/" . $wp_logs[0];
