@@ -1,19 +1,22 @@
-issue: old version of Mysql running there
-which ones are we going to updgrade to 5.6, and how
-if we can do for it, we have a procedure for the production DBs
-enquire DBA
+2016-08-24 ensembldb transfer finished
+ensembldb transfer finished, mart DB transfer still going.
 
-24/08 ensembldb transfer finished?
-
-18/08 copying the data from martdb (ensembldb2b) to EBI, same approach as ensembldb, should take <1w
+2016-08-18 Migration strategy and transfer updates
 Migration strategy: ask/set up two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 from 5.1 at EBI, keep MySQL 4 (need to request). Aiming at e!86 (Sep 20), how about GRCh37?
 
-10/08 Steve transferring ensembldb files using shadowland to EBI warehouse, will complete ~2w
+Copying the data from martdb (ensembldb2b) to EBI, same approach as ensembldb, should take <1w.
 
-22/07 the internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ, will take about 2.5 - 3 weeks
+2016-08-10 ensembldb data transfer
+Steve transferring ensembldb files using shadowland to EBI warehouse, will complete ~2w.
 
-21/07 can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set. This will reduce transfer time greatly (Paul Bevan)
+2016-07-22 ensembldb transfer updates
+The internal Sanger mirror only has 2-3 releases. The only place we have it all is ensembldb2a|b in the DMZ, will take about 2.5 - 3 weeks.
 
-05/08 HW from initial purchase ready at EBI, need to send form for request
+2016-07-21 ensembldb transfer updates
+Can use internal ensembldb mirror, we can copy that at the full 10G rate. That just leaves the biomart data from the DMZ which is a smaller data set. This will reduce transfer time greatly (Paul Bevan).
 
-15/07 300TB warehouse ready, can receive ensembldb/martdb files from Sanger
+2016-08-05 HW ready
+HW from initial purchase ready at EBI, need to send form for request
+
+2016-07-15 Warehouse ready to accept DB files
+300TB warehouse ready, can receive ensembldb/martdb files from Sanger
