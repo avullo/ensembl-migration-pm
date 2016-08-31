@@ -6,11 +6,11 @@ NFS data is copying.
 Trying to set up reverse ssh tunnelling for archive EBI-Embassy data move, doesn't work.
 Should be doable with port forwarding, seems it needs set up of iptables. Dan S claims there's a simple way to specify via command line ssh.
 
-2016-08-23 archive databases at EBI
+2016-08-23 Archive databases at EBI
 Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
-Mart dbs are not there yet
+Mart dbs are not there yet.
 
-options for moving to Embassy:
+Options for moving to Embassy:
 - NFS mount main archive DB disk on bastion host (slower)
 - ssh tunnelling through bastion host (reverse SSH tunnel)
 
