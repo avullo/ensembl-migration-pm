@@ -1,1 +1,10 @@
 name: Ensembl Migration
+collections:
+  wp012:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: wp012
+    values:
+      layout: default
