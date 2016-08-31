@@ -84,7 +84,7 @@ Not enough space for a complete configuration capable of hosting all archives, e
 2016-02-10 Solr OVA import successful
 Successfully upload Solr search instance OVA into Embassy from Sanger using ovftool. VM quite big (~650GB).
 
-2016-04-02 Solr instance OVA available
+2016-02-04 Solr instance OVA available
 Solr search instance OVA available to upload. Image is big (~200GB), impractical to upload from laptop.
 
 2016-02-02 OVA import successful
