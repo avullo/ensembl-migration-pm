@@ -1,0 +1,16 @@
+---
+layout: default
+title: WP5-6 - Production (incl. genebuild)
+---
+        <h1>{{ page.title }}</h1>
+	<ul class="posts">
+
+	  {% for post in site.wp056 %}
+	    <li><span>{{ post.date | date_to_string }}</span>
+	      <h2>{{ post.title }}</h2>
+	      <p>
+		{{ post.content }}
+	      </p>
+	    </li>
+	  {% endfor %}
+	</ul>
