@@ -2,9 +2,45 @@ name: Ensembl Migration
 collections:
   wp012:
     output: true
+  wp03:
+    output: true
+  wp04:
+    output: true
+  wp056:
+    output: true
+  wp07:
+    output: true
+  wp08:
+    output: true
+
 defaults:
   - scope:
       path: ""
       type: wp012
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp03
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp04
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp056
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp07
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp08
     values:
       layout: default
