@@ -51,10 +51,6 @@ my %wps =
 foreach my $milestones_file (@wp_milestones) {
   my $wp = (split /-/, $milestones_file)[0];
   
-  # TEMP
-  # skip if wp08, not yet converted
-  next if $wp =~ /wp08/;
-
   # just do it, do not die, this is implemented wrongly either in Perl or in shell
   `mkdir -p "_${wp}_milestones"`; # or die "Could create dir _$wp: $!\n";
   
@@ -112,10 +108,6 @@ closedir $DH;
 
 foreach my $log_file (@wp_logs) {
   my $wp = (split /-/, $log_file)[0];
-  
-  # TEMP
-  # skip if wp56/wp08, not yet converted
-  next if $wp =~ /wp(056|08)/;
   
   # parse log to get content organised by date
   my $file = "$log_dir/" . $log_file;
