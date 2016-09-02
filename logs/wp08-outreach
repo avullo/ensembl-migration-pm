@@ -7,7 +7,7 @@ Ensembl Goals and Expectations
 - Flagging suspect/problematic users
 
 
-10/08 Plan is to migrate within the first two weeks of September
+2016-08-10 Plan is to migrate within the first two weeks of September
 EBI wants to start the consulting process (get as much of the planning and any issues)
 Tim Cutts from Sanger is on holiday and back end of August
 
@@ -25,19 +25,17 @@ imported ticket.
 (D) Develop email handling code to manage Sanger ID tickets (capture in 
 a custom ID) to new EBI ticket ID.
 
-07/07 Consultancy purchased
+2016-07-07 Consultancy purchased
 
-05/07 Signed EBI-BP master agreement
+2016-07-05 Signed EBI-BP master agreement
 
-29/06 Consultancy timeframe: do this towards the start of August
+2016-06-29 Consultancy timeframe: do this towards the start of August
 
-02/06 Sanger/EBI/BP meeting
-
+2016-06-02 Sanger/EBI/BP meeting
 Current BP proposal:
 10 days support, split in two main parts:
 
 - export the data from Sanger RT, 3-5 days
-
 - import the data into EBI RT, with the following blockers
   ~ reconcile ticket ids between the two systems
   ~ reconcile user ids and LDAP issues
@@ -114,7 +112,7 @@ Actions:
 - AY to list queues to move over
 - All to decide on a strategy for the switch over
 
-29/05 BP RT consulting quote:
+2016-05-29 BP RT consulting quote
 BP will provide EBI ten days of professional services, a mixture of Professional Services and development, to achieve the following tasks:
 1. Upgrade the Sanger instance to 4.2.12 to leverage RT’s core serializer/importer feature. In order to achieve EBI’s goal of extracting specific queues from one instance to another, Best Practical will need to extend RT’s serializer.The serializer extension work will require 3-5 days of development time for Best Practical to assure that it will meet EBI’s
 needs.
@@ -126,12 +124,12 @@ responses from the old ticket id to the newly assigned one since all tickets wil
 * Update LDAP integration as necessary to handle new users.
 * Apply an manual updates needed for imported scrips.
 
-24/05 There isn't much downtime allowance, because the Ensembl RT queues are just three of a total of 226 queues on this RT instance.
+2016-05-24 There isn't much downtime allowance, because the Ensembl RT queues are just three of a total of 226 queues on this RT instance.
 There are 29,000 Ensembl queue tickets, out of a total of 467,000 tickets. The non-Ensembl EBI queues contain a further 24,000 tickets.
 
-19/04 EBI finance discussing contract terms and clauses for RT migration consultancy with BT. Master agreement under processing.
+2016-04-19 EBI finance discussing contract terms and clauses for RT migration consultancy with BT. Master agreement under processing.
 
-21/03 Many non Ensembl EBI queues need to migrate as well (13 queues). 
+2016-03-21 Many non Ensembl EBI queues need to migrate as well (13 queues). 
 Queue name	Tickets (16/3/16)
 ensembl-helpdesk	14861
 ensembl-genomes	1326
@@ -151,13 +149,13 @@ total	42063
 
 There's consensus on buying the consultancy together, very expensive (estimated 10 days @ 2000$/day). 
 3 migration options:
-1). Move it all across, strip anything that's not our ticket from the DB and have our Sanger RT at EBI
-2). Do point 1 but have it as an archive and use the EBI RT
-3). Merge into the EBI archive
+1. Move it all across, strip anything that's not our ticket from the DB and have our Sanger RT at EBI
+2. Do point 1 but have it as an archive and use the EBI RT
+3. Merge into the EBI archive
 
-Paul F has vetoed the 2nd option. Option 1 seems very unlikely considering EBI has just merged two RTs together. That leaves us with option 3 and that's the most expensive/troublesome option :)
+Paul F has vetoed the 2nd option. Option 1 seems very unlikely considering EBI has just merged two RTs together. That leaves us with option 3 and that's the most expensive/troublesome option.
 
-14/03 RT queue Ensembl specific customisations identified.
+2016-03-14 RT queue Ensembl specific customisations identified.
 Lists of Sanger/EBI RT extensions and Sanger customisations
 
-02/03 Enquire BP about possible Consultation to help migrate and maintain history between two RTs
+2016-03-02 Enquire BP about possible Consultation to help migrate and maintain history between two RTs
