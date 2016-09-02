@@ -1,8 +1,9 @@
-Objective: migrate when? (talk with Andy/Steve)
+Objective: migrate when?
+State: 70%
 
-August 2016: 70%
+2016-08-31: 70%
 - data transfer from ensembldb/martdb using shadowland to EBI warehouse (78TB)
 - HW ready but not available at EBI, request made
 
-July 2016: 5%
+2016-07-31: 5%
 - warehouse available, temp host for db/mart files before 5.6 upgrade and server load
