@@ -1,0 +1,20 @@
+wp012:
+  name: Archives
+  goal: migrate Autumn 2016
+  state: 40%
+
+wp04:
+  name: Public MySQL
+  goal: migrate when?
+  state: 70%
+
+wp03:
+  name: FTP
+  goal: migrate by fall 2016
+  state: 50%
+
+wp056:
+  name: Production (incl. genebuild)
+  goal: migrate Q1 2017
+  state: 70%
+
