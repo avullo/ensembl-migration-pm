@@ -1,40 +1,45 @@
-23/08 Sanger Hinxton Data Centre Shutdown starts at 5:00pm 26/08
+2016-08-23 Shutdown update
+Sanger Hinxton Data Centre Shutdown starts at 5:00pm 26/08
 Farm systems are expected to be back from 1:00pm on Tuesday 30th August
 
 The long, parallel and hugemem-restricted queues will be set inactive today ~5pm
 All queues will be closed to jobs at around 5:00pm on Thursday 25th August.
 
 
-22/08 created /nfs/ensemblarch/warehouse for data move
+2016-08-22 Created /nfs/ensemblarch/warehouse for data move
 300TB warehouse is not enough to accomodate ensembldb/mart/ftp/nfs and actual Sanger warehouse alltogether. warehouse will probably move later
 cannot move staging to ens-dump for the shutdown, as it does not have enough room to build mart (deadline Sep 2), the disk on ens-dump had limits in the attached disk size.
 Sanger systems could reattach the storage from st-1/2 to different machines.
 
 Plan:
-(1) We'll announce that we're shutting down processes on staging-1/2 on Thursdy afternoon and all pipelines need to finish by then
-(2) We'll copy everything from staging-1/2 to ens-staging3 on Thursday afternoon
-(3) We'll cross our fingers that staging-1/2 come back to life, but need confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back.
+1. We'll announce that we're shutting down processes on staging-1/2 on Thursdy afternoon and all pipelines need to finish by then
+2. We'll copy everything from staging-1/2 to ens-staging3 on Thursday afternoon
+3. We'll cross our fingers that staging-1/2 come back to life, but need confirmation from systems that they'll be able to source a suitable replacement in a day or two in the event it doesn't come back.
 
-19/08 warehouse not yet available for team members, archive policy/targets haven't been addressed yet, call meeting
+2016-08-19 Warehouse not yet available for team members
+Warehouse not yet available for team members, archive policy/targets haven't been addressed yet, call meeting
 Steve: We have a 10TB volume for the backups of the FTP datafiles*. That's virtually full and given that it's likely to grow much larger I'd like to move away from multiple areas each of fixed size. We have also ended up squeezing files onto different partitions and adding symlinks to make the full use of the available space, not great. One large partition feels better, but I don't know what the storage team would advise 
 
-18/08 pipeline tests status (RH6):
+2016-08-18 pipeline tests status (RH6)
 - core 100%
 - variation 70%
 - regulation 0%
 - genebuild 10-25%?
 - compara no tests, wait RH7 (software is main issue)
 
-17/08 HW request form submitted, will likely be available after shutdown. warehouse data transferred soon (follows ensembldb)
+2016-08-17 HW requisition update
+HW request form submitted, will likely be available after shutdown. warehouse data transferred soon (follows ensembldb)
 
-11/08 requested HW to DBA, TSC ask to submit form, Andy Y to do it
+2016-08-11 HW requisition update
+Requested HW to DBA, TSC ask to submit form, Andy Y to do it
 
-05/08 HW ready at EBI (production/web), FTP/farm will be covered soon by a late purchase
+2016-08-5 HW ready at EBI
+HW ready at EBI (production/web), FTP/farm will be covered soon by a late purchase
 300TB NFS archive area created and mounted on /nfs/ensemblarch
 
-26/07 the new /nfs/software is available on the cluster
+2016-07-26 The new /nfs/software is available on the cluster
 
-15/07 Disk requirements
+2016-07-15 Disk requirements
 Clustered file system attached to HX farm. 100TB of lustre storage attached to HX farm. Can use 'our share' of the 5PB Lustre just published.
 NFS/medium-term storage areas. 300TB of NFS available storage hosted in HX (longer-term warehousing, since lustre lacks any kind of backup)
 An NFS area attached to HX farm at /nfs/software and an area made available under /nfs/software/ensembl with write access only to the user ensw
@@ -42,9 +47,9 @@ An NFS area attached to HX farm at /nfs/software and an area made available unde
 Compute requirements
 Use 500 CPU yrs farm processing on Sanger farm. Can use the ebi cluster as is for that, has plenty of free cpu capacity.
 
-01/06 cvs.sanger.ac.uk is turned off
+2016-06-01 cvs.sanger.ac.uk is turned off
 
-26/05 CVS transferred from cvs.sanger.ac.uk to EBI. 
+2016-05-26 CVS transferred from cvs.sanger.ac.uk to EBI. 
 CVS repository copied across from Sanger and hosted in:
 /nfs/production/panda/ensembl/sanger-cvsroot
 
@@ -55,5 +60,5 @@ Transfer done using scp (no rsync) and with no checks on file integrity. Total s
 Can checkout projects from CVS locally but with write access enabled.
 
 
-01/04 CVS at Sanger becomes read only
+2016-04-01 CVS at Sanger becomes read only
 
