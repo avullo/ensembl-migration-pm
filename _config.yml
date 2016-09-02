@@ -1,47 +1,89 @@
 name: Ensembl Migration
 collections:
-  wp012:
+  wp012_logs:
     output: true
-  wp03:
+  wp03_logs:
     output: true
-  wp04:
+  wp04_logs:
     output: true
-  wp056:
+  wp056_logs:
     output: true
-  wp07:
+  wp07_logs:
     output: true
-  wp08:
+  wp08_logs:
+    output: true
+  wp012_milestones:
+    output: true
+  wp03_milestones:
+    output: true
+  wp04_milestones:
+    output: true
+  wp056_milestones:
+    output: true
+  wp07_milestones:
+    output: true
+  wp08_milestones:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: wp012
+      type: wp012_logs
     values:
       layout: default
   - scope:
       path: ""
-      type: wp03
+      type: wp03_logs
     values:
       layout: default
   - scope:
       path: ""
-      type: wp04
+      type: wp04_logs
     values:
       layout: default
   - scope:
       path: ""
-      type: wp056
+      type: wp056_logs
     values:
       layout: default
   - scope:
       path: ""
-      type: wp07
+      type: wp07_logs
     values:
       layout: default
   - scope:
       path: ""
-      type: wp08
+      type: wp08_logs
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp012_milestones
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp03_milestones
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp04_milestones
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp056_milestones
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp07_milestones
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wp08_milestones
     values:
       layout: default
 permalink: /blog/:year/:month/:day/:title
