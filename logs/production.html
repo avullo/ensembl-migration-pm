@@ -2,15 +2,16 @@
 layout: default
 title: WP5-6 - Production (incl. genebuild)
 ---
-        <h1>{{ page.title }}</h1>
-	<ul class="posts">
-
-	  {% for post in site.wp056_logs %}
-	    <li><span>{{ post.date | date_to_string }}</span>
-	      <h2>{{ post.title }}</h2>
-	      <p>
-		{{ post.content }}
-	      </p>
-	    </li>
-	  {% endfor %}
-	</ul>
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+</div>
+<div class="list-group">
+  {% for post in site.wp056_logs %}
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading" style="margin-bottom: 15px;"><span class="label label-primary">{{ post.date | date_to_string }}</span> {{ post.title }}</h4>
+    <p class="list-group-item-text">
+      {{ post.content }}
+    </p>
+  </a>
+  {% endfor %}
+</div>

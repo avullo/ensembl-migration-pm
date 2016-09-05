@@ -3,17 +3,27 @@ layout: default
 title: WP3 - FTP
 wp: wp03
 ---
-        <h1>{{ page.title }}</h1>
-	{% assign info = site.data.wp[page.wp] %}
-	<h2>Objective: {{ info.goal }}</h2>
-	<h2>State: {{ info.state }}</h2>
-	<ul class="posts">
-	 
-	  {% for post in site.wp03_milestones %}
-	    <li><span>{{ post.title }}</span>
-	      <p>
-		{{ post.content }}
-	      </p>
-	    </li>
-	  {% endfor %}
-	</ul>
+{% assign info = site.data.wp[page.wp] %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{ page.title }}</h2>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li><strong>Objective: {{ info.goal }}</strong></li>
+      <li><strong>State: {{ info.state }}</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="list-group">
+  {% for post in site.wp03_milestones %}
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">{{ post.title }}</h4>
+    <p class="list-group-item-text">
+      {{ post.content }}
+    </p>
+  </a>
+  {% endfor %}
+</div>
