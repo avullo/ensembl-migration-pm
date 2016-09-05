@@ -18,7 +18,8 @@ wp: wp056
 </div>
 
 <div class="list-group">
-  {% for post in site.wp056_milestones %}
+  {% assign posts = site.wp056_milestones | reverse %}
+  {% for post in posts %}
   <a href="#" class="list-group-item">
     <h4 class="list-group-item-heading">{{ post.title }}</h4>
     <p class="list-group-item-text">
