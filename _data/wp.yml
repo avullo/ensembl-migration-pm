@@ -18,3 +18,8 @@ wp056:
   goal: migrate Q1 2017
   state: 70%
 
+wp08:
+  name: Outreach
+  goal: migrate Oct 2016
+  state: 45%
+
