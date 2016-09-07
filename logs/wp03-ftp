@@ -1,3 +1,16 @@
+2016-09-05 FTP copying status update
+Only 8.7Tb so far. Not in a rush though.
+
+2016-09-02 Migration update
+Data is currently copying to EBI, but exactly how to deploy here is not yet fully defined. We therefore need to release the 86 data on the current Sanger hardware 
+
+2016-09-01 Started copying FTP data
+Copying from mount on ensweb-1-19 to /nfs/ensemblarch/ftp started. 39Tb - will take at least a week I reckon
+
+Note I'm only copying ensembl/pub, ignoring ensembl/bin etc
+
+I think we should see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example ?
+
 2016-08-24 Shadowland FTP endpoint
 Steve to ask shadowland endpoint for FTP next week.
 

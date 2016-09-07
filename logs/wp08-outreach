@@ -1,3 +1,9 @@
+2016-09-06 Dump export pb
+The dump this time is taking an extraordinarily long time, ETA 290h. Shawn to advise on this. Shawn suggest to trim down the db before export (only if RT instance is shut down).
+
+2016-09-05 Revised plan
+Discussed migrations dates, like to start on 3rd October. Shawn's on holiday Oct3-14 but can arrange for another engineer to supervise.
+
 2016-08-10 Plan is to migrate within the first two weeks of September
 EBI wants to start the consulting process (get as much of the planning and any issues)
 Tim Cutts from Sanger is on holiday and back end of August
