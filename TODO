@@ -8,33 +8,31 @@ Ask Steve about public MySQL meeting with AndyB (06-09-2016)
 
 07/09/2016
 ==========
-catch up with last week
+X catch up with last week
 
 data review slides, shutdown update
 
-set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution
-can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
+set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
 
-wp08 milestones
+X wp08 milestones
 
 X bootstrap/css for github pages
 
 02/09/2016
-work on Jekyll
+X work on Jekyll
 
 01/09/2016
-work on Jekyll
+X work on Jekyll
 
 31/08/2016
-work on Jekyll
+X work on Jekyll
 
 30/08/2016
-explore github pages with jekyll
+X explore github pages with jekyll
 
 26/08/2016
 ==========
 X slides data review
-
 
 25/08/2016
 X instantiate 67 instance as 82 clone
