@@ -1,5 +1,11 @@
+2016-09-02 Migration update
+ensembldb/martdb - we have the data here and we are in contact with the EBI DBAs, but at this moment we can't be sure of being able to run these services from EBI in time for the next release (86) due in 3 weeks time. Plan is therefore to release 86 on Sanger and migrate as soon after that as we can. 
+
+Steve has requested meeting with EBI DBA to figure out how to deploy instances now that we have data and HW
+
 2016-08-24 ensembldb transfer finished
-ensembldb transfer finished, mart DB transfer still going.
+ensembldb transfer finished, archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb.
+mart DB transfer still going.
 
 2016-08-18 Migration strategy and transfer updates
 Migration strategy: ask/set up two services/2 servers, request 2 VMs each in HX/HH (fail over), upgrade to 5.6 from 5.1 at EBI, keep MySQL 4 (need to request). Aiming at e!86 (Sep 20), how about GRCh37?

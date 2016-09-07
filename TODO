@@ -1,16 +1,23 @@
+09/09/2016
+Organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+
+08/09/2016
+What does Steve mean by: "see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example"?
+
+Ask Steve about public MySQL meeting with AndyB (06-09-2016)
+
 07/09/2016
+==========
 catch up with last week
 
 data review slides, shutdown update
 
 set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution
-can use rsync through a remove firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
-
-organise meeting for warehouse?
+can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
 
 wp08 milestones
 
-bootstrap/css for github pages
+X bootstrap/css for github pages
 
 02/09/2016
 work on Jekyll
