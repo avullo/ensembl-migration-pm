@@ -1,8 +1,10 @@
 Objective: migrate by fall 2016
-State: 50%
+State: 70%
 
-2016-08-31: 50%
-- data transfer to EBI warehouse via shadowland?
+2016-09-30: 70%
+- data transfer to EBI warehouse via shadowland
+
+2016-08-31: 40%
 - internal beta testing available for FTP/HTTP/Rsync
 
 2016-07-31: 25%
