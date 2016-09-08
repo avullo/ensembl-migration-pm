@@ -1,22 +1,23 @@
 09/09/2016
-Organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+ask Steve: "we should see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example?"
+
+organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
 
 Items for e! migration meeting on Monday
 
+Set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
+
 08/09/2016
 ==========
-Ask Steve:
-- what he means by: "see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example"? (FTP data transfer)
-- public MySQL meeting with AndyB (06-09-2016)
+X ask Steve about public MySQL meeting with AndyB (06-09-2016)
 
-Ask Andy:
-- HW requisition for production update
+ask Andy HW requisition for production update
 
 data review slides 
 
-transfer more OVAs from Sanger
+X transfer more OVAs from Sanger
 
-set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
+X allocate enough storage for archive DBs
 
 07/09/2016
 X catch up with last week

@@ -1,6 +1,9 @@
 Objective: migrate Autumn 2016
 State: 40%
 
+2016-09-30: 50%
+- uploaded all archive instances to Embassy
+
 2016-08-31: 40%
 - plan deviation: we migrate (switch DNS) all in one go
 - debugging VM boot problems (67)
