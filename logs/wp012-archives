@@ -1,3 +1,7 @@
+2016-09-08 Upload images update
+75-84 archive instances uploaded
+74-77 search instances uploaded
+
 2016-09-07 74 archive uploaded
 
 2016-09-03 Creating 74-84 OVAs
@@ -15,6 +19,8 @@ Plan is to go live with all of these from Embassy at once, as soon as we can. We
 
 Dan has successfully uploaded and booted the 73 instances
 
+2016-09-01 Martdb copying to warehouse finished
+
 2016-08-24 NFS data is copying
 NFS data is copying.
 
@@ -24,7 +30,7 @@ Trying to set up reverse ssh tunnelling for archive EBI-Embassy data move, doesn
 Should be doable with port forwarding, seems it needs set up of iptables. Dan S claims there's a simple way to specify via command line ssh.
 
 2016-08-23 Archive databases at EBI
-Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
+Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb, although updates will be needed for 86.
 Mart dbs are not there yet.
 
 Options for moving to Embassy:
