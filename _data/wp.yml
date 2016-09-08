@@ -1,7 +1,7 @@
 wp012:
   name: Archives
   goal: migrate Autumn 2016
-  state: 40%
+  state: 60%
 
 wp04:
   name: Public MySQL
@@ -11,7 +11,7 @@ wp04:
 wp03:
   name: FTP
   goal: migrate by fall 2016
-  state: 50%
+  state: 70%
 
 wp056:
   name: Production (incl. genebuild)
