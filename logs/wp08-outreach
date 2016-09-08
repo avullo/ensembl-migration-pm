@@ -1,3 +1,25 @@
+2016-09-08 Final list of queues to be exported from Sanger
+1000genomes,
+anacode,
+annotest,
+annotrack,
+ebi-dgva-admin,
+ebi-ega-helpdesk,
+ebi-era-admin,
+ebi-eva-helpdesk,
+ebi-micromes,
+ebi-pombase,
+ensembl-genomes,
+ensembl-helpdesk,
+ensemblweb,
+gencode,
+havana,
+seqtools,
+treefam,
+vega
+
+Export runtime now down to ~10h. Creating two indexes in the database has made a vast difference to the performance of the GC phase.
+
 2016-09-06 Dump export pb
 The dump this time is taking an extraordinarily long time, ETA 290h. Shawn to advise on this. Shawn suggest to trim down the db before export (only if RT instance is shut down).
 
