@@ -5,7 +5,7 @@ wp012:
 
 wp04:
   name: Public MySQL
-  goal: migrate when?
+  goal: migrate Autumn 2016
   state: 70%
 
 wp03:

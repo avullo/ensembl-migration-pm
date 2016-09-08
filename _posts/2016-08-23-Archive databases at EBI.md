@@ -4,7 +4,7 @@ title: "Archive databases at EBI"
 date: 2016-08-23
 ---
 
-Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb
+Archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb, although updates will be needed for 86.
 Mart dbs are not there yet.
 
 Options for moving to Embassy:
