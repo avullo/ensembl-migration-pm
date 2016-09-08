@@ -1,7 +1,7 @@
 _site/
 Gemfile.lock
 *~
-data-review-10-16/.~lock.talk.odp#
+data-review-10-16/.~lock*
 logs/*~
 meetings/*~
 milestones/*~
