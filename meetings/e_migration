@@ -1,5 +1,28 @@
+12/09/2016
+- Gracefully survived shutdown:
+  - a number of VMs have come back with different IPs
+  - minor pbs with Solr servers (java process stopping e! tomcat)
+  - some IBM blades have not come back and others had trouble with storage: new system boards with more memory, all blades back to service Aug 31 evening
+- HW requisition: no update from EBI systems
+- Warehouse: not enough space at EBI to host Sanger warehouse with public MySQL/FTP/NFS data, will move after these have been transferred
+- Clean up DB servers?
+- Move home directories/lustre space?
+- Archives:
+  - uploading archive/search Sanger instances to Embassy
+  - db/mart data files copied to EBI warehouse, to be copied to Embassy asap
+- FTP:
+  - data transfer to EBI warehouse, should be finished this week
+  - internal beta testing now enabled for FTP/HTTP/RSYNC
+  - aim to migrate end 2016
+- Public MySQL:
+  - data transfer (ensembldb/martdb) to EBI warehouse completed
+  - layout agreement (failover HH/HW), following eg-publicsql.ebi.ac.uk set up with the expectation of production taking over routine updating
+  - request for 2 x 5 VMs with appropriate disk
+  - aim to switch DNS in autumn (Oct/Nov)
+- Outreach
+  - RT migrate week Oct 17-21 
+
 22/08/2016
-==========
 - Production HW ready at EBI, request submitted (available after shutdown)
 
 - Farm infrastructure ready:
