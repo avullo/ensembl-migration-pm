@@ -1,3 +1,12 @@
+2016-09-09 RT migrate Oct 17-21 week
+
+2016-09-09 Improvement in export runtime
+Down to ~7h (BT patches + indexes, even though we shall still look at 2-3 days of downtime.
+
+Tim run a test import, possible that user IDs may present a problem (possibility that there might exist users with the same Name who aren't actually the same user).
+
+Tim proposes to move also PFAM queues, since the group now lives at EBI
+
 2016-09-08 Final list of queues to be exported from Sanger
 1000genomes,
 anacode,
