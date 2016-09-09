@@ -5,7 +5,7 @@
   - some IBM blades have not come back and others had trouble with storage: new system boards with more memory, all blades back to service Aug 31 evening
 - HW requisition: no update from EBI systems
 - Warehouse: not enough space at EBI to host Sanger warehouse with public MySQL/FTP/NFS data, will move after these have been transferred
-- Clean up DB servers?
+- Clean up DB servers?	
 - Move home directories/lustre space?
 - Archives:
   - uploading archive/search Sanger instances to Embassy

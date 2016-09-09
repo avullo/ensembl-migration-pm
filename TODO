@@ -1,19 +1,29 @@
-09/09/2016
-ask Steve: "we should see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example?"
+12/09/2016
+e! migration meeting
 
-ask Andy HW requisition for production update
+ask production about archiving old FTP data
+- ftp://ftp.ensembl.org/pub/assembly/
+- ftp://ftp.ensembl.org/pub/IPI/
+don't know what this is and therfore don't now if it can archived away from the FTP site.
 
-organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
-
-Items for e! migration meeting on Monday
+data review slides/talk
 
 Set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
 
-08/09/2016
+organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+
+09/09/2016
 ==========
+X ask Steve: "we should see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example?"
+
+X ask Andy HW requisition for production update
+
+X items for e! migration meeting on Monday
+
+08/09/2016
 X ask Steve about public MySQL meeting with AndyB (06-09-2016)
 
-data review slides 
+X data review slides 
 
 X transfer more OVAs from Sanger
 
