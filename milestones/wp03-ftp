@@ -6,6 +6,7 @@ State: 70%
 
 2016-08-31: 40%
 - internal beta testing available for FTP/HTTP/Rsync
+- FTP server is ready in London
 
 2016-07-31: 25%
 - FTP layout agreement with systems (mirroring, manual failover)

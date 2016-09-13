@@ -1,3 +1,12 @@
+2016-09-13 FTP servers ready in London
+Need to start testing external FTP/HTTP access, requested London FTP set up status to Asier.
+
+Asier confirmed they're ready: [ftp,http,rsync]://ftp.ensemblorg.ebi.ac.uk
+He needs to talk to storage team but he thinks there was an active copy from HX to HH for publishing data. Will let us know.
+
+2016-09-12 FTP copying status update
+Still going on, expected to complete next week.
+
 2016-09-05 FTP copying status update
 Only 8.7Tb so far. Not in a rush though.
 
