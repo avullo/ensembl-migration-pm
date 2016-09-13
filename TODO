@@ -1,19 +1,33 @@
-12/09/2016
-e! migration meeting
+14/09/2016
+Probe Asier about publishing FTP data to London
 
-ask production about archiving old FTP data
+data review slides/talk
+
+organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+
+13/09/2016
+==========
+X probe Asier Roa about FTP server set up
+Will let me know about how to publish, might happen automatically from HX to HH. 
+
+X ask Bronwen about ftp://ftp.ensembl.org/pub/assembly
+Pig data could be somehow related to map data from Sanger available in the pre site. It's a result of a collaboration between Sanger and other institutes which has stopped at some point after which every actor proceeded independently of each other. Havan team might know something about it. She doesn't know about mouse. Data could be there because at that time it wasn't submitted to the relevant archives. She will enquire relevant people and will let me know.
+
+X start transferring NFS data to Embassy
+
+12/09/2016
+X e! migration meeting
+
+X ask production about archiving old FTP data
 - ftp://ftp.ensembl.org/pub/assembly/
 - ftp://ftp.ensembl.org/pub/IPI/
 don't know what this is and therfore don't now if it can archived away from the FTP site.
 
-data review slides/talk
+X set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
 
-Set up port forwarding for EBI-Embassy archive data trasfer? Dan claims there's a simple solution. Can use rsync through a remote firewall, http://chriscase.cc/2011/07/rsync-a-file-through-a-remote-firewall/
-
-organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+X start transferring archive DB data (73-79)
 
 09/09/2016
-==========
 X ask Steve: "we should see if we can archive some of this - what is assembly/mouse/mgsc_assembly_1 for example?"
 
 X ask Andy HW requisition for production update
