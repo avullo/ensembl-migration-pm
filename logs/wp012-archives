@@ -1,6 +1,28 @@
+2016-09-13 75-77 search instances uploaded
+EBI cloud team got feedback from VMWare, retrying upload, it works (VMWare did some db maintenance tasks).
+Proceeding with remaining instances.
+
+2016-09-13 Started NFS data transfer to Embassy
+Again, rsync process died, restarted
+
+2016-09-12 Started transferring archive db data to Embassy
+rsync process died with uninformative message:
+--
+rsync: writefd_unbuffered failed to write 4 bytes to socket [sender]: Broken pipe (32)
+rsync: connection unexpectedly closed (1508 bytes received so far) [sender]
+rsync error: unexplained error (code 255) at io.c(600) [sender=3.0.6]
+--
+rsync restarted
+
+2016-09-12 Still problems uploading search instances
+Cloud team enquire VMWare for uploading problems
+
 2016-09-08 Upload images update
 75-84 archive instances uploaded
+
 74 search instance uploaded
+
+Problems uploading search instances, cloud team increased quota but with no effect
 
 2016-09-07 74 archive uploaded
 
