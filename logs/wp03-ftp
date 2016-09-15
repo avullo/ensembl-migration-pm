@@ -1,3 +1,6 @@
+2016-09-14 FTP transfer update: 60%
+Looking at two more weeks or so to go.
+
 2016-09-13 FTP servers ready in London
 Need to start testing external FTP/HTTP access, requested London FTP set up status to Asier.
 
@@ -67,7 +70,7 @@ Setting up the FTP servers in London.
 Need an FTP site for the mirrors (load flat files from FTP into live tools), or could have a reduced level of service for these (shutdown).
 
 2016-07-27 FTP storage
-FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster. there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/).
+HX FTP serving area is now mounted at /nfs/ensemblftp and available on the EBI cluster. there was another volume to transfer data from/to Sanger (/nfs/ftp/ensemblorg/pub/).
 
 2016-07-15 Proposed FTP layout
 ### Proposed FTP layout 

@@ -1,4 +1,10 @@
-2016-09-13 75-77 search instances uploaded
+2016-09-15 Request for more memory on Embassy
+An extra 144GB
+
+2016-09-14 All search instances have been uploaded to Embassy
+Cannot instantiate all of them, run out of configured memory resources
+ 
+2016-09-13 75-78 search instances uploaded
 EBI cloud team got feedback from VMWare, retrying upload, it works (VMWare did some db maintenance tasks).
 Proceeding with remaining instances.
 
