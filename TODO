@@ -1,13 +1,14 @@
-16/09/2016
+19/09/2016
+involve Dan Staines in FTP
 
 copy martdb to Embassy
+
+data review slides/talk
 
 organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
 
 15/09/2016
 X Embassy request form for more memory
-
-data review slides/talk
 
 14/09/2016
 ==========
@@ -20,7 +21,7 @@ X probe Asier Roa about FTP server set up
 Will let me know about how to publish, might happen automatically from HX to HH. 
 
 X ask Bronwen about ftp://ftp.ensembl.org/pub/assembly
-Pig data could be somehow related to map data from Sanger available in the pre site. It's a result of a collaboration between Sanger and other institutes which has stopped at some point after which every actor proceeded independently of each other. Havan team might know something about it. She doesn't know about mouse. Data could be there because at that time it wasn't submitted to the relevant archives. She will enquire relevant people and will let me know.
+Pig data could be somehow related to map data from Sanger available in the pre site. It's a result of a collaboration between Sanger and other institutes which has stopped at some point after which every actor proceeded independently of each other. Havana team might know something about it. She doesn't know about mouse. Data could be there because at that time it wasn't submitted to the relevant archives. She will enquire relevant people and will let me know.
 
 X start transferring NFS data to Embassy
 
