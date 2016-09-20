@@ -10,4 +10,3 @@ Farm systems are expected to be back from 1:00pm on Tuesday 30th August
 The long, parallel and hugemem-restricted queues will be set inactive today ~5pm
 All queues will be closed to jobs at around 5:00pm on Thursday 25th August.
 
-
