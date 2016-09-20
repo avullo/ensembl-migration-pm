@@ -1,10 +1,15 @@
+2016-09-19 HW provision update
+Issues with the request for the staging server: a machine with such specs
+needs to be hosted on a different hypervisor. This is also blocking the provision
+of all the remaining VMs as EBI prefers to do that in one go.
+The EBI team is looking into providing a suitable solution.
+
 2016-08-23 Shutdown update
 Sanger Hinxton Data Centre Shutdown starts at 5:00pm 26/08
 Farm systems are expected to be back from 1:00pm on Tuesday 30th August
 
 The long, parallel and hugemem-restricted queues will be set inactive today ~5pm
 All queues will be closed to jobs at around 5:00pm on Thursday 25th August.
-
 
 2016-08-22 Created /nfs/ensemblarch/warehouse for data move
 300TB warehouse is not enough to accomodate ensembldb/mart/ftp/nfs and actual Sanger warehouse alltogether. warehouse will probably move later

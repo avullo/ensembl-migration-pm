@@ -1,3 +1,7 @@
+2016-09-19 martdb copying to Embassy started 
+
+2016-09-19 ensembldb copy to Embassy restarted
+
 2016-09-16 ensembldb copy stopped for the week end
 ensdb-web-archive has 30TB provisioned and it's sitting in a 9TB datastore. The cloud team needs to move the three disks to another datastore with a bigger capacity.
 
