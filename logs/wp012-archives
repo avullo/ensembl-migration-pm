@@ -2,6 +2,7 @@
 Total size is 13TB.
 
 2016-09-19 ensembldb copy to Embassy restarted
+Total size is 18.3TB, done 8TB.
 
 2016-09-16 ensembldb copy stopped for the week end
 ensdb-web-archive has 30TB provisioned and it's sitting in a 9TB datastore. The cloud team needs to move the three disks to another datastore with a bigger capacity.
