@@ -1,11 +1,14 @@
-19/09/2016
+20/09/2016
 involve Dan Staines in FTP
-
-copy martdb to Embassy
 
 data review slides/talk
 
 organise meeting for warehouse: decide on our general strategy for backups of ensembldb and FTP, ie a replacement for manual copying to /warehouse
+
+19/09/2016
+X restart ensembldb rsync to Embassy, request auth from storage team
+
+X copy martdb to Embassy
 
 15/09/2016
 X Embassy request form for more memory
@@ -100,7 +103,7 @@ X RT migration catch up
 
 user/hive/tools DB at EBI should be ready (pm), ask Steve
 
-X ask Andy if he agress on production suicidal priority list (include staging1/2 in web live slot?) No need, agreed on Steve's production priority list
+X ask Andy if he agrees on production suicidal priority list (include staging1/2 in web live slot?) No need, agreed on Steve's production priority list
 
 
 22/08/2016
