@@ -5,7 +5,7 @@ wp012:
 
 wp07:
   name: Web
-  goal: migrate Q1 2017 (we should aim at having an infrastructure which is capable of running the web sites by end 2016)
+  goal: migrate Q1 2017, but we should aim at having an infrastructure which is capable of running the web sites by end 2016
   state: 10%
 
 wp04:
