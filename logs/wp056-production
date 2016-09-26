@@ -1,3 +1,10 @@
+2016-09-23 Production HW available
+Dan to:
+- check with DBAs if same virtual user for file system access that we have on the test servers will be available;
+- ask sysinf to mount /nfs/software on all login nodes (only ebi-006 at the moment)
+- set up ro/rw users on these VMs
+- set up mysql-cmds on /nfs/software/ensembl (no brew)
+
 2016-09-19 HW provision update
 Issues with the request for the staging server: a machine with such specs
 needs to be hosted on a different hypervisor. This is also blocking the provision

@@ -1,7 +1,12 @@
 Objective: migrate Q1 2017
 State: 70%
 
-2016-08-31: 70%
+2016-09-30: 70%
+- long-term (RH7) software environment ready
+- Production HW available
+- Pipelines test?
+
+2016-08-31: 60%
 - Production HW ready at EBI, request submitted (available after shutdown)
 - staging3 too slow, moves back to suicidal blades with backup to genebuild9
 - long-term (RH7) software environment almost ready
