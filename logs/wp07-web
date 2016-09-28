@@ -1,5 +1,29 @@
+2016-09-27 Project space and users request still on hold. Group needs to be set up
+Currently ens_pub and it's owned by Paul Kersey. We really want machines up asap. Spoken to Paul K and he's happy with some transfers of ownership.
+
+If we want all new things separate we might ask for users:
+ensweb_adm, w3_ensweb01, tc_ensweb01
+
+But before doing that you should ask for the group ensweb_pub
+
+The group can't be requested through the web interface 
+so we might need to contact desktop directly.
+
+After the group is created you might request the users and then the the 
+storage area.
+
+2016-09-22 Request for two virtual users and project space for the e! website at EBI.
+admin user: ensweb_adm
+web user: w3_ensweb01
+group: ensweb_pub
+Read only project space: /nfs/public/ro/ensweb
+Read/write project space: /nfs/public/rw/ensweb
+
+Update: ens_adm02 and w3_ens02 to keep the same name style with the numbers being the first available ones.
+
 2016-09-16 Web topology agreement
-This has been discussed at a meeting between TSC and the web team.
+This has been discussed at a meeting between TSC and the web team about EBI deployment. The focus was fitting into existing practice and figuring out where special cases will occur and flagging for further investigation. 
+
 More details on a dedicated page on Ensembl web confluence space
 https://www.ebi.ac.uk/seqdb/confluence/display/ENSWEB/Website+topology
 
