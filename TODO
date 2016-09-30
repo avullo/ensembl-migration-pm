@@ -1,3 +1,21 @@
+03/10/2016
+
+inform cloud team (David Ocana) about Embassy storage problems
+
+data review slides/talk
+
+process pending migration emails
+
+29/09/2016
+==========
+X send email for agreement on RT migration date
+
+X debug ensembldb transfer: seems there are portions of storage which have r/w problems (rsync and ls hang indefinitively) 
+
+X process pending migration emails
+
+data review slides/talk
+
 20/09/2016
 involve Dan Staines in FTP
 

@@ -1,3 +1,49 @@
+2016-09-29 Migration dates
+Shawn on holiday Oct 3-14. Unavailable on October 22nd as well. The weekend of October 14-16th would work better for him if it's open. Otherwise he's fully available the weekend of October 28-30th, or we could try to do the migration on October 21-23rd and deal with his unavailability (a colleague can replace him on Sat).
+
+Sent an email proposing Oct 17-23 dates otherwise shift to Oct 24-30
+
+2016-09-28 Migration plan
+1. set all incoming email on hold for both servers
+
+2. stop any cronjobs on both servers by commenting them out
+
+3. stop both webservers
+
+4. take backup of EBI database simultaneously alongside the next step
+
+5. perform the export from Sanger
+
+6. perform the import into EBI
+
+7. start EBI webserver
+
+8. spot check migration
+
+9. send a few test emails
+
+10. trickle real mail in
+
+11. release remaining held mail into EBI RT
+
+12. resume cronjobs
+
+1. Can't be done for the Sanger instance.  It would cause enormous disruption to production sequencing, amongst other things.  Tim proposes the following: 
+
+
+1a.  Set incoming email to hold on EBI RT server
+
+1b.  For all Sanger addresses which feed into queues to be migrated, forward them to their new EBI address, where they will queue up because of 1a.
+
+1c.  Clone the Sanger RT instance database VM, and point the rtsrv-dev machine I've been using at it
+
+1d.  Upgrade the cloned RT database to 4.2.12
+
+2016-09-27 Migration test taking longer after patches
+Approx 80hs according to last test import.
+
+Sunny asks BT to clearly define all the steps to be taken pre and post import migration
+
 2016-09-23 RT patches including custom field and queue limiting additions
 Will be part of next RT release. Sanger running another test dump.
 
