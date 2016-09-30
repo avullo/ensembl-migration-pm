@@ -3,7 +3,7 @@ State: 60%
 
 2016-09-30: 60%
 - uploaded all archive/search instances to Embassy
-- data transfer (martdb) to Embassy completed
+- data transfer (nfs/martdb) to Embassy completed
 
 2016-08-31: 40%
 - plan deviation: we migrate (switch DNS) all in one go
