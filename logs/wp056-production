@@ -1,3 +1,5 @@
+2017-10-04 Machines now configured with file-system level copying with ensmysql
+
 2016-09-27 Meeting with DBA about copying e! DBs
 Need to support file-system level copying using the ensmysql virtual user between the following instances (Andy B knows the details here). Since these are currently unused, the rebuild will be very quick so it can go ahead whenever DBAs are ready:
 mysql-ens-sta-1
