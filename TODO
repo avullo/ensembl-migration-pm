@@ -1,11 +1,35 @@
-04/10/2016
-book room for e!-DBA meeting for Friday
+07/10/2016
+==========
+data review
+
+X debug Embassy main archive problems with David
+
+06/10/2016
+X probe David Ocana about storage problem (wrote embassycloud)
+
+X probe RT guys about agreement
+
+X ask Steve about public MySQL HW, FTP transfer
 
 data review
 
+05/10/2016
+X data review
+
+X catch up on various WP tasks
+
+ask Steve about public MySQL HW, dev environment
+
+ask Dan about involvment in FTP site
+
+04/10/2016
+X book room for e!-DBA meeting for Friday
+
+X data review
+
 X complete page about testing EBI pipelines with RH7
 
-ask Dan if he intends to test production pipelines like the others do
+X ask Dan if he intends to test production pipelines like the others do
 
 03/10/2016
 X inform cloud team (David Ocana) about Embassy storage problems
@@ -17,7 +41,6 @@ X process pending migration emails
 X RT migration date amendment
 
 29/09/2016
-==========
 X send email for agreement on RT migration date
 
 X debug ensembldb transfer: seems there are portions of storage which have r/w problems (rsync and ls hang indefinitively) 

@@ -1,5 +1,8 @@
-Objective: migrate Autumn 2016
+Objective: migrate autumn 2016
 State: 70%
+
+2016-10-31: 71%
+- 86 DBs copied (www, grch37)
 
 2016-09-30: 70%
 - Layout agreement (failover/backup/update)

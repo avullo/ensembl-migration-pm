@@ -1,3 +1,19 @@
+2016-10-03 Updates
+Virtual users:
+- ens_adm02 requested
+- w3_ens02 requested
+- tc_ens01CC (not requested yet)
+
+All users have been minted with the ens_pub user group ((seemed easier than creating more, e.g. ensweb_pub)
+
+Disc will be /nfs/public/r[o|w]/ensweb, not yet requested but will be made once the users have been confirmed 
+
+All 86 databases are on ebi /nfs and we have a dev MySQL server with 4Tb disc that we can use to upgrade these to 5.6. This is however set up for the ensmysql user (as used by production) but we are not sure if we can have our own user which would seem like the sensible thing to do. We have a meeting on Friday to discuss this with the DBAs and other TSC 
+
+Asked www-prod about how the loadbalancer would work for our database (public MySQL and website)
+
+Near to asking for production MySQL servers to be deployed. Still to tie down virtual users and decide how we split databases - do we stick with species/other split, or do we combine the two and have more servers for each? We have never seen high load on the compara database.
+
 2016-09-27 Project space and users request still on hold. Group needs to be set up
 Currently ens_pub and it's owned by Paul Kersey. We really want machines up asap. Spoken to Paul K and he's happy with some transfers of ownership.
 
@@ -27,7 +43,7 @@ This has been discussed at a meeting between TSC and the web team about EBI depl
 More details on a dedicated page on Ensembl web confluence space
 https://www.ebi.ac.uk/seqdb/confluence/display/ENSWEB/Website+topology
 
-2016-09-08 Request for web dev environment on hold
+2016-09-08 Request for web dev environment
 
 1) /nfs space for ensemblweb, both rw and ro
 2) A virtual user (not needed for the sandboxes of course, but this should be the owner of the /nfs volumes)

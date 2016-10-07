@@ -1,15 +1,13 @@
 Objective: migrate Q1 2017
 State: 70%
 
-2016-09-30: 70%
+2016-09-30: 65%
 - long-term (RH7) software environment ready
-- Production HW available
-- Pipelines test?
+- production HW available
 
-2016-08-31: 60%
-- Production HW ready at EBI, request submitted (available after shutdown)
-- staging3 too slow, moves back to suicidal blades with backup to genebuild9
-- long-term (RH7) software environment almost ready
+2016-08-31: 55%
+- production HW ready at EBI, request submitted (available after shutdown)
+- survived shutdown
 - pipelines tested (RH6):
   - core 100%
   - variation 70%
@@ -17,7 +15,7 @@ State: 70%
   - genebuild 10-25%?
   - compara no testing, wait RH7 (software is main issue)
 
-2016-07-31: 50%
+2016-07-31: 40%
 - RH7 software area ready
 - Farm storage (100TB lustre/300TB warehouse), compute (500 CPU yrs) requirements ready
 - staging1/2 moves to non suicidal blades for shutdown (staging3)
@@ -31,12 +29,13 @@ State: 70%
 - Compara software installed (RH6)
 - /nfs/ensembl on old unexpandable area, moved to new storage area (1.5TB)
 - HW purchase
-- CVS transferred from cvs.sanger.ac.uk to EBI
+- CVS transferred from cvs.sanger.ac.uk to EBI (local co, tarball available)
 
 2016-04-30: 5%
 - EBI cluster update to RH7! 
 - Genebuild/Regulation software installed (some carried over from Sanger)
 - Compara hand over software dependency list
+- Sanger CVS becomes read only
 
 2016-03-31: 3%
 - Genebuild/Regulation hand over software dependency list
