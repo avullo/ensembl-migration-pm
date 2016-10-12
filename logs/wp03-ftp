@@ -1,3 +1,14 @@
+2016-10-11 Data transfer to HX mount point 15%
+
+2016-10-10 Data transfer to HX mount point 10%
+ETA end of month
+
+2016-10-08 Initiated data transfer to FTP mount point at HX
+A total of 42T.
+
+2016-10-07 Completed FTP transfer to EBI
+Available at /nfs/ensemblarch/ftp
+
 2016-09-16 Confirmation from EBI systems
 Data can put at /nfs/ensemblftp, which will then sync to HH every hour.
 Granted privilege to become ensemblftp, need to force shell, i.e. $ become ensemblftp /bin/bash

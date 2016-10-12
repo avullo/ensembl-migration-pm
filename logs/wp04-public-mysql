@@ -1,3 +1,13 @@
+2016-10-10 DBA to request the VMs and build a test set up this week
+Steve has provided the sizes of the different releases to let DBA do that.
+
+2016-10-07 No feedback from www-prod re load balancing for public MySQL servers
+
+2016-10-07 VMs for ensembldb/martdb ready
+We have VMs for ensembldb and martdb with the exception of ensembldb port 3306/5306. 
+
+The cloud team have strong reservations about having a 40+Tb volume so we're looking into alternatives (either don't continue to provide all databases or we use MySQL sharding. 
+
 2016-09-27 Public MySQL instance VM names
 We should suggest these:
 
