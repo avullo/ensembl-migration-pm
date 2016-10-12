@@ -1,6 +1,33 @@
-07/10/2016
+12/10/2016
 ==========
+X mail Asier about ftp http access
+
 data review
+
+X ask Steve to copy DBs for Michael:
+from ens-genomics2:3306
+all tracking_*, all starting with homo_sapiens, and all starting with mus_musculus
+to  mysql-ens-reg-prod-1.ebi.ac.uk
+Don't need, Michael will copy the data on his own using globus
+
+11/10/2016
+X ask Sunny about RT migration:
+- during import, tickets will be accepted by EBI
+- if not, can we do the import in two stages (first Ensembl, then the rest)
+
+X request 85 (web/search) images to Luke
+
+X data review 
+
+10/10/2016
+X ask Dan to support David Ocana in Embassy debugging and test VM boot
+
+X catch up with web updates (Steve email 07/10 19:15)
+
+X data review
+
+07/10/2016
+X data review
 
 X debug Embassy main archive problems with David
 

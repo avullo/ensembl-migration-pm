@@ -1,3 +1,18 @@
+2016-10-07 Updates
+
+- no progress on asking for production MySQL servers. Proposed to combine other / species.
+- agreed with Production and DBAs to have just a single virtual user for database coping.
+- no feedback from www-prod re load balancing for web MySQL servers
+- written to www-prod asking for opinions on our proposed webserver topology 
+
+Aims this week:
+
+- request tc_ens01CC user so we can start on Solr
+- request to www-prod asking about our proposed Solr topology
+- start on tools
+- copy data to dev instance
+
+
 2016-10-03 Updates
 Virtual users:
 - ens_adm02 requested
