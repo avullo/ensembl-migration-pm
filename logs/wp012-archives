@@ -1,10 +1,19 @@
-2016-10-12 Data transfer of 75,78,80 archives finished
+2016-10-13 Uploaded 85 web instance to Embassy, 86 cloned from 85
+
+2016-10-12 Archive machines update
+All 14 of the web machines boot successfully now, and have been updated with the network configuration, accounts, passwords, etc, on each per the setup at EBI.
+
+The remaining big tasks are to do the same for the search machines and
+to bring up ensembl on each of them.
+
+2016-10-12 Data transfer of 74,75,78,80 archives finished
+Remains 86
 
 2016-10-11 Embassy copy problems debugged, resumed rsync for 74,75,78,80,86
 Tracked down the cause of problem to be a misconfiguration of the physical switches connected to the Embassy Cloud hosts
 
 2016-10-11 Requested 85 images, deleted 73 from Embassy
-The 73 archive from retired last week.
+The 73 archive was retired last week.
 Once 85 instances are uploaded, clone them to be able to prepare the 86 archive on Embassy
 
 2016-10-07 martdb 86 transfer to Embassy completed
