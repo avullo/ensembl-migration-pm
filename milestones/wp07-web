@@ -1,11 +1,11 @@
 Objective: migrate Q1 2017, but we should aim at having an infrastructure which is capable of running the web sites by end 2016
 State: 21%
 
-2016-10-31: 21%
+2016-10-31: 35%
 - request for production MySQL servers
 - request for virtual users/project space (ro/rw)
 
-2016-09-30: 20%
+2016-09-30: 30%
 - web topology agreement with TSC: HH/HX fail over, backups, DC replication
 - defined dev environment
 - dev MySQL server ready (used to upgrade to 5.6)
@@ -19,3 +19,5 @@ State: 21%
 2016-05-31: 5%
 - HW purchase
 
+2016-03-31: 1%
+- ensembl.org domain transferred
