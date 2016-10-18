@@ -1,3 +1,13 @@
+2016-10-18 Update
+Tim has written code which (a) will update the Sanger email aliases correctly on the day and (b) creates undo LDIF entries so that I can undo everything if it all goes wrong for whatever reason.
+
+The DBA's may have identified the issue that is causing the long import time. They are going to get another test rig setup for Sunny to import into and I will test and report back the results.
+
+2016-10-17 Migration update
+The DBA team have been analysing some of the risks we're exposed to when importing and offered a suggestion: it's importing into a blank database using the normal RT tools (planned by BP) and then the DBA's have another tool that can merge Oracle databases
+
+Sunny will hold off sending a system announce until tomorrow.
+
 2016-10-13 Migration time estimates
 Recent test imports have taken around 45hrs to complete. Tim estimate ~24 hrs to complete export and then ~45hrs to complete import, total time 69 hrs. If the export started e.g. 9am 24th October import will start 9am Tuesday and should complete by Thursday 6am. Thursday morning Sunny can do my checks and release queued emails by around 11am. 
 
