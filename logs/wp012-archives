@@ -1,3 +1,11 @@
+2016-10-18 Search servers configuration
+Dan is recreating www-ens, updating www-ens password, enabling www-ens login, www-ens can su, su requires password, passwordless ssh from bastion, only one key authorized, password auth disabled, disable root shell, set hostname, and adding to dns.
+
+74-84 done.
+
+2016-10-17 Search 85 cannot be exported
+Luke made several attempts with no success. He may have to just download the VMDK files (600GB) and we may have to create the server from scratch in the embassy cloud and attach the VMDK files to new VM.
+ 
 2016-10-13 Uploaded 85 web instance to Embassy, 86 cloned from 85
 
 2016-10-12 Archive machines update
