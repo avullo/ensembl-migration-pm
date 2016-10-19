@@ -3,6 +3,8 @@ Tim has written code which (a) will update the Sanger email aliases correctly on
 
 The DBA's may have identified the issue that is causing the long import time. They are going to get another test rig setup for Sunny to import into and I will test and report back the results.
 
+The annopipeline-requests and zmap queues also need to be moved. This may (depending on queue size) add extra time to the overall export/import time
+
 2016-10-17 Migration update
 The DBA team have been analysing some of the risks we're exposed to when importing and offered a suggestion: it's importing into a blank database using the normal RT tools (planned by BP) and then the DBA's have another tool that can merge Oracle databases
 
