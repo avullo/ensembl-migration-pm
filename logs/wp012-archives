@@ -1,3 +1,14 @@
+2016-10-24 Resource upgrade, issues with vCloud deploy mechanisms
+The cloud team opened a case with VMWare and will let us know as soon as this is resolved.
+
+2016-10-20 Search 85 uploaded, not enough resources to instantiate it
+Requested more CPU/memory (10GHz, 32GB) to take into account search 86 as well.
+
+2016-10-19 Search archive machines EBI-ified
+The search machines have all been EBI-ified, and we should be able to get to them all via bastion with the usual details, via ssh.
+
+The next thing Dan needs to do is to sort out the ownership of the search server processes (we want to move them all to the single www-ens user) and then he can start firing up individual apaches and tomcats and see what the services look like.
+
 2016-10-18 Search servers configuration
 Dan is recreating www-ens, updating www-ens password, enabling www-ens login, www-ens can su, su requires password, passwordless ssh from bastion, only one key authorized, password auth disabled, disable root shell, set hostname, and adding to dns.
 

@@ -1,6 +1,10 @@
 Objective: migrate Q1 2017
 State: 70%
 
+2016-10-31: 70%
+- teams have started testing pipelines on RH7
+- copying warehouse data to EBI
+
 2016-09-30: 65%
 - long-term (RH7) software environment ready
 - production HW available

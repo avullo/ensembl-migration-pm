@@ -1,6 +1,29 @@
-19/10/2016
+25/10/2016
 
-FTP meeting 11am 
+24/10/2016
+==========
+Ask Asier: X
+- confirmation HTTP(s)/Rsync access to FTP servers in London
+- rsync to London preserves permissions
+- private area under /nfs/ensemblftp to sync to at release time with ability to grant access to on a per individual basis
+
+Ask ensembl_variation_wh01 has been cleaned X
+
+21/10/2016
+Ask
+- ensembl_variation_wh01 has been cleaned (Sarah)
+- location of user warehouse space on EBI (Dan)
+
+20/10/2016
+Ask Asier:
+- confirmation HTTP(s)/Rsync access to FTP servers in London
+- rsync to London preserves permissions
+- private area under /nfs/ensemblftp to sync to at release time with ability to grant access to on a per individual basis
+
+Ask embassy cloud more CPU/memory resources X
+
+19/10/2016
+FTP meeting 11am X
 
 Ask:
 - location of user warehouse space on EBI (Dan)

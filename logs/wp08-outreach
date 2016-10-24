@@ -1,3 +1,21 @@
+2016-10-24 Final migration date - Nov 25-27
+
+2016-10-21 Next migration availability
+Shawn cannot make the 11-th and BP doesn't have an engineering resource available the weekend of 11/11; available the three other weekends in November: 4-6, 19-21, 25-27. Sunny not available Sunday 27th or Monday 28th.
+
+The next available weekend with BP support and Tim's availability is 25-27 November. If Tim is able to get export data ready by ~5pm Friday, Sunny starts import ~6pm and by Saturday ~12 noon (18 hours) import should complete. Sunny then have Saturday afternoon/evening to complete post import configs/tests and turn the RT service back on. 
+
+Need to reschedule with BP.
+
+2016-10-20 Major import risks detected, need to reschedule migration
+Possible risk posed to the EBI RT queue in the event of a mis-import of the queues. Andy C's fears are in the event of a mis-import and without taking our RT services down any problems would require the use of the RT shredder to reset the instance and Ensembl queues to the last workable version (restoring from backup is not an option if the service remains live).
+
+EBI has taken the decision that with the work they've done to bring the import down to less than 24hrs it's now possible to close down EBI queues over a weekend with minimal disruption. That would be better for an external user as we reduce overall downtime from 3 week days to 1.
+
+The new plan is to close the EBI RT system over a weekend meaning should the import fail we can rollback to the last database snapshot rather than deleting from a live database. Sanger export will happen on a Friday meaning 1 working day downtime for all Sanger based queues and no working day downtime for all existing EBI queues.
+
+Import tentatively scheduled for the 11th November pending confirmation of a number of people on our side.
+
 2016-10-18 Update
 Tim has written code which (a) will update the Sanger email aliases correctly on the day and (b) creates undo LDIF entries so that I can undo everything if it all goes wrong for whatever reason.
 
