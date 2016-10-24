@@ -11,7 +11,11 @@ What we need from our dev environment is:
 
 (iii) ability to customise login environments (require us to set environments with scripts, which again will be writable by everyone)
 
-Will ask for a virtual user for each developer.
+After the meeting, it was recognised that all the potential blockers aren't actually.
+We'll get 30GB of local disk per VM and enough nfs storage which is ok until the middle of next year. 
+
+Requesting for a virtual user for each developer (4/8 requested so far).
+
 
 2016-10-07 Updates
 

@@ -1,3 +1,6 @@
+2016-10-24 Resource upgrade, issues with vCloud deploy mechanisms
+The cloud team opened a case with VMWare and will let us know as soon as this is resolved.
+
 2016-10-20 Search 85 uploaded, not enough resources to instantiate it
 Requested more CPU/memory (10GHz, 32GB) to take into account search 86 as well.
 
