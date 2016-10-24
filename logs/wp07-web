@@ -1,3 +1,18 @@
+2016-10-19 Request for tc_ens02 Tomcat user (group ens_pub)
+
+2016-10-18 Meeting with www-prod
+Request for advice on set up.
+
+What we need from our dev environment is:
+
+(i) able to isolate our sandboxes from other developers (not happy with the idea of everyone having write access to my directory);
+
+(ii) git push and pull (will require us to enter our passwords on every commit)
+
+(iii) ability to customise login environments (require us to set environments with scripts, which again will be writable by everyone)
+
+Will ask for a virtual user for each developer.
+
 2016-10-07 Updates
 
 - no progress on asking for production MySQL servers. Proposed to combine other / species.

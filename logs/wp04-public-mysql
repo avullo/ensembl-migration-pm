@@ -1,3 +1,38 @@
+2016-10-21 Copying mysql5 martdb to mysql-hhvm7-005:/instances/5316
+We have 22TB currently on that.
+
+2016-10-20 The VMs for 5 shards are requested
+DBAs to configure them as soon as they arrive. External access needs to be configured by the network team.
+
+Given the uncertainties on sharding, they don't know whether the end-of-October migration deadline can be met.
+
+One suggestion would be if Sanger haven't got any space is to migrate martdb.ensembl.org soon, freeing up disc space at Sanger and giving us more time to move ensembldb.ensembl.org.
+
+The 43.6TB archive of r48-86 presents a problem. The sql-aware proxy (ProxySQL) will not allow cross-database (cross-release) queries and would require tables to be fully-qualified in each query, ie 'db_name.table_name' rather than 'use db_name; select ... from table_name;'. We need to establish how big a problem this presents.
+Not being able to support cross database queries is not that significant a problem, but having to have fully qualified table names is a show stopper (our APIs have not been designed to create namespaced queries).
+
+An alternative to using a proxy would be to instruct the anonymous sql-user to go to server-x for a certain set of releases and to server-y for the next set, etc. DBAs don't know whether this is feasible. As long as it's transparent for users, ie they connect on 3306/5306 and the loadbalancer or proxy does the rest, then this would work. If technically possible.
+
+
+2016-10-18 Shard test set up
+s1 releases 48-63, 10.2TB
+
+s2 releases 64-71, 9.6TB
+
+s3 releases 72-77, 9.2TB
+
+s4 releases 78-83, 9.1TB
+
+s5 releases 84-86, 4.7TB, perhaps with 6.5TB allocated to allow space for release 87
+
+We monitor the VMs with Nagios and will keep a load history. Within the database instance we can switch on the slow query log (but not the general log) and possibly use Nagios plug-ins. We could consider finer resolution for the more recent releases (eg s5 for 84-85, s6 for 86 and then s7 for 87) to gauge their popularity more accurately. We're already stretching the originally-envisaged resources by sharding, it's just a case how far we want/can afford to take that; a single, monolithic server (whether at Sanger or EBI) could never scale to handle an infinite stream of releases.
+
+We do not currently have enough disc space at Sanger for release 87 (due 29th November).The priority is to migrate this ASAP so five shards for now sounds good.
+
+We will need to patch the 87 databases from 5.1 to 5.6 (they are being produced at Sanger one last time).
+
+We should also keep an eye on the main martdb.ensembl.org instance; that will reach 25Tb in about June of next year 
+
 2016-10-10 DBA to request the VMs and build a test set up this week
 Steve has provided the sizes of the different releases to let DBA do that.
 
