@@ -1,3 +1,7 @@
+2016-10-28 Confirmed 85 and 86 boots and configured networking
+
+2016-10-25 Deploy issue resolved, booted search 85 and 86 created (as clone of 85)
+
 2016-10-24 Resource upgrade, issues with vCloud deploy mechanisms
 The cloud team opened a case with VMWare and will let us know as soon as this is resolved.
 

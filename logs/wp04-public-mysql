@@ -1,3 +1,8 @@
+2016-10-28 Disk available at Sanger to host ensembldb/masrtdb for release 87
+EBI DBA to let us know if moving just martdb before then is achievable or not. 
+
+2016-10-24 martdb data copied to production instance
+
 2016-10-21 Copying mysql5 martdb to mysql-hhvm7-005 at /instances/5316
 We have 22TB currently on that.
 
