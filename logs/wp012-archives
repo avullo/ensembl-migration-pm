@@ -1,7 +1,7 @@
 2016-11-14 Embassy DNS migration next week
 
-2016-11-10 SOLR/Lucene firewall rules
-Dan has disabled Solr/Lucene ports (81xx range) for the archives because some of our tomcats are very old, with known vulnerabilities. 
+2016-11-10 SOLR, Lucene firewall rules
+Dan has disabled Solr Lucene ports (81xx range) for the archives because some of our tomcats are very old, with known vulnerabilities. 
 
 2016-11-01 Monitoring VM on Embassy
 Plan to move monitoring off of control and 1-18 (where they currently reside) and onto a separate small VM in embassy today.
