@@ -3,18 +3,18 @@ wp012:
   goal: migrate autumn 2016
   state: 60%
 
-wp07:
-  name: Web
-  goal: migrate Q1 2017, but we should aim at having an infrastructure which is capable of running the web sites by end 2016
-  state: 21%
-
-wp04:
-  name: Public MySQL
-  goal: migrate autumn 2016
-  state: 70%
+wp08:
+  name: Outreach
+  goal: migrate Oct 2016
+  state: 50%
 
 wp03:
   name: FTP
+  goal: migrate autumn 2016
+  state: 70%
+
+wp04:
+  name: Public MySQL
   goal: migrate autumn 2016
   state: 70%
 
@@ -23,8 +23,8 @@ wp056:
   goal: migrate Q1 2017
   state: 70%
 
-wp08:
-  name: Outreach
-  goal: migrate Oct 2016
-  state: 50%
+wp07:
+  name: Web
+  goal: migrate Q1 2017, but we should aim at having an infrastructure which is capable of running the web sites by end 2016
+  state: 21%
 
