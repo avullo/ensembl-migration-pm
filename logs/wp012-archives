@@ -1,3 +1,34 @@
+2016-11-14 Embassy DNS migration next week
+
+2016-11-10 SOLR/Lucene firewall rules
+Dan has disabled Solr/Lucene ports (81xx range) for the archives because some of our tomcats are very old, with known vulnerabilities. 
+
+2016-11-01 Monitoring VM on Embassy
+Plan to move monitoring off of control and 1-18 (where they currently reside) and onto a separate small VM in embassy today.
+
+This will help because:
+
+1. the monitor script has been shown to be flaky when unexpected things happen (like the LDAP crashing and taking home directories with it). This is fair enough (but should be fixed in the end) but shouldn't take out either 1-18 or control (which is doing DNS), if it fails;
+
+2. it will all be in one place;
+
+3. we can migrate it more easily out of embassy if we extend this to other places.
+
+Going to call it (surprise, surprise) monitoring.
+
+2016-10-31 Vega in Embassy
+Next year we'll be running Vega from Embassy and treating it like an e! archive site. 
+
+- Vega website at Sanger runs on bare metal so we should clone the ensweb-archive-86 instance and then reconfigure it be a Vega website
+- We'll need about 100Gb of storage for the Vega DBs - there's space on the existing Embassy archive for that
+- Vega Solr search requires a lot less disc than Ensembl search. Assuming that it's easier to clone an already migrated instance than to reimport another OVA from Sanger, how could we create it from ensweb-search-86 ? Clone, delete all files, and then reclone but specifying less disc ?
+
+- FTP site can go onto ftp.ensembl.org. 
+
+When we have the databases ready in Jan / Feb Steve will copy them across to /nfs and we can add them to the existing MySQL
+
+We should clone ensweb-archive-86 and ensweb-search-86 and then respectively (i) git update and convert to Vega, and (ii) convert search to use the vega shards and then replicate indexes from the master at Sanger. The Vega search indexes are 350Gb smaller than the Ensembl one
+
 2016-10-28 Confirmed 85 and 86 boots and configured networking
 
 2016-10-25 Deploy issue resolved, booted search 85 and 86 created (as clone of 85)
