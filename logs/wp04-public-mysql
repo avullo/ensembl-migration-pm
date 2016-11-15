@@ -1,3 +1,21 @@
+2016-11-14 Provision of ensembldb 48 onward
+
+DBA figured out with the Cloud team a way of provisioning a 50TB server for ensembldb-48onward, which will allow convenient migration of filesystem mountpoints (to which we can symlink from the instance data directory) to a sharded solution once we're ready with that. It'll be possible to migrate by re-presenting the data rather than having to copy tens
+of TB.
+
+We should have that in next the few days, in both HH and HX.
+
+2016-11-10 martdb:5316 to remain at version 5.1
+Once we've copied release-87 v5.1 files onto it, DBA will run the 5.5 to 5.6 upgrade.
+
+DBA ask clearer names for the 5 VMs, e.g: martdb-pre48, martdb-48onward, ensembldb-pre48, ensembldb-grch37, ensembldb-48onward. 
+
+2016-11-04 neither ensembldb or martdb will be migrating to EBI before e87
+Release will be carried out at Sanger.
+
+2016-11-03 Sharding of the large 45TB instance is low in priority
+DBA to let us know if neither of ensembl/martdb services will be migrating to EBI before the new release Nov 29.
+
 2016-10-28 Disk available at Sanger to host ensembldb/masrtdb for release 87
 EBI DBA to let us know if moving just martdb before then is achievable or not. 
 

@@ -1,3 +1,29 @@
+2016-11-08 First regulation instance upgraded
+
+2016-11-08 genebuild-prod machines reconfigured with increased connection limit
+
+2016-11-07 Monitoring MySQL hosts
+Elastic Beats could be an option, might be worth trying out for monitoring by Ensembl staff once we have virtual users to connect to the new machines. 
+
+2016-11-07 Second regulation instance mysql-ens-reg-prod-2 now available
+
+2016-11-03 Increased number of cores on mysql-vm-072
+They are all still being fully utilised without any appreciable IO workload, and the load on the server is not dropping but rather seems to be increasing. There is still 12 GiB free RAM on the server, don't think increasing the RAM would be useful without any indications that it would be used for anything other than filesystem cache.
+
+An increase in connection limit for all genebuild machines is expected for tomorrow.
+
+2016-11-02 Meeting with DBA
+List of actions:
+
+- Andy B/Rich to increase cores on mysql-ens-compara-prod-1 to 8 and Matthieu to monitor and report back
+- Andy B to reparameterise all new machines according to planned usage
+- Andy B to increase connection limit to 1024 on mysql-ens-genebuild-prod-1 and mysql-ens-variation-prod-2 and Thibaut/Sarah to test pipelines and report back
+- Dan S to contact sysinf about cactus monitoring on MySQL servers
+- Andy B to look into requests for upgrading mysql-ens-reg-prod-1 and creating mysql-ens-reg-prod-2 (tickets #95173 and #90611) and Alessandro to add these to the spreadsheet
+- Dan S to look into separate server dedicated to hive and tuned for InnoDB only
+
+Manuela and Andy B had a meeting with Pete Jokinen and it is feasible (and already in use at EBI) a mechanism to place a condition based on load for LSF to decide about throttling. AndyB and Pete will work on this over the next days and get back to use asap.
+
 2016-10-24 Pipeline tests update
 - variation dbSNP import
 - some production pipelines successfully tested

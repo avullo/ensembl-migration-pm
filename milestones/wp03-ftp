@@ -1,6 +1,9 @@
 Objective: migrate autumn 2016
 State: 70%
 
+2016-11-30: 85%
+- HTTP/Rsync access enabled
+
 2016-10-31: 80%
 - FTP data moved to HH
 

@@ -1,3 +1,21 @@
+2016-11-11 list servers at Sanger/EBI
+Sanger is on version 2.1.13, EBI on 2.1.9. To aid in the export, Sanger asks if EBI's server can be upgraded.
+
+2016-11-10 Migration of mailing lists (annouce and dev) lists.ensembl.org
+Sent email to Desktop. We would want to migrate these to EBI. We want to maintain the current separate domain for lists.ensembl.org to ensure we show external users only relevant lists and provide appropriate archives.
+
+Should be easy to move.
+
+1) disable email alias delivery?
+2)  export list
+3) import list
+4) re-enable mail deliver
+
+Sanger still hosts the MX records. These too needs to move the ebi
+
+2016-11-07 Tuning Oracle and testing import, 16hrs
+Obtained by turning off some logging
+
 2016-10-26 Analyses of import bottle necks
 
 2016-10-24 Final migration date - Nov 25-27
