@@ -1,11 +1,25 @@
-16/11/2016
-
 Poll to organise migration meetings with TSC and web prod
 
-15/11/2016
-==========
+Request for more Embassy resources to accomodate:
+- 87 web/search
+- vega web (as the others) and search (2 CPUs/4GB RAM)
 
-Ask Andy, Dan about meeting with Marc (Wed)
+21/11/2016
+
+Discuss with Dan:
+- metric beats + ELK
+- FTP set up
+
+16/11/2016
+
+Meeting with Marc (sysinf) and Dan 11am X 
+
+Install compara recipes
+
+Look at MyISAM/InnoDB issue for core-prod-1 reported by Thomas M
+
+15/11/2016
+Ask Andy, Dan about meeting with Marc (Wed) X
 
 
 24/10/2016
