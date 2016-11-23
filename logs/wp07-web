@@ -1,3 +1,13 @@
+2016-11-18 Priorities for delivering Web MySQL servers
+Highest priority: accounts, sessions, tools and the various ensembldb instances
+
+After that, the five 'species&compara'. 
+
+Having these first will be most usefull for us in developing our deployment procedures and also for setting up the internal load balancing 
+
+2016-11-17 Planning for delivering batch of Web MySQL servers
+species/compara, mart, grch37/mart, private, pre, archive
+
 2016-11-14 Updates from Steve
 
 - We cannot have a dev VM with our new home and storage areas mounted on it for 'some weeks'. We could have one with the old areas now though. We really really need to get going on this so it'd be good if we could use the old areas and get building localsw ASAP. Q - are there any existing accounts that we could use for this ?
