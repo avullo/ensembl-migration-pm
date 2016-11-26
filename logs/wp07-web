@@ -1,9 +1,23 @@
+2016-11-21 Virtual user for administrating ensembl website database files
+Will be done this week:
+ensdb-prod - copies within the group mysql-ens*prod* and mysql-ens-sta*
+ensdb-web - mysql-ens-sta* and mysql-ens-web*
+ensdb-pub - mysql-ens-sta* and mysql-ens*pub*
+
 2016-11-18 Priorities for delivering Web MySQL servers
 Highest priority: accounts, sessions, tools and the various ensembldb instances
 
 After that, the five 'species&compara'. 
 
 Having these first will be most usefull for us in developing our deployment procedures and also for setting up the internal load balancing 
+
+Timelines:
+
+accounts, sessions, tools, ensembldb - before Xmas
+
+remainder (minus two) - end of Jan
+
+final two (mysql-ens-web-archive and mysql-ens-web-archive-mart) - April 
 
 2016-11-17 Planning for delivering batch of Web MySQL servers
 species/compara, mart, grch37/mart, private, pre, archive

@@ -1,6 +1,10 @@
 Objective: migrate autumn 2016
 State: 60%
 
+2016-11-30: 95%
+- archives running at EBI, switched DNS
+- 87 and Vega to be hosted on Embassy
+
 2016-10-31: 70%
 - archive DB data transfer to Embassy completed
 - all web machines configured (networks, accounts, passwords)

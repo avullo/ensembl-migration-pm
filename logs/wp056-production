@@ -1,3 +1,8 @@
+2016-11-25 All prod instances running on ext4 filesystem
+
+2016-11-24 All genebuild prod servers are running ext4 filesystem now, other servers to be upgraded as well
+xfs has fragmentation problems
+
 2016-11-17 Finalizing optimization of delivered servers
 Currently genebuild and biomart building servers
 
