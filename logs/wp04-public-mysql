@@ -1,3 +1,11 @@
+2016-12-06 Mart4 files have been copied
+
+2016-12-02 MySQL 4 instance available
+fb1-mysql-ens-mart4-pub:3316
+Can copy data to /instances/3316/db_files (and symlinks in /instances/3316/data)
+
+DBA configuring the 45TB server
+
 2016-11-14 Provision of ensembldb 48 onward
 DBA figured out with the Cloud team a way of provisioning a 50TB server for ensembldb-48onward, which will allow convenient migration of filesystem mountpoints (to which we can symlink from the instance data directory) to a sharded solution once we're ready with that. It'll be possible to migrate by re-presenting the data rather than having to copy tens
 of TB.

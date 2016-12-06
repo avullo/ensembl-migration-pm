@@ -1,3 +1,6 @@
+2016-12-01 FTP/HTTP protocols work as expected
+Need to test rsync
+
 2016-11-25 Sysinf has implemented new layout
 Applied the changes that will allow the http ftp and rsync to serve from PUBLIC, and http to hide PRIVATE but provide it if requested and with support for .htaccess.
 
