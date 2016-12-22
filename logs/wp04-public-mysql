@@ -1,4 +1,34 @@
-2016-12-06 Mart4 files have been copied
+2016-12-22 Both GRCh37 instances instances are now upgraded to 5.6
+Doing the same with mart5. The latter will need extra storage to accept release 88, in fact at
+22TB currently it should probably be split into 2x15TB and that way can be sharded eventually, in the same way as sql5 and GRCh37 (if all three are to grow indefinitely).
+
+2016-12-15 The 10Tb on the 37 database server is not enough even for now so we'll need it expanding
+HX is full, HH is only at 3Tb since the (ongoing) copying there is much much slower than that to hx.
+
+DBA to request more space. The 10TB was on the basis of the 8.6TB envisaged at the beginning of this ticket. I would suggest 15TB to accommodate releases 88 and 89, and beyond that moving to a shard-based system the same as planned for sql5.
+
+That'll take us around June.
+
+2016-12-09 Copy to HX grch37 finished 
+
+2016-12-08 HH/HX grch37 instances ready for file copies and symlinks.
+hh-mysql-ens-grch37-pub and fb1-mysql-ens-grch37-pub (port 3337)
+
+These have 10TB available so will need to be expanded fairly soon.
+
+Copy expected to complete early next week, after that will copy sql5 data to the 60TB instances.
+
+2016-12-07 MySQL4 servers ready, all files copied ansd symlinked
+Currently populating mart5 servers with files up to release 87
+
+2016-12-06 Mart4 files have been copied to fall back instance
+And copying to Hemel Hempstead.
+
+HH and fallback sql4 instances hh-mysql-ens-sql4-pub and fb1-mysql-ens-sql4-pub (port 4306) are ready.
+
+Mart 5 HH is already populated, the fallback instance fb1-mysql-ens-mart5-pub:5316 is also ready for file copies and symlinks
+
+Copying the 87 mart dbs from Sanger, after that will push to HH/FB
 
 2016-12-02 MySQL 4 instance available
 fb1-mysql-ens-mart4-pub:3316
