@@ -1,3 +1,16 @@
+2016-12-22 Both GRCh37 instances instances are now upgraded to 5.6
+Doing the same with mart5. The latter will need extra storage to accept release 88, in fact at
+22TB currently it should probably be split into 2x15TB and that way can be sharded eventually, in the same way as sql5 and GRCh37 (if all three are to grow indefinitely).
+
+2016-12-15 The 10Tb on the 37 database server is not enough even for now so we'll need it expanding
+HX is full, HH is only at 3Tb since the (ongoing) copying there is much much slower than that to hx.
+
+DBA to request more space. The 10TB was on the basis of the 8.6TB envisaged at the beginning of this ticket. I would suggest 15TB to accommodate releases 88 and 89, and beyond that moving to a shard-based system the same as planned for sql5.
+
+That'll take us around June.
+
+2016-12-09 Copy to HX grch37 finished 
+
 2016-12-08 HH/HX grch37 instances ready for file copies and symlinks.
 hh-mysql-ens-grch37-pub and fb1-mysql-ens-grch37-pub (port 3337)
 
