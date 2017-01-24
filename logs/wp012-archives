@@ -1,3 +1,19 @@
+2017-01-23 Created VM for 87 web archive on Embassy
+It is a clone of ensweb-archive-86
+
+2017-01-23 Cloud team has recovered the crashed machines
+The problem seems to be due to a host not entering correctly in maintenance mode.
+
+2017-01-20 Three Embassy machines have unexpectedly crashed
+ensweb-archive-86, ensweb-search-75, ensweb-archive-80
+
+They fell in an inconsistent state and no operation on them (starting, stopping, powering off, rebooting, etc) works in vCloud director.
+
+Dan has created three new machines from the OVAs we got from Sanger as a temporary replacement.
+
+2017-01-19 Sanger archive stats to be discontinued
+Piwick stats are going to be discontinued as long things are moving to Embassy
+
 2016-12-15 Copying 87 archive to Embassy
 And also decipher 87_38 data and synching ensnfs again.
 
