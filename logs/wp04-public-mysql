@@ -1,3 +1,15 @@
+2017-01-18 All services are set up and running
+Cloud team has provided a number of 15TB volumes attached to the VMs.
+
+All data is there and the services are running. LB set in HH to direct access on different instances based on port, with fail over to HX.
+
+Remaining issue is to how users access to these. No anonymous user so far, so public access can't be tested.
+
+The service is expected to be fully migrated out of Sanger by the time e!88 is out (18/03).
+
+2017-01-04 Both 5306 instances upgraded to 5.6
+Steve has requested the home directories to be mounted on HH. DBA replied is possible for all servers except for public/rogue state (outside firewall).
+
 2016-12-22 Mart5 instances upgraded to 5.6
 
 2016-12-22 Both GRCh37 instances instances are now upgraded to 5.6
@@ -134,7 +146,25 @@ No live backups of MySQL4 instances, and unlikely to need live backups of MySQL5
 2016-09-02 Migration update
 ensembldb/martdb - we have the data here and we are in contact with the EBI DBAs, but at this moment we can't be sure of being able to run these services from EBI in time for the next release (86) due in 3 weeks time. Plan is therefore to release 86 on Sanger and migrate as soon after that as we can. 
 
-Steve has requested meeting with EBI DBA to figure out how to deploy instances now that we have data and HW
+Steve has requested meeting with EBI DBA to figure out how to deploy instances now that we have data and HW. 
+
+This is an outline of what we have at Sanger:
+
+ We have five servers and need to transfer all five.
+  
+a) martdb.ensembl.org on port 3316. Disc space is 2.1Tb and will not change. Running MySQL 4.1.20. These are old databases and the compatibility of newer versions of MySQL with the APIs out there is unknown.
+  
+b) martdb.ensembl.org on port 5316. Disc space is 20Tb and will increase by ~1Tb each release (ie 4-5Tb per year). Running MySQL 5.1.72 but should be updgraded to 5.6.
+  
+c) ensembldb.ensembl.org on port 4306. Disc space is 4.4Tb and will not change. These databases cannot be upgraded to version 5 due to known incompatibilities with the API versions out there.
+  
+d) ensembldb.ensembl.org on ports 3337. Disc space is 8.6 Tb and will grow by 1.3Tb each release (ie 5-6Tb per year). Running MySQL 5.1.72 but should be updgraded to 5.6
+  
+e) ensembldb.ensembl.org on ports 3306 and 5306. Disc space is 43.6 Tb and will grow each year - by at least 1.3Tb each release but likely more as new sepecies and data types get added. Running MySQL 5.1.72 but should be updgraded to 5.6.
+  
+With these being public facing we would like the primary servers to be in HH with a backup at HX. At Sanger we currently have just two servers for these (one for ensembldb, one for martdb) and our hardware requisition reflected this - 4 VMs (2 in HH, 2 in HX), each of 8 cores with 32Gb RAM. Silver storage.
+  
+Filesystems are read only. All databases are MyISAM.
 
 2016-08-24 ensembldb transfer finished
 ensembldb transfer finished, archive databases for embassy are all at /nfs/ensemblarch/db/ensembldb.
