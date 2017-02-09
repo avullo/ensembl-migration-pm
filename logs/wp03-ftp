@@ -1,3 +1,6 @@
+2017-01-27 Running out of space of FTP
+FTP volume is full. There is a bug in that the system displays space that is reserved for filesystem purposes and cannot be used for regular data. Sysinf now looking to see if if we are able to expand this volume. 
+
 2017-01-19 Production team testing synch to HH
 Thomas M is taking care of this. After these tests FTP service is ready to fully migrate.
 

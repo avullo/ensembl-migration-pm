@@ -1,3 +1,24 @@
+2017-02-08 Plan is to migrate lists by the end of the month
+Will be moving MX and mail lists at the same time, which is easier.
+
+2017-02-06 Import of the announce list on test server OK
+Struggling to do mail routing tests as EBI does not manage the ensembl.org domain and aliases, despite the domain is owned by EBI.
+
+Emails are going via SANGER mail server, but because SANGER doesn't have direct access to our mailman server, the 20 aliases (2 lists x 10 aliases - admin, buounce, join, etc) will have to get redirect to EBI <list>@ebi.ac.uk mailserver (we need to create an extra set of them on out site) which in turn will redirect them to our mailman server.
+
+Will have a dedicated mailman server for ensembl.org on our site, as the one that EBI uses does not allow different domain that ebi.ac.uk to be used on it. 
+
+2017-01-18 Import of http://lists.ensembl.org/mailman/listinfo lists to EBI
+EBI will create a new instance of mailman for ensembl.org lists (there is no database back-end), import the data and then Sanger will update MX DNS to point to EBI (short downtime), this will maintain the use of ensembl.org domain.
+
+Work breakdown:
+
+- create a EBI hosted mailman (assume this means a Postgres box and web server hosted in HH with failover?)
+- advertise that we will close down dev@ensembl.org and annouce@ensembl.org for a period of time
+- take a snapshot of the data
+- migrate into the aforementioned EBI hosted mailman
+- redirect email from dev@ensembl.org and announce@ensembl.org to the new server at EBI
+
 2016-11-24 Ensembl queue export at Sanger done
 Results put on the FTP site
 
