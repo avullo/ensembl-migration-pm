@@ -1,3 +1,12 @@
+2017-01-27 Running out of space of FTP
+FTP volume is full. There is a bug in that the system displays space that is reserved for filesystem purposes and cannot be used for regular data. Sysinf now looking to see if if we are able to expand this volume. 
+
+2017-01-19 Production team testing synch to HH
+Thomas M is taking care of this. After these tests FTP service is ready to fully migrate.
+
+2017-01-18 FTP FUSE fs access tested
+Web team report tests are successful
+
 2016-12-20 Follow up on volume synch
 Main question is how rapidly a large directory structure can be made public. Lets take /nfs/ensemblftp/PUBLIC/pub/release-87 as an example - this is 1.3Tb and we'd typically assemble it over a number of days as finished data is available to us. We then want to make the entire directory tree public in one go. What strategies do they recommend for this, and how "instantaneous" would they be?
 

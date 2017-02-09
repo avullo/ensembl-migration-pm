@@ -1,3 +1,44 @@
+2017-01-27 Available back up options from Cloud team
+There's a script to backups machines using PowerCLI (A Windows machine with PowerShell and PowerCLI is needed. Also valid credential to access the vCenter):
+
+http://www.simonlong.co.uk/blog/2010/05/05/powercli-a-simple-vm-backup-script/
+
+Also there is a free version of the Veeam Backup software (Windows is needed also)
+
+https://www.veeam.com/virtual-machine-backup-solution-free.html
+
+And other free alternative:
+
+http://www.thinware.net/Products/ThinwarevBackup/tabid/202/Default.aspx
+
+Maybe the fastest way is to use a windows machine available and use PowerCLI,
+delegate some permissions in vCenter and use a separate datastore/disk for the
+backups.
+
+I would also give a try to Veeam Free, but a powerful windows machines is
+normally needed.
+
+2017-01-24 Asked Cloud team about backup, snapshots strategies 
+This could be done programmatically using the vCloud REST API, and it can be done while the machines are running.
+
+On the other hand, taking snapshots of a machine doesn't mean these are available as resources which can be downloaded as stored somewhere separate from Embassy. Once you've taken a snapshot you can revert the machine to it, but only using the menu on the vCloud interface. The snapshot is stored internally. 
+
+2017-01-23 Created VM for 87 web archive on Embassy
+It is a clone of ensweb-archive-86
+
+2017-01-23 Cloud team has recovered the crashed machines
+The problem seems to be due to a host not entering correctly in maintenance mode.
+
+2017-01-20 Three Embassy machines have unexpectedly crashed
+ensweb-archive-86, ensweb-search-75, ensweb-archive-80
+
+They fell in an inconsistent state and no operation on them (starting, stopping, powering off, rebooting, etc) works in vCloud director.
+
+Dan has created three new machines from the OVAs we got from Sanger as a temporary replacement.
+
+2017-01-19 Sanger archive stats to be discontinued
+Piwick stats are going to be discontinued as long things are moving to Embassy
+
 2016-12-15 Copying 87 archive to Embassy
 And also decipher 87_38 data and synching ensnfs again.
 
