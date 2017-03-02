@@ -1,0 +1,14 @@
+Release 88 Mar 7, if that happens, we might set a date to migrate the release to EBI ~ Mar 28
+Compara is the main blocker for getting e!88 in time (Mar 7)
+Need a strategy for that, for sure about:
+- update mirrors (RH6, localsw)
+- migration of GRCh37 (Mar 7 at the very latest, even if e!88 happens after)
+  need to speak to production about getting Mart ready
+  anyway, no big deal if mart is not ready
+
+pre is the first one to go, very quickly after 37 then live
+
+Steve to speak with Simone about the request for the VMs
+
+project areas:
+/nfs/public/release/ensweb,enswebdata
