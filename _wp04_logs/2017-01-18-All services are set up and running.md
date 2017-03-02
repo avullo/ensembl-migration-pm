@@ -10,5 +10,5 @@ All data is there and the services are running. LB set in HH to direct access on
 
 Remaining issue is to how users access to these. No anonymous user so far, so public access can't be tested.
 
-The service is expected to be fully migrated out of Sanger by the time e!88 is out (18/03).
+The service is expected to be fully migrated out of Sanger by the time e88 is out (18/03).
 
