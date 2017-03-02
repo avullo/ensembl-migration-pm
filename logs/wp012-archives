@@ -11,24 +11,10 @@ Need to check that the VMs running are configured to the latest VM Hardware vers
 avoid problems with vMotion. Currently most part of the machines in emsembl tenancy are running VM HW version 8 and they should be updated to 10. The process to update them implies to power off the machine and change the HW version on the properties.
 
 2017-01-27 Available back up options from Cloud team
-There's a script to backups machines using PowerCLI (A Windows machine with PowerShell and PowerCLI is needed. Also valid credential to access the vCenter):
-
-http://www.simonlong.co.uk/blog/2010/05/05/powercli-a-simple-vm-backup-script/
-
-Also there is a free version of the Veeam Backup software (Windows is needed also)
-
-https://www.veeam.com/virtual-machine-backup-solution-free.html
-
-And other free alternative:
-
-http://www.thinware.net/Products/ThinwarevBackup/tabid/202/Default.aspx
-
-Maybe the fastest way is to use a windows machine available and use PowerCLI,
-delegate some permissions in vCenter and use a separate datastore/disk for the
+There's a script to backups machines using PowerCLI (A Windows machine with PowerShell and PowerCLI is needed. Maybe the fastest way is to use a windows machine available and use PowerCLI, delegate some permissions in vCenter and use a separate datastore/disk for the
 backups.
 
-I would also give a try to Veeam Free, but a powerful windows machines is
-normally needed.
+I would also give a try to Veeam Free, but a powerful windows machines is normally needed.
 
 2017-01-24 Asked Cloud team about backup, snapshots strategies 
 This could be done programmatically using the vCloud REST API, and it can be done while the machines are running.
