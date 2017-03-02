@@ -5,7 +5,7 @@ All data is there and the services are running. LB set in HH to direct access on
 
 Remaining issue is to how users access to these. No anonymous user so far, so public access can't be tested.
 
-The service is expected to be fully migrated out of Sanger by the time e!88 is out (18/03).
+The service is expected to be fully migrated out of Sanger by the time e88 is out (18/03).
 
 2017-01-04 Both 5306 instances upgraded to 5.6
 Steve has requested the home directories to be mounted on HH. DBA replied is possible for all servers except for public/rogue state (outside firewall).
